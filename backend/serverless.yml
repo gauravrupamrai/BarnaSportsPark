@@ -1,0 +1,122 @@
+service: backend
+frameworkVersion: '3'
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 128
+  region: eu-west-1
+  stage: ${opt:stage, 'dev'}
+  apiName: UserSignupLoginApi
+  endpointType: REGIONAL
+  apiGateway:
+    apiKeys:
+      - bspSignupLogin
+      - ${opt:stage, 'dev'}-bspSignupLogin
+    usagePlan:
+      quota:
+        limit: 5000
+        offset: 2
+        period: MONTH
+      throttle:
+        burstLimit: 200
+        rateLimit: 100
+
+
+functions:
+
+## Health Check function
+  healthCheck:
+    handler: src/handlers/signupLogin.handler
+    events:
+      - http:
+          path: /health
+          method: GET
+          cors: true
+          private: true
+    timeout: 90
+
+## Register Function
+  register:
+    handler: src/handlers/signupLogin.handler
+    events:
+      - http:
+          path: /register
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
+## Login Function
+  login:
+    handler: src/handlers/signupLogin.handler
+    events:
+      - http:
+          path: /login
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
+## Verify Function
+  verify:
+    handler: src/handlers/signupLogin.handler
+    events:
+      - http:
+          path: /verify
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
+## Multiple Users extract function
+  getAll:
+    handler: src/handlers/getAll.handler
+    events:
+      - http:
+          path: /users
+          method: GET
+          cors: true
+    timeout: 90
+
+## Single User extract function
+  getUser:
+    handler: src/handlers/getUser.handler
+    events:
+      - http:
+          path: /user
+          method: GET
+          cors: true
+    timeout: 90
+## Function for creating user
+  createUser:
+    handler: src/handlers/createUser.handler
+    events:
+      - http:
+          path: /user
+          method: POST
+          cors: true
+    timeout: 90
+## Function for updating user
+  updateUser:
+    handler: src/handlers/updateUser.handler
+    events:
+      - http:
+          path: /user
+          method: PATCH
+          cors: true
+    timeout: 90
+
+## Function for deleting user
+  deleteUser:
+    handler: src/handlers/deleteUser.handler
+    events:
+      - http:
+          path: /user
+          method: DELETE
+          cors: true
+    timeout: 90
