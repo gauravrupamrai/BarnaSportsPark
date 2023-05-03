@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add some text'],
         minlength: 6,
-        select: false,
+        // select: false,
     },
 });
 

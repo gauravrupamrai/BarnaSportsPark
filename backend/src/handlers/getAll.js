@@ -8,7 +8,7 @@ module.exports.handler = async (event, context) => {
     try {
         await connectDatabase();
 
-        userObj = await User.find();
+        let userObj = await User.find();
         return{
             statusCode: 200,
             body: JSON.stringify({msg: 'Users Found:', userObj})

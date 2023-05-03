@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Hero() {
+export default function Reset() {
   return (
     <div>
-      Hero
+      Reset
     </div>
   )
 }

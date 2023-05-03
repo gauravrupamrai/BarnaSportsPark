@@ -8,7 +8,7 @@ module.exports.handler = async (event, context) => {
     try {
         await connectDatabase();
         const {email} = event.pathParameters;
-        userObj = await User.findOne({email});
+        const userObj = await User.findOne({email});
 
         if(userObj){
             return{

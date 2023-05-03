@@ -24,18 +24,14 @@ exports.handler = async (event, context) => {
         case event.httpMethod === 'POST' && event.path === registerPath:
             const registerBody = JSON.parse(event.body);
             response = await registerService.register(registerBody);
-            // exports.handler = async (event, context) => {
-            //     context.callbackWaitsForEmptyEventLoop = false;
-            //     const registerBody = JSON.parse(event.body);
-            //     const response = await registerService.register(registerBody);
-            //     return response;
-            //   };
             break;
         case event.httpMethod === 'POST' && event.path === loginPath:
-            response = util.buildResponse(200);
+            const loginBody = JSON.parse(event.body);
+            response = await loginService.login(loginBody);
             break;
         case event.httpMethod === 'POST' && event.path === verifyPath:
-            response = util.buildResponse(200);
+            const verifyBody = JSON.parse(event.body);
+            response = await verifyService.verify(verifyBody);
             break;
         default:
             response = util.buildResponse(404, '404 Not Found');
