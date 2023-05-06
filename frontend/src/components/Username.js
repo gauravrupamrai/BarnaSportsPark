@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import { useFormik } from 'formik';
+import axios from 'axios';
+import env from "react-dotenv";
+import { Toaster, toast } from 'react-hot-toast';
+
+const loginURL = process.env.REACT_APP_LOGIN_URL;
+console.log('loginURL: ', loginURL);
+
+const apiKey = process.env.REACT_APP_API_KEY;
+console.log('apiKey: ', apiKey);
 
 export default function Username() {
-
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-    },
-    validateOnBlur: false,
-    validateOnChange: false,
-    onSubmit: async values => {
-      console.log(values);
-    }
-  });
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,24 +18,53 @@ export default function Username() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle login logic
+
+    console.log('email: ', email);
+    console.log('password: ', password);
+    console.log('Submit button clicked');
+
+    const requestConfig = {
+      headers: {
+        'x-api-key': apiKey
+      }
+    }
+
+    const requestBody = {
+      email: email,
+      password: password
+    }
+    console.log('requestBody: ', requestBody);
+    console.log('requestConfig: ', requestConfig);
+    console.log('loginURL: ', loginURL);
+
+    axios.post(loginURL, requestBody, requestConfig).then((response) => {
+      toast.success('Login successful');
+    }).catch((error) => {
+      if(error.response.status === 401 || error.response.status === 403){
+        toast.error(error.response.data.message);
+      } else {
+        toast.error('Something went wrong. Please try again later.');
+      }
+    });
+
   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <Toaster position='top-center' reverseOrder={false}></Toaster>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6" onSubmit={formik.handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email address
               </label>
               <div className="mt-1">
                 <input
-                  {...formik.getFieldProps('email')}
                   id="email"
                   name="email"
                   type="email"
