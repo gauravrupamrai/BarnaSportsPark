@@ -1,37 +1,59 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
-function generateToken(user) {
+function generateToken(param, secretKey, expiryTime) {
+  if (!param || !secretKey || !expiryTime) {
+    return null;
+  }
 
-    if(!user){
-        return null;
-    }
-
-    const token = jwt.sign(user, process.env.JWT_SECRET, {expiresIn: '1h'});
-    return token;
+  const token = jwt.sign(param, secretKey, { expiresIn: expiryTime });
+  return token;
 }
 
-function verifyToken(userName, token){
-    return jwt.verify(token, process.env.JWT_SECRET, (err, response) => {
-        if(err){
-            return {
-                verified: false,
-                message: 'Invalid Token'
-            };
-        }
+function verifyToken(token, secretKey) {
+  try {
+    const decoded = jwt.verify(token, secretKey);
+    const response = {
+      verified: true,
+      message: "Valid Token, Verified",
+      decoded: decoded,
+    };
+    return response;
+  } catch (error) {
+    const response = {
+      verified: false,
+      message: "Invalid Token: " + error.message,
+      decoded: null,
+    };
+    return response;
+  }
+}
 
-        if(response.name !== userName){
-            return {
-                verified: false,
-                message: 'Invalid User'
-            }
-        }
+function createCookie(param, secretKey) {
+  const token = jwt.sign(param, secretKey);
 
-        return {
-            verified: true,
-            message: 'Valid Token, Verified'
-        };
-    });
+  const options = {
+    expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+    httpOnly: true,
+    sameSite: "none",
+    secure: true,
+  };
+
+  const serializedOptions = Object.entries(options)
+    .map(([key, value]) => `${key}=${value}`)
+    .join("; ");
+
+  const cookie = `token=${token}; ${serializedOptions}`;
+
+  return cookie;
+}
+
+function isAuthenticated(cookie, secretKey){
+  const { token } = cookie.token;
+
+  
+
 }
 
 module.exports.generateToken = generateToken;
 module.exports.verifyToken = verifyToken;
+module.exports.createCookie = createCookie;
