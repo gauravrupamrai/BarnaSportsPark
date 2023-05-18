@@ -1,53 +1,45 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 /** import all componenents */
-import Username from './components/Username';
-import Password from './components/Password';
-import Register from './components/Register';
-import Profile from './components/Profile';
-import Recovery from './components/Recovery';
-import Reset from './components/Reset';
-import PageNotFound from './components/PageNotFound';
+import {
+  HomePage,
+  LoginPage,
+  SignUpPage,
+  ActivatePage,
+  PageNotFoundPage,
+  VerifyEmailPage,
+} from "./Routes.js";
 
 /** root routes */
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Username></Username>
-    },
-    {
-        path: '/register',
-        element: <Register></Register>
-    },
-    {
-        path: '/password',
-        element: <Password></Password>
-    },
-    {
-        path: '/profile',
-        element: <Profile></Profile>
-    },
-    {
-        path: '/recovery',
-        element: <Recovery></Recovery>
-    },
-    {
-        path: '/reset',
-        element: <Reset></Reset>
-    },
-    {
-        path: '*',
-        element: <PageNotFound></PageNotFound>
-    }
-])
-
-export default function App() {
+const App = () => {
   return (
-    <main>
-      <RouterProvider router={router}></RouterProvider>
-    </main>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/activate" element={<ActivatePage />} />
+        <Route path="/verifyemail" element={<VerifyEmailPage />} />
+        <Route path="*" element={<PageNotFoundPage />} />
+      </Routes>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </BrowserRouter>
+  );
+};
+
+export default App;

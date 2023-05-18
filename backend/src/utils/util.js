@@ -5,7 +5,7 @@ function buildResponse(statusCode, message, body) {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({msg: message, body})
+        body: JSON.stringify({message: message, body})
     }
 }
 

@@ -1,9 +1,10 @@
 service: backend
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 plugins:
   - serverless-dotenv-plugin
   - serverless-offline
+  - serverless-finch
 
 provider:
   name: aws
@@ -13,6 +14,11 @@ provider:
   stage: ${opt:stage, 'dev'}
   apiName: UserSignupLoginApi
   endpointType: REGIONAL
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - ses:* # Allows all SES actions
+      Resource: "*" # Allows all resources
   apiGateway:
     apiKeys:
       - bspSignupLogin
@@ -26,12 +32,18 @@ provider:
         burstLimit: 200
         rateLimit: 100
 
+custom:
+  client:
+    bucketName: barnasportspark.com
+    bucketRegion: eu-west-1
+    distributionFolder: ../frontend/build
+    indexDocument: index.html
+
 
 functions:
-
-## Health Check function
+  ## Health Check function
   healthCheck:
-    handler: src/handlers/signupLogin.handler
+    handler: src/apis/signupLogin.handler
     events:
       - http:
           path: /health
@@ -40,9 +52,9 @@ functions:
           private: true
     timeout: 90
 
-## Register Function
+  ## Register Function
   register:
-    handler: src/handlers/signupLogin.handler
+    handler: src/apis/signupLogin.handler
     events:
       - http:
           path: /register
@@ -51,9 +63,9 @@ functions:
           private: true
     timeout: 90
 
-## Login Function
+  ## Login Function
   login:
-    handler: src/handlers/signupLogin.handler
+    handler: src/apis/signupLogin.handler
     events:
       - http:
           path: /login
@@ -62,9 +74,9 @@ functions:
           private: true
     timeout: 90
 
-## Verify Function
+  ## Verify Function
   verify:
-    handler: src/handlers/signupLogin.handler
+    handler: src/apis/signupLogin.handler
     events:
       - http:
           path: /verify
@@ -73,50 +85,23 @@ functions:
           private: true
     timeout: 90
 
-## Multiple Users extract function
-  getAll:
-    handler: src/handlers/getAll.handler
+  ## Activation Function
+  activate:
+    handler: src/apis/signupLogin.handler
     events:
       - http:
-          path: /users
+          path: /activate
           method: GET
           cors: true
+          private: false
     timeout: 90
 
-## Single User extract function
-  getUser:
-    handler: src/handlers/getUser.handler
+  ## Email Function
+  sendEmail:
+    handler: src/apis/externalConn.handler
     events:
       - http:
-          path: /user
-          method: GET
-          cors: true
-    timeout: 90
-## Function for creating user
-  createUser:
-    handler: src/handlers/createUser.handler
-    events:
-      - http:
-          path: /user
+          path: send-Email
           method: POST
           cors: true
-    timeout: 90
-## Function for updating user
-  updateUser:
-    handler: src/handlers/updateUser.handler
-    events:
-      - http:
-          path: /user
-          method: PATCH
-          cors: true
-    timeout: 90
-
-## Function for deleting user
-  deleteUser:
-    handler: src/handlers/deleteUser.handler
-    events:
-      - http:
-          path: /user
-          method: DELETE
-          cors: true
-    timeout: 90
+          private: true
