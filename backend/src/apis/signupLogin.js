@@ -1,7 +1,7 @@
-const registerService = require("../services/register");
-const loginService = require("../services/login");
-const verifyService = require("../services/verify");
-const activateService = require("../services/activate");
+const registerService = require("../services/userAuthServices/register");
+const loginService = require("../services/userAuthServices/login");
+const verifyService = require("../services/userAuthServices/verify");
+const activateService = require("../services/userAuthServices/activate");
 const util = require("../utils/util");
 
 const healthPath = "/health";
@@ -28,12 +28,8 @@ exports.handler = async (event, context) => {
       const loginBody = JSON.parse(event.body);
       response = await loginService.login(loginBody);
       break;
-    case event.httpMethod === "GET" && event.path === getuserPath:
-      const getuserBody = JSON.parse(event.body);
-      response = await loginService.getuser(getuserBody);
-      break;
     case event.httpMethod === "POST" && event.path === verifyPath:
-      const verifyBody = JSON.parse(event.body);
+      const verifyBody = JSON.parse(event.body);  
       response = await verifyService.verify(verifyBody);
       break;
     case event.httpMethod === "GET" && event.path === activatePath:

@@ -82,7 +82,7 @@ functions:
           path: /verify
           method: POST
           cors: true
-          private: true
+          private: false
     timeout: 90
 
   ## Activation Function
@@ -105,3 +105,34 @@ functions:
           method: POST
           cors: true
           private: true
+
+            
+  createNotice:
+    handler: src/apis/adminFunctions.handler
+    events:
+      - http:
+          path: /create-notice
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
+  getNotices:
+    handler: src/apis/adminFunctions.handler
+    events:
+      - http:
+          path: /get-notices
+          method: GET
+          cors: true
+          private: true
+    timeout: 90
+  
+  getNoticeForHome:
+    handler: src/apis/adminFunctions.handler
+    events:
+      - http:
+          path: /get-notice-for-home
+          method: GET
+          cors: true
+          private: true
+    timeout: 90

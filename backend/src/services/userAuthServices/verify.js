@@ -1,5 +1,5 @@
-const util = require('../utils/util.js');
-const auth = require('../utils/auth.js');
+const util = require('../../utils/util.js');
+const auth = require('../../utils/auth.js');
 
 const verifySecret = process.env.LOGIN_SECRET;
 
@@ -15,7 +15,9 @@ function verify(requestBody){
     const decodedToken = auth.verifyToken(token, verifySecret);
     if(decodedToken.verified){
         if(decodedToken.decoded.email !== user.email){
-            return util.buildResponse(401, 'Invalid User', {verified: decodedToken});
+            return util.buildResponse(401, 'Invalid User', {
+                verified: decodedToken
+            });
         } else {
             return util.buildResponse(200, 'Successfully Verified', {
                 verified: decodedToken,
@@ -24,7 +26,9 @@ function verify(requestBody){
             });
         }
     }else{
-        return util.buildResponse(401, 'Invalid Token', {verified: decodedToken});
+        return util.buildResponse(401, 'Invalid Token', {
+            verified: decodedToken
+        });
     }
 }
 

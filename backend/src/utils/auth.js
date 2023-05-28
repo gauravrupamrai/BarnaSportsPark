@@ -33,9 +33,7 @@ function createCookie(param, secretKey) {
 
   const options = {
     expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
-    httpOnly: true,
     sameSite: "none",
-    secure: true,
   };
 
   const serializedOptions = Object.entries(options)
@@ -47,13 +45,14 @@ function createCookie(param, secretKey) {
   return cookie;
 }
 
-function isAuthenticated(cookie, secretKey){
-  const { token } = cookie.token;
-
+function decodeCookie(cookie, secretKey) {
+  const token = cookie.match(/token=([^;]+)/);
   
-
+  const decoded = jwt.verify(token, secretKey);
+  return decoded;
 }
 
 module.exports.generateToken = generateToken;
 module.exports.verifyToken = verifyToken;
 module.exports.createCookie = createCookie;
+module.exports.decodeCookie = decodeCookie;

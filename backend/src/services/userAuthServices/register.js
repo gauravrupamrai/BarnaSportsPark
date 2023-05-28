@@ -1,8 +1,8 @@
-const connectDatabase = require("../database/db");
-const User = require("../models/user");
-const util = require("../utils/util");
-const { sendEmail } = require("./sendEmail");
-const auth = require("../utils/auth");
+const connectDatabase = require("../../database/db");
+const User = require("../../models/user");
+const util = require("../../utils/util");
+const { sendEmail } = require("../sendEmail");
+const auth = require("../../utils/auth");
 
 const senderEmail = process.env.EMAIL_USERNAME;
 const activationSecret = process.env.ACTIVATION_SECRET;

@@ -4,8 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    // colors: {
+    //   transparent: 'transparent',
+    //   current: 'currentColor',
+    //   'primary-color': '#d3e2ec',
+    // },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 }
 
