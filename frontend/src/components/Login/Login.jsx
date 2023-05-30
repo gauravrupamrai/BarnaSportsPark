@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { setUserSession } from "../../services/AuthService";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 
-const loginURL = process.env.REACT_APP_LOGIN_URL;
+const loginURL = `${process.env.REACT_APP_APP_URL}/login`;
 
 const apiKey = process.env.REACT_APP_API_KEY;
 

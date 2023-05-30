@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 
-const signupURL = process.env.REACT_APP_SIGNUP_URL;
+const signupURL = `${process.env.REACT_APP_APP_URL}/signup`;
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
