@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
                 <div className="mt-4 sm:mt-0">
-                    &copy; 2023 Barna Sports Park All rights reserved.
+                    &copy; 2017 Barna Sports Park All rights reserved.
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">

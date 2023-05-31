@@ -1,23 +1,24 @@
 import React from 'react'
-import NotificationBar from '../components/Layout/NotificationBar.jsx'
-import AboutUs from '../components/Layout/AboutUs.jsx'
+import NotificationBar from '../components/Home/NotificationBar.jsx'
 import NavigationBar from '../components/Layout/NavigationBar.jsx'
-import PricingPlans from '../components/Layout/PricingPlans.jsx'
-import Hero from '../components/Layout/Hero.jsx'
+import Hero from '../components/Home/Hero.jsx'
+import AboutUs from '../components/Home/AboutUs.jsx'
+import Stats from '../components/Home/Stats.jsx'
+import WhyBarna from '../components/Home/WhyBarna.jsx'
+import DiffPlans from '../components/Home/DiffPlans.jsx'
+import HowToJoin from '../components/Home/HowToJoin.jsx'
+import Courts from '../components/Home/Courts.jsx'
+import CTA from '../components/Home/CTA.jsx'
+import Events from '../components/Home/Events.jsx'
 import Footer from '../components/Layout/Footer.jsx'
-import HowToJoin from '../components/Layout/HowToJoin.jsx'
-import WhyBarna from '../components/Layout/WhyBarna.jsx'
-import Stats from '../components/Layout/Stats.jsx'
-import DiffPlans from '../components/Layout/DiffPlans.jsx'
-import Courts from '../components/Layout/Courts.jsx'
-import CTA from '../components/Layout/CTA.jsx'
-import Events from '../components/Layout/Events.jsx'
+
+
 
 const HomePage = () => {
   return (
     <div>
       <NotificationBar />
-      {/* <NavigationBar /> */}
+      <NavigationBar />
       <Hero />
       <AboutUs />
       <Stats />
@@ -27,7 +28,6 @@ const HomePage = () => {
       <Courts />
       <CTA />
       <Events />
-      {/* <PricingPlans /> */}
       <Footer />
     </div>
   )

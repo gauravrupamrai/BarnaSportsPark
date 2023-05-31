@@ -1,11 +1,12 @@
 import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
+import { GoUnverified } from "react-icons/go";
 
-const signupURL = `${process.env.REACT_APP_APP_URL}/signup`;
+const signupURL = `${process.env.REACT_APP_APP_URL}/register`;
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -14,7 +15,8 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
-  const navigate = useNavigate();
+  const [modalState, setModalState] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -35,11 +37,8 @@ const Signup = () => {
       .post(signupURL, requestBody, requestConfig)
       .then((response) => {
         toast.success("User Registered");
-        if (response.status === 201) {
-          navigate("/verifyEmail", {
-            state: { responseMessage: response.data.message },
-          });
-        }
+        setModalMessage(response.data.message);
+        setModalState(true);
       })
       .catch((error) => {
         if (error.response.status === 409 || error.response.status === 401) {
@@ -70,7 +69,7 @@ const Signup = () => {
             <p className="">
               Already have an account?{" "}
               <Link
-                to="/signup"
+                to="/login"
                 className="font-medium text-indigo-600 hover:text-indigo-500"
               >
                 Log in
@@ -160,6 +159,54 @@ const Signup = () => {
             </button>
           </div>
         </form>
+        {modalState && (
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div
+              className="fixed inset-0 w-full h-full bg-black opacity-40"
+            ></div>
+            <div className="flex items-center min-h-screen px-4 py-8">
+              <div className="relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
+                <div className="mt-3">
+                  <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
+                    <GoUnverified />
+                  </div>
+                  <div className="mt-2 text-center">
+                    <h4 className="text-lg font-medium text-gray-800">
+                      Verify Your registered email address
+                    </h4>
+                    {modalMessage && (
+                      <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
+                        {modalMessage}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                <div className="items-center gap-2 mt-3 sm:flex">
+                <Link to = "/">
+                  <button
+                    className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2"
+                    onClick={() => setModalState(false)}
+                  >
+                    Go Back to
+                    <br />
+                    Home Page
+                  </button>
+                  </Link>
+                  <Link to = "/signup">
+                  <button
+                    className="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2"
+                    onClick={() => setModalState(false)}
+                  >
+                    Incorrect Email?
+                    <br />
+                    Register Again!
+                  </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );

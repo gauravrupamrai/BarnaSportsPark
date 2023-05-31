@@ -5,20 +5,27 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Store from "./redux/store";
 import { loadUser } from "./redux/actions/user";
-import UserLayout from "./components/Layout/UserLayout.jsx";
 
-/** import all componenents */
+/** import all components */
 import {
   HomePage,
+  AboutUsPage,
+  FacilitiesPage,
+
+  ContactUsPage,
+  FAQsPage,
+
   LoginPage,
   SignUpPage,
   ActivatePage,
-  PageNotFoundPage,
-  VerifyEmailPage,
-  CreateContentPage,
+  
   UserPage,
   UserProfilePage,
-  AdminPage
+  
+  AdminPage,
+  CreateContentPage,
+
+  PageNotFoundPage
 } from "./Routes.js";
 
 /** root routes */
@@ -31,16 +38,26 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<HomePage />} />
+        <Route path="/aboutUs" element={<AboutUsPage />} />
+        <Route path="/facilities" element={<FacilitiesPage />} />
+
+        <Route path="/contactUs" element={<ContactUsPage />} />
+        <Route path="/faqs" element={<FAQsPage />} />
+        
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/activate" element={<ActivatePage />} />
-        <Route path="/verifyemail" element={<VerifyEmailPage />} />
-        <Route path="/createcontent" element={<CreateContentPage />} />
+        
         <Route path="/user" element={<UserPage />} />
-            <Route path="/userprofile" element={<UserProfilePage />} />
+        <Route path="/userprofile" element={<UserProfilePage />} />
+
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/createContent" element={<CreateContentPage />} />
+
         <Route path="*" element={<PageNotFoundPage />} />
+
       </Routes>
       <ToastContainer
         position="bottom-center"

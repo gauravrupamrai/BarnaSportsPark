@@ -1,5 +1,6 @@
 import React from 'react';
-import CTAimage from "../../assets/images/CTA_Image.svg"
+import CTAImage from "../../assets/images/CTA_Image.svg";
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
 
@@ -17,12 +18,12 @@ const CTA = () => {
             </div>
           </div>
           <div className="flex items-center"> {/* Add flex and items-center classes */}
-            <img src={CTAimage} alt="" style={{ margin: 'auto' }} className="h-60" /> {/* Apply margin: auto */}
+            <img src={CTAImage} alt="" style={{ margin: 'auto' }} className="h-60" /> {/* Apply margin: auto */}
           </div>
           <div className="flex justify-center mt-4 md:mt-0"> {/* Add flex and justify-center classes */}
-            <a href="javascript:void(0)" className="inline-block py-2 px-4 text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-md hover:shadow-none" style={{ margin: 'auto' }}> {/* Apply margin: auto */}
+            <Link to="/signup" className="inline-block py-2 px-4 text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-md hover:shadow-none" style={{ margin: 'auto' }}> {/* Apply margin: auto */}
               Become a Member today!
-            </a>
+            </Link>
           </div>
         </div>
       </section>

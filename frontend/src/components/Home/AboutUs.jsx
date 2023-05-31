@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -26,8 +27,8 @@ const AboutUs = () => {
               continue to develop new offerings that serve the needs of our
               residents.
             </p>
-            <a
-              href="javascript:void(0)"
+            <Link
+              to="/aboutUs"
               className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
             >
               Learn more
@@ -43,7 +44,7 @@ const AboutUs = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
