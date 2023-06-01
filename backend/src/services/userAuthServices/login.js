@@ -33,7 +33,7 @@ async function login(loginBody) {
             password: userEmail.password
         }
 
-        const token = auth.generateToken(userInfo, loginSecret, "30000");
+        const token = auth.generateToken(userInfo, loginSecret, "1h");
 
         const response = {
             user: userInfo,

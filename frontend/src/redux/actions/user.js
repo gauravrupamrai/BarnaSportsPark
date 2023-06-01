@@ -11,7 +11,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
 
 export const loadUser = () => async (dispatch) => {
   try {
-
+    console.log("Load User Action");
     dispatch({
         type: "LoadUserRequest",
       });

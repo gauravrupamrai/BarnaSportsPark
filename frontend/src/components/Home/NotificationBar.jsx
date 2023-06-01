@@ -31,7 +31,7 @@ const NotificationBar = ({ notice }) => {
 
   return (
     <div className="bg-indigo-600">
-      <div className="max-w-screen-xl mx-auto px-4  flex items-start justify-between text-white sm:items-center md:px-8">
+      <div className="max-w-screen-xl mx-auto px-4  flex items-start justify-evenly text-white items-center md:px-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -50,9 +50,9 @@ const NotificationBar = ({ notice }) => {
         {noticesNews.map((items, idx) => (
           <div
             key={idx}
-            className="flex-1 justify-center flex items-start gap-x-4 sm:items-center"
+            className="flex-1 justify-center flex items-start  items-center"
           >
-            <div className="flex-none p-1.5 px-4 rounded-full bg-indigo-800 flex items-center justify-center font-medium text-sm">
+            <div className="flex p-1.5 px-4 rounded-full bg-indigo-800 items-center justify-center font-medium text-sm">
               {items.contentType}
             </div>
             <p className="font-medium p-2">

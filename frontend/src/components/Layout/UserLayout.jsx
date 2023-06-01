@@ -1,20 +1,55 @@
-import React from 'react'
-import Sidebar from './Sidebar';
+import React from "react";
+import UserNavbar from "./UserNavbar.jsx";
+import { Routes, Route } from "react-router-dom";
+
+import {
+    UserPage,
+
+    UserMembershipPage,
+    RenewMembershipPage,
+    UpdateMembershipPage,
+    BuyMembershipPage,
+
+    UserCourtBookingPage,
+    BookACourtPage,
+
+    UserCoachingSession,
+    BookACoachingSessionPage,
+
+    UserEventBookingPage,
+    BookAnEventPage,
+    UpdateAnEventPage,
+
+  PageNotFoundPage,
+} from "../../Routes.js";
 
 const UserLayout = () => {
+
   return (
-    <div className='grid min-h-screen grid-cols-[auto_1fr] justify-center gap-4 overflow-hidden p-4'>
-      <aside class="flex h-[calc(100vh_-_2rem)] w-20 flex-col items-center justify-between bg-slate-500 py-6">
-      <Sidebar />
-      </aside>
-      
-      <div class="h-[calc(100vh_-_2rem)] w-full overflow-y-scroll">
-      <main class="min-h-screen w-full bg-slate-300 p-4">
-        Main Content
-      </main>
-      </div>
-    </div>
-  )
-}
+    <>
+      <UserNavbar />
+      <Routes>
+        <Route path="/" element={<UserPage />} />
+
+        <Route path="/your-memberships" element={<UserMembershipPage />} />
+        <Route path="/renew-memberships" element={<RenewMembershipPage />} />
+        <Route path="/update-memberships" element={<UpdateMembershipPage />} />
+        <Route path="/buy-new-memberships" element={<BuyMembershipPage />} />
+
+        <Route path="/your-court-bookings" element={<UserCourtBookingPage />} />
+        <Route path="/book-a-court" element={<BookACourtPage />} />
+
+        <Route path="/your-coaching-sessions" element={<UserCoachingSession />} />
+        <Route path="/book-a-coaching-session" element={<BookACoachingSessionPage />} />
+
+        <Route path="/your-events-booking" element={<UserEventBookingPage />} />
+        <Route path="/book-events" element={<BookAnEventPage />} />
+        <Route path="/update-event" element={<UpdateAnEventPage />} />
+        
+        <Route path="*" element={<PageNotFoundPage />} />
+      </Routes>
+    </>
+  );
+};
 
 export default UserLayout;

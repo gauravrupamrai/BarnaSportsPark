@@ -41,7 +41,16 @@ const Login = () => {
         console.log("Response Data:", response.data);
         console.log("Response Data Token:", response.data.body.token);
         console.log("Response Data User:", response.data.body.user);
-        navigate("/user");
+        
+        window.setInterval( function() {
+          console.log("Token:");
+          
+        }, 5000)
+
+        navigate("/");
+
+
+        
       })
       .catch((error) => {
         if (error.response.status === 401 || error.response.status === 403) {

@@ -11,53 +11,43 @@ import {
   HomePage,
   AboutUsPage,
   FacilitiesPage,
-
   ContactUsPage,
   FAQsPage,
-
   LoginPage,
   SignUpPage,
   ActivatePage,
-  
-  UserPage,
-  UserProfilePage,
-  
   AdminPage,
   CreateContentPage,
-
-  PageNotFoundPage
+  UserLayout,
+  PageNotFoundPage,
 } from "./Routes.js";
 
 /** root routes */
 const App = () => {
-
   useEffect(() => {
     Store.dispatch(loadUser());
   }, []);
-  
+
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutUs" element={<AboutUsPage />} />
         <Route path="/facilities" element={<FacilitiesPage />} />
 
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
-        
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/activate" element={<ActivatePage />} />
-        
-        <Route path="/user" element={<UserPage />} />
-        <Route path="/userprofile" element={<UserProfilePage />} />
+
+        <Route path="/user/*" element={<UserLayout />} />
 
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/createContent" element={<CreateContentPage />} />
 
         <Route path="*" element={<PageNotFoundPage />} />
-
       </Routes>
       <ToastContainer
         position="bottom-center"

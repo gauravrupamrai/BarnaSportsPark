@@ -7,9 +7,9 @@ const Hero = () => {
 
   return (
     <>
-      <section className="py-28">
+      <section className="py-10 md:py-20">
         <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
-          <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+          <div className="flex-none space-y-5 px-6 md:px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
             <h1 className="text-sm text-indigo-600 font-medium">
             Where Sports and Community Converge!
             </h1>
@@ -51,7 +51,7 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
+          <div className="flex-none mt-14 p-4 md:p-0 md:mt-0 md:max-w-xl">
             <img src={heroImage} className=" md:rounded-tl-[108px] md:rounded-tr-[25px] md:rounded-br-[25px] md:rounded-bl-[25px]" alt="" />
           </div>
         </div>
