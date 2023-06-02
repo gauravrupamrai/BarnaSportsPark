@@ -28,9 +28,9 @@ async function login(loginBody) {
         }
 
         const userInfo = {
+            userId: userEmail._id,
             name: userEmail.name,
             email: userEmail.email,
-            password: userEmail.password
         }
 
         const token = auth.generateToken(userInfo, loginSecret, "1h");

@@ -17,7 +17,10 @@ async function sendEmail(sendEmailBody) {
     },
     Message: {
       Body: {
-        Text: { Data: body },
+        Html:{
+          Charset: "UTF-8",
+          Data: body
+        }
       },
       Subject: { Data: subject },
     },

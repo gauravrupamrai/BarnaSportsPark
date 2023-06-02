@@ -28,7 +28,11 @@ async function register(registerBody) {
       password: password,
     };
 
-    const activationToken = auth.generateToken(newUserObj, activationSecret, "1h");
+    const activationToken = auth.generateToken(
+      newUserObj,
+      activationSecret,
+      "1h"
+    );
 
     const userActivation = `${activationURL}?token=${activationToken}`;
 
@@ -36,13 +40,16 @@ async function register(registerBody) {
       from: senderEmail, // Replace with the email address you want to use as the sender
       to: newUserObj.email,
       subject: "Account Activation",
-      body: `Hello ${newUserObj.name}, Please click the following link to activate your account: ${userActivation}}</p>`,
+      body: `<b>Hello ${newUserObj.name},</b> <br/>Please click the following link to activate your account:<br/> ${userActivation}`,
     };
 
     await sendEmail(mailOptions);
 
-    return util.buildResponse(201, `Please check your email ${newUserObj.email} to activate your account`, newUserObj);
-    
+    return util.buildResponse(
+      201,
+      `Please check your email ${newUserObj.email} to activate your account`,
+      newUserObj
+    );
   } catch (error) {
     console.log(error);
     if (error.statusCode) {

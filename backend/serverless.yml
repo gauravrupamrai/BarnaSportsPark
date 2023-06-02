@@ -136,3 +136,34 @@ functions:
           cors: true
           private: true
     timeout: 90
+
+  userProfileUpdate:
+    handler: src/apis/userFunctions.handler
+    events:
+      - http:
+          path: /user-profile-update
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+  
+  userNewMembership:
+    handler: src/apis/userFunctions.handler
+    events:
+      - http:
+          path: /user-new-membership
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
+  testApi:
+    handler: src/apis/userFunctions.handler
+    events:
+      - http:
+          path: /test-api
+          method: POST
+          cors: true
+          private: true
+    timeout: 90
+
