@@ -14,11 +14,10 @@ const NavigationBar = () => {
   console.log(isAuthenticated, user_data); // Add this line
   const [state, setState] = useState(false);
 
-  // const logOut = () => {
-  //   dispatch(setUser(null))
-  //   navigate("/");
-    
-  // }
+  const logOut = () => {
+    dispatch(setUser(null))
+    navigate("/");
+  }
   return (
     <>
     <div className="bg-white pb-5">
@@ -90,6 +89,7 @@ const NavigationBar = () => {
             </li>
             <li className="order-3 py-3 md:py-0">
             <button
+              onClick={()=>{dispatch(setUser(null));navigate("/");}}
                 className="py-2 px-5 rounded-lg font-medium text-black text-center bg-white-600 border hover:text-white hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline"
               >
                 Logout
@@ -118,7 +118,7 @@ const NavigationBar = () => {
           )}
         </ul>
       </nav>
-      </div>
+    </div>
     </>
   );
 };
