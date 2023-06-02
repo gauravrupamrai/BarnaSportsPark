@@ -1,14 +1,24 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { navigation } from "../../static/data";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../../redux/reducers/user";
+
+
 
 const NavigationBar = () => {
-  const {isAuthenticated, user} = useSelector((state) => state.user);
-  console.log(isAuthenticated, user); // Add this line
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {isAuthenticated, user_data} = useSelector((state) => state.user);
+  console.log(isAuthenticated, user_data); // Add this line
   const [state, setState] = useState(false);
 
+  // const logOut = () => {
+  //   dispatch(setUser(null))
+  //   navigate("/");
+    
+  // }
   return (
     <>
     <div className="bg-white pb-5">
@@ -75,16 +85,15 @@ const NavigationBar = () => {
                 to="/user"
                 className="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline shadow-lg hover:shadow-none"
               >
-                Hi {user.user.name}
+                Hi {user_data.user.name}
               </Link>
             </li>
             <li className="order-3 py-3 md:py-0">
-            <Link
-                to="/logout"
+            <button
                 className="py-2 px-5 rounded-lg font-medium text-black text-center bg-white-600 border hover:text-white hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline"
               >
                 Logout
-              </Link>
+              </button>
             </li>
           </div>
           ) : (
@@ -113,5 +122,6 @@ const NavigationBar = () => {
     </>
   );
 };
+
 
 export default NavigationBar;
