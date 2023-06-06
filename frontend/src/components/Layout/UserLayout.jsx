@@ -1,30 +1,35 @@
 import React from "react";
 import UserNavbar from "./UserNavbar.jsx";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import {
-    UserPage,
+  UserPage,
+  UserMembershipPage,
+  RenewMembershipPage,
+  UpdateMembershipPage,
+  BuyMembershipPage,
+  MembershipSuccessPage,
 
-    UserMembershipPage,
-    RenewMembershipPage,
-    UpdateMembershipPage,
-    BuyMembershipPage,
-    MembershipSuccessPage,
+  UserCourtBookingPage,
+  BookACourtPage,
 
-    UserCourtBookingPage,
-    BookACourtPage,
+  UserCoachingSession,
+  BookACoachingSessionPage,
 
-    UserCoachingSession,
-    BookACoachingSessionPage,
-
-    UserEventBookingPage,
-    BookAnEventPage,
-    UpdateAnEventPage,
+  UserEventBookingPage,
+  BookAnEventPage,
+  UpdateAnEventPage,
 
   PageNotFoundPage,
 } from "../../Routes.js";
 
 const UserLayout = () => {
+
+  function RequireMembership({ children }) {
+    let { isMembership } = useSelector((state) => state.user);
+    return isMembership === true ? children : <Navigate to="/user/buy-new-memberships" replace />;
+  }
 
   return (
     <>
@@ -38,16 +43,19 @@ const UserLayout = () => {
         <Route path="/buy-new-memberships" element={<BuyMembershipPage />} />
         <Route path="/membership/success" element={<MembershipSuccessPage />} />
 
-        <Route path="/your-court-bookings" element={<UserCourtBookingPage />} />
-        <Route path="/book-a-court" element={<BookACourtPage />} />
+        <Route path="/your-court-bookings" element={
+          <RequireMembership>
+            <UserCourtBookingPage />
+          </RequireMembership>
+        } />
+        <Route path="/book-a-court" element={<RequireMembership><BookACourtPage /></RequireMembership>} />
 
-        <Route path="/your-coaching-sessions" element={<UserCoachingSession />} />
-        <Route path="/book-a-coaching-session" element={<BookACoachingSessionPage />} />
+        <Route path="/your-coaching-sessions" element={<RequireMembership><UserCoachingSession /></RequireMembership>} />
+        <Route path="/book-a-coaching-session" element={<RequireMembership><BookACoachingSessionPage /></RequireMembership>} />
 
-        <Route path="/your-events-booking" element={<UserEventBookingPage />} />
-        <Route path="/book-events" element={<BookAnEventPage />} />
-        <Route path="/update-event" element={<UpdateAnEventPage />} />
-        
+        <Route path="/your-events-booking" element={<RequireMembership><UserEventBookingPage /></RequireMembership>} />
+        <Route path="/book-events" element={<RequireMembership><BookAnEventPage /></RequireMembership>} />
+        <Route path="/update-event" element={<RequireMembership><UpdateAnEventPage /></RequireMembership>} />
         <Route path="*" element={<PageNotFoundPage />} />
       </Routes>
     </>

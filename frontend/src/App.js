@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import {Store} from "./redux/store";
 import { loadUser } from "./redux/actions/user";
-
+import { useSelector } from "react-redux";
 /** import all components */
 import {
   HomePage,
@@ -25,6 +25,13 @@ import {
 
 /** root routes */
 const App = () => {
+
+  function RequireAdmin({children}) {
+    const {isAuthenticated} = useSelector((state) => state.user);
+    return isAuthenticated === true ? children : <Navigate to="/login" replace />;
+  }
+
+  
   // useEffect(() => {
   //   // Store.dispatch(loadUser());
   // }, []);
@@ -45,7 +52,11 @@ const App = () => {
 
         <Route path="/user/*" element={<UserLayout />} />
 
-        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admin" element={
+        <RequireAdmin>
+          <AdminPage />
+        </RequireAdmin>
+        } />
         <Route path="/createContent" element={<CreateContentPage />} />
         <Route path="/draftSendEmail" element={<DraftSendEmailPage />} />
 
