@@ -42,7 +42,7 @@ custom:
 
 functions:
   ## Health Check function
-  healthCheck:
+  signupLogin:
     handler: src/apis/signupLogin.handler
     events:
       - http:
@@ -50,45 +50,21 @@ functions:
           method: GET
           cors: true
           private: true
-    timeout: 90
-
-  ## Register Function
-  register:
-    handler: src/apis/signupLogin.handler
-    events:
       - http:
           path: /register
           method: POST
           cors: true
           private: true
-    timeout: 90
-
-  ## Login Function
-  login:
-    handler: src/apis/signupLogin.handler
-    events:
       - http:
           path: /login
           method: POST
           cors: true
           private: true
-    timeout: 90
-
-  ## Verify Function
-  verify:
-    handler: src/apis/signupLogin.handler
-    events:
       - http:
           path: /verify
           method: POST
           cors: true
           private: false
-    timeout: 90
-
-  ## Activation Function
-  activate:
-    handler: src/apis/signupLogin.handler
-    events:
       - http:
           path: /activate
           method: GET
@@ -97,47 +73,38 @@ functions:
     timeout: 90
 
   ## Email Function
-  sendEmail:
-    handler: src/apis/externalConn.handler
+  adminFunctions:
+    handler: src/apis/adminFunctions.handler
     events:
       - http:
-          path: send-Email
+          path: /sendCustomEmail
           method: POST
           cors: true
           private: true
-
-            
-  createNotice:
-    handler: src/apis/adminFunctions.handler
-    events:
       - http:
           path: /create-notice
           method: POST
           cors: true
           private: true
-    timeout: 90
-
-  getNotices:
-    handler: src/apis/adminFunctions.handler
-    events:
       - http:
           path: /get-notices
           method: GET
           cors: true
           private: true
-    timeout: 90
-  
-  getNoticeForHome:
-    handler: src/apis/adminFunctions.handler
-    events:
       - http:
           path: /get-notice-for-home
           method: GET
           cors: true
           private: true
+      - http:
+          path: /get-emails
+          method: GET
+          cors: true
+          private: true
     timeout: 90
 
-  userProfileUpdate:
+
+  userFunctions:
     handler: src/apis/userFunctions.handler
     events:
       - http:
@@ -145,25 +112,33 @@ functions:
           method: POST
           cors: true
           private: true
-    timeout: 90
-  
-  userNewMembership:
-    handler: src/apis/userFunctions.handler
-    events:
+      - http:
+          path: /user-profile-info
+          method: GET
+          cors: true
+          private: true
       - http:
           path: /user-new-membership
           method: POST
           cors: true
           private: true
-    timeout: 90
-
-  testApi:
-    handler: src/apis/userFunctions.handler
-    events:
       - http:
-          path: /test-api
+          path: /user-new-membership
           method: POST
           cors: true
           private: true
+      - http:
+          path: /user-membership-webhook
+          method: POST
+          cors: true
+          private: false
     timeout: 90
 
+  externalConn:
+    handler: src/apis/externalConn.handler
+    events:
+      - http:
+          path: send-Email
+          method: POST
+          cors: true
+          private: true

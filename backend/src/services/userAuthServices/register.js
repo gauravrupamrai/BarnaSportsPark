@@ -4,7 +4,6 @@ const util = require("../../utils/util");
 const { sendEmail } = require("../sendEmail");
 const auth = require("../../utils/auth");
 
-const senderEmail = process.env.EMAIL_USERNAME;
 const activationSecret = process.env.ACTIVATION_SECRET;
 const activationURL = process.env.ACTIVATION_LINK;
 
@@ -37,7 +36,6 @@ async function register(registerBody) {
     const userActivation = `${activationURL}?token=${activationToken}`;
 
     const mailOptions = {
-      from: senderEmail, // Replace with the email address you want to use as the sender
       to: newUserObj.email,
       subject: "Account Activation",
       body: `<b>Hello ${newUserObj.name},</b> <br/>Please click the following link to activate your account:<br/> ${userActivation}`,

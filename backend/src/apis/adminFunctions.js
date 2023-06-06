@@ -1,16 +1,16 @@
 const notices = require("../services/adminServices/notices");
-// const loginService = require("../services/login");
-// const verifyService = require("../services/verify");
-// const activateService = require("../services/activate");
+const email = require("../services/adminServices/email");
+
 
 const util = require("../utils/util");
 
 const createNotice = "/create-notice";
 const getNotices = "/get-notices";
 const getNoticeForHome = "/get-notice-for-home";
-// const loginPath = "/login";
-// const verifyPath = "/verify";
-// const activatePath = "/activate";
+const sendEmailPath = "/sendCustomEmail";
+const getEmailPath = "/getEmail";
+
+
 
 exports.handler = async (event, context) => {
   console.log("Request event: ", event);
@@ -29,17 +29,13 @@ exports.handler = async (event, context) => {
     case event.httpMethod === "GET" && event.path === getNoticeForHome:
       response = await notices.getNoticeForHome();
       break;
-    // case event.httpMethod === "POST" && event.path === loginPath:
-    //   const loginBody = JSON.parse(event.body);
-    //   response = await loginService.login(loginBody);
-    //   break;
-    // case event.httpMethod === "POST" && event.path === verifyPath:
-    //   const verifyBody = JSON.parse(event.body);
-    //   response = await verifyService.verify(verifyBody);
-    //   break;
-    // case event.httpMethod === "GET" && event.path === activatePath:
-    //   response = await activateService.activate(event);
-    //   break;
+    case event.httpMethod === "POST" && event.path === sendEmailPath:
+      const sendEmailBody = JSON.parse(event.body);
+      response = await email.sendCustomEmail(sendEmailBody);
+      break;
+    case event.httpMethod === "GET" && event.path === getEmailPath:
+      response = await email.getEmail(event.queryStringParameters);
+      break;
     default:
       response = util.buildResponse(404, "404 Not Found");
   }

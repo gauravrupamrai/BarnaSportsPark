@@ -9,6 +9,7 @@ import {
     RenewMembershipPage,
     UpdateMembershipPage,
     BuyMembershipPage,
+    MembershipSuccessPage,
 
     UserCourtBookingPage,
     BookACourtPage,
@@ -35,6 +36,7 @@ const UserLayout = () => {
         <Route path="/renew-memberships" element={<RenewMembershipPage />} />
         <Route path="/update-memberships" element={<UpdateMembershipPage />} />
         <Route path="/buy-new-memberships" element={<BuyMembershipPage />} />
+        <Route path="/membership/success" element={<MembershipSuccessPage />} />
 
         <Route path="/your-court-bookings" element={<UserCourtBookingPage />} />
         <Route path="/book-a-court" element={<BookACourtPage />} />

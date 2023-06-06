@@ -18,6 +18,7 @@ import {
   ActivatePage,
   AdminPage,
   CreateContentPage,
+  DraftSendEmailPage,
   UserLayout,
   PageNotFoundPage,
 } from "./Routes.js";
@@ -46,6 +47,7 @@ const App = () => {
 
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/createContent" element={<CreateContentPage />} />
+        <Route path="/draftSendEmail" element={<DraftSendEmailPage />} />
 
         <Route path="*" element={<PageNotFoundPage />} />
       </Routes>

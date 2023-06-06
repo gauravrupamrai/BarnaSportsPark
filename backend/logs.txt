@@ -1,0 +1,3523 @@
+2023-06-06T07:23:24.824Z - stripeEvent.type: checkout.session.completed
+2023-06-06T07:23:24.824Z - newMembershipData: {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T07:23:24.824Z - userId: undefined
+2023-06-06T07:23:24.825Z - session: {"id":"cs_test_a1aAbmHmVjuMcfIGkYIP9s4i6nkLRiveDml2PcmIYPOao9CKTdcHU9zrfs","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686036215,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686122614,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFuFILG0AaCHwVL1NOAEqs0","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T07:23:24.824Z - sig: t=1686036241,v1=8afb68f8f1108c48136110363a225501ececb8fbbadf0a640bd14778d9f87ebe,v0=a2a59d6c5b5927951dcb1bac43fb6718407c65bb727ea29e8bd8e571d3163863
+2023-06-06T07:23:24.824Z - body: {
+  "id": "evt_1NFuFJLG0AaCHwVLlxQ5vO0f",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036241,
+  "data": {
+    "object": {
+      "id": "cs_test_a1aAbmHmVjuMcfIGkYIP9s4i6nkLRiveDml2PcmIYPOao9CKTdcHU9zrfs",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686036215,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686122614,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFuFILG0AaCHwVL1NOAEqs0",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T07:23:24.820Z - stripeEvent: {"id":"evt_1NFuFJLG0AaCHwVLlxQ5vO0f","object":"event","api_version":"2022-11-15","created":1686036241,"data":{"object":{"id":"cs_test_a1aAbmHmVjuMcfIGkYIP9s4i6nkLRiveDml2PcmIYPOao9CKTdcHU9zrfs","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686036215,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686122614,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFuFILG0AaCHwVL1NOAEqs0","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T07:23:24.865Z - stripeEvent: {"id":"evt_3NFuFILG0AaCHwVL1Ydcyi89","object":"event","api_version":"2022-11-15","created":1686036241,"data":{"object":{"id":"ch_3NFuFILG0AaCHwVL1xkc1K6L","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFuFILG0AaCHwVL1ehAUOeM","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686036240,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":38,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFuFILG0AaCHwVL1NOAEqs0","payment_method":"pm_1NFuFHLG0AaCHwVLaopbWppj","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":12,"exp_year":2023,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKJG--6MGMgaDG7vudYk6LBbgCAaqlglz-u-kUQkJInB93ut7gDsTMEbFsigBAUy6zv-t8l_1p1vjKMqr","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_Au596epdEiN4oZ","idempotency_key":"61b0246a-9871-4e14-8cca-915d38dd2df0"},"type":"charge.succeeded"}
+2023-06-06T07:23:24.866Z - sig: t=1686036241,v1=c10441d02428106802fb3919aaa0d3a74b391ccac53b025c4b131ee90701afee,v0=39db150848e5f7ae09bb9267edf30f2e6d187d87d71c9b01e41d0aa1c910e207
+2023-06-06T07:23:24.866Z - body: {
+  "id": "evt_3NFuFILG0AaCHwVL1Ydcyi89",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036241,
+  "data": {
+    "object": {
+      "id": "ch_3NFuFILG0AaCHwVL1xkc1K6L",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFuFILG0AaCHwVL1ehAUOeM",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686036240,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 38,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFuFILG0AaCHwVL1NOAEqs0",
+      "payment_method": "pm_1NFuFHLG0AaCHwVLaopbWppj",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 12,
+          "exp_year": 2023,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKJG--6MGMgaDG7vudYk6LBbgCAaqlglz-u-kUQkJInB93ut7gDsTMEbFsigBAUy6zv-t8l_1p1vjKMqr",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Au596epdEiN4oZ",
+    "idempotency_key": "61b0246a-9871-4e14-8cca-915d38dd2df0"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T07:23:24.867Z - stripeEvent.type: charge.succeeded
+2023-06-06T07:23:24.943Z - stripeEvent: {"id":"evt_3NFuFILG0AaCHwVL1hw0wv5L","object":"event","api_version":"2022-11-15","created":1686036241,"data":{"object":{"id":"pi_3NFuFILG0AaCHwVL1NOAEqs0","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuFILG0AaCHwVL1NOAEqs0_secret_Gj2lkkeyc2ZeChQe3c4Hx1oof","confirmation_method":"automatic","created":1686036240,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFuFILG0AaCHwVL1xkc1K6L","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFuFHLG0AaCHwVLaopbWppj","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_Au596epdEiN4oZ","idempotency_key":"61b0246a-9871-4e14-8cca-915d38dd2df0"},"type":"payment_intent.succeeded"}
+2023-06-06T07:23:24.944Z - body: {
+  "id": "evt_3NFuFILG0AaCHwVL1hw0wv5L",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036241,
+  "data": {
+    "object": {
+      "id": "pi_3NFuFILG0AaCHwVL1NOAEqs0",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuFILG0AaCHwVL1NOAEqs0_secret_Gj2lkkeyc2ZeChQe3c4Hx1oof",
+      "confirmation_method": "automatic",
+      "created": 1686036240,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFuFILG0AaCHwVL1xkc1K6L",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFuFHLG0AaCHwVLaopbWppj",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Au596epdEiN4oZ",
+    "idempotency_key": "61b0246a-9871-4e14-8cca-915d38dd2df0"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T07:23:24.944Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T07:23:24.944Z - sig: t=1686036241,v1=fa1884e9a47a6a8ebffbecaa261091237bafd4f66e1e8074074a6f88ce1b82a8,v0=f9c9efc001c1bdf1209b72d2590f3501f9941b6cd956e334775510e0bcd42bc9
+2023-06-06T07:23:25.132Z - sig: t=1686036241,v1=86c875e6d95a883da26ba89d7268a0f4b31a00dcb3a88fae0585404931dd2011,v0=94a508f9b364eb75fd22a47b4a1730ca9ab782e1a769f4c38de7788389085737
+2023-06-06T07:23:25.131Z - stripeEvent: {"id":"evt_3NFuFILG0AaCHwVL1xR7FgnR","object":"event","api_version":"2022-11-15","created":1686036240,"data":{"object":{"id":"pi_3NFuFILG0AaCHwVL1NOAEqs0","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuFILG0AaCHwVL1NOAEqs0_secret_Gj2lkkeyc2ZeChQe3c4Hx1oof","confirmation_method":"automatic","created":1686036240,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_Au596epdEiN4oZ","idempotency_key":"61b0246a-9871-4e14-8cca-915d38dd2df0"},"type":"payment_intent.created"}
+2023-06-06T07:23:25.132Z - body: {
+  "id": "evt_3NFuFILG0AaCHwVL1xR7FgnR",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036240,
+  "data": {
+    "object": {
+      "id": "pi_3NFuFILG0AaCHwVL1NOAEqs0",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuFILG0AaCHwVL1NOAEqs0_secret_Gj2lkkeyc2ZeChQe3c4Hx1oof",
+      "confirmation_method": "automatic",
+      "created": 1686036240,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Au596epdEiN4oZ",
+    "idempotency_key": "61b0246a-9871-4e14-8cca-915d38dd2df0"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T07:23:25.132Z - stripeEvent.type: payment_intent.created
+2023-06-06T07:29:27.571Z - stripeEvent: {"id":"evt_3NFuL8LG0AaCHwVL0VTGEVmt","object":"event","api_version":"2022-11-15","created":1686036603,"data":{"object":{"id":"ch_3NFuL8LG0AaCHwVL0Vcp1rcX","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFuL8LG0AaCHwVL0mZBCwyK","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686036603,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":64,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b","payment_method":"pm_1NFuL8LG0AaCHwVLAWfzKc3c","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2050,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKPzA-6MGMgYW--mhbWM6LBYfbPlPE_4-jaWMRnuw1kudppUyCmtLGx_Rf22Jt4lphRgkFSBbaj693U_l","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_nYuxMAujBCc5ZB","idempotency_key":"2922d28e-36b5-45c9-8fda-e86deb99d165"},"type":"charge.succeeded"}
+2023-06-06T07:29:27.579Z - body: {
+  "id": "evt_3NFuL8LG0AaCHwVL0VTGEVmt",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036603,
+  "data": {
+    "object": {
+      "id": "ch_3NFuL8LG0AaCHwVL0Vcp1rcX",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFuL8LG0AaCHwVL0mZBCwyK",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686036603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 64,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b",
+      "payment_method": "pm_1NFuL8LG0AaCHwVLAWfzKc3c",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2050,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKPzA-6MGMgYW--mhbWM6LBYfbPlPE_4-jaWMRnuw1kudppUyCmtLGx_Rf22Jt4lphRgkFSBbaj693U_l",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_nYuxMAujBCc5ZB",
+    "idempotency_key": "2922d28e-36b5-45c9-8fda-e86deb99d165"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T07:29:27.580Z - stripeEvent.type: charge.succeeded
+2023-06-06T07:29:27.573Z - sig: t=1686036604,v1=8b587b6c5dde1b8315086b57e0a1fb62f5b55f4ef197053777ad119efab705de,v0=7450c83bb88af6b5f0d7949532abaa1c5d25fb7b901ca7e78c2baa5b386bbdda
+2023-06-06T07:29:27.617Z - stripeEvent: {"id":"evt_1NFuLALG0AaCHwVL3IbrAjFO","object":"event","api_version":"2022-11-15","created":1686036604,"data":{"object":{"id":"cs_test_a1DYqVdj2mPdz3qK6WYV88d95NW9ncMOAYJaqg0dOFRn2rSbWKSU7hGJ8h","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686036578,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686122978,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T07:29:27.618Z - body: {
+  "id": "evt_1NFuLALG0AaCHwVL3IbrAjFO",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036604,
+  "data": {
+    "object": {
+      "id": "cs_test_a1DYqVdj2mPdz3qK6WYV88d95NW9ncMOAYJaqg0dOFRn2rSbWKSU7hGJ8h",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686036578,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686122978,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T07:29:27.618Z - stripeEvent.type: checkout.session.completed
+2023-06-06T07:29:27.619Z - newMembershipData: {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T07:29:27.620Z - Error handling Stripe webhook: ReferenceError: userId is not defined
+2023-06-06T07:29:27.618Z - sig: t=1686036604,v1=047bac7d6091fcd82912a1d5ea81153275fe64df6cb0716020655079f0508cbf,v0=2931efd4d428b50400356edb0017a373289ce93d9668c55c5f69bf097f6f1100
+2023-06-06T07:29:27.640Z - sig: t=1686036604,v1=e11b7d26a50bb179954c5896b881e5b5e1b11d5355ba9861dbe05f93348550e1,v0=88110794c890bd8d60be73a94b38d6bc4fb56e9ca24f95a2ed874c66e4c8b661
+2023-06-06T07:29:27.640Z - body: {
+  "id": "evt_3NFuL8LG0AaCHwVL0kviDg49",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036603,
+  "data": {
+    "object": {
+      "id": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b_secret_x4grUs0eR39RlHI67VYrWK6R8",
+      "confirmation_method": "automatic",
+      "created": 1686036602,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFuL8LG0AaCHwVL0Vcp1rcX",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFuL8LG0AaCHwVLAWfzKc3c",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_nYuxMAujBCc5ZB",
+    "idempotency_key": "2922d28e-36b5-45c9-8fda-e86deb99d165"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T07:29:27.640Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T07:29:27.639Z - stripeEvent: {"id":"evt_3NFuL8LG0AaCHwVL0kviDg49","object":"event","api_version":"2022-11-15","created":1686036603,"data":{"object":{"id":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b_secret_x4grUs0eR39RlHI67VYrWK6R8","confirmation_method":"automatic","created":1686036602,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFuL8LG0AaCHwVL0Vcp1rcX","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFuL8LG0AaCHwVLAWfzKc3c","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_nYuxMAujBCc5ZB","idempotency_key":"2922d28e-36b5-45c9-8fda-e86deb99d165"},"type":"payment_intent.succeeded"}
+2023-06-06T07:29:27.817Z - stripeEvent: {"id":"evt_3NFuL8LG0AaCHwVL0cRINTx7","object":"event","api_version":"2022-11-15","created":1686036602,"data":{"object":{"id":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuL8LG0AaCHwVL0ZsFQ64b_secret_x4grUs0eR39RlHI67VYrWK6R8","confirmation_method":"automatic","created":1686036602,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_nYuxMAujBCc5ZB","idempotency_key":"2922d28e-36b5-45c9-8fda-e86deb99d165"},"type":"payment_intent.created"}
+2023-06-06T07:29:27.818Z - sig: t=1686036604,v1=f2959825cfee630c5122ac98168f25bdc2bb8b54cd71a1c0fe8349e103a957ea,v0=2cc13567114f2e993b82239738b5e0e372c04882f75be7e20a63bc98681cd51b
+2023-06-06T07:29:27.818Z - body: {
+  "id": "evt_3NFuL8LG0AaCHwVL0cRINTx7",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686036602,
+  "data": {
+    "object": {
+      "id": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuL8LG0AaCHwVL0ZsFQ64b_secret_x4grUs0eR39RlHI67VYrWK6R8",
+      "confirmation_method": "automatic",
+      "created": 1686036602,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_nYuxMAujBCc5ZB",
+    "idempotency_key": "2922d28e-36b5-45c9-8fda-e86deb99d165"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T07:29:27.818Z - stripeEvent.type: payment_intent.created
+2023-06-06T07:42:29.265Z - stripeEvent: {"id":"evt_3NFuXkLG0AaCHwVL0PVpKXbR","object":"event","api_version":"2022-11-15","created":1686037385,"data":{"object":{"id":"ch_3NFuXkLG0AaCHwVL03i0PhEA","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFuXkLG0AaCHwVL0XI8MbVp","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686037385,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":34,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw","payment_method":"pm_1NFuXkLG0AaCHwVLea4RzbFL","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2026,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKIrH-6MGMgYpIcwjh5k6LBZzJpEinkBZnN244sEhLRAhTEUnJHvgmPrrGGqRdA4mkLmXj1BfR1nhdiiZ","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_1LsosKEEV4ovrF","idempotency_key":"f3c6a379-493b-4c0f-a734-f5157d71d5fb"},"type":"charge.succeeded"}
+2023-06-06T07:42:29.266Z - sig: t=1686037386,v1=bc2240d70f353ada1661ff6f93d387f70d09f7900267e122485ff6d36e545147,v0=c47d32695ceccf96fa2a6e50f46cd30e39aeaef1496e7e846e50cd816087ecb7
+2023-06-06T07:42:29.267Z - stripeEvent.type: charge.succeeded
+2023-06-06T07:42:29.267Z - body: {
+  "id": "evt_3NFuXkLG0AaCHwVL0PVpKXbR",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686037385,
+  "data": {
+    "object": {
+      "id": "ch_3NFuXkLG0AaCHwVL03i0PhEA",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFuXkLG0AaCHwVL0XI8MbVp",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686037385,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 34,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw",
+      "payment_method": "pm_1NFuXkLG0AaCHwVLea4RzbFL",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2026,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKIrH-6MGMgYpIcwjh5k6LBZzJpEinkBZnN244sEhLRAhTEUnJHvgmPrrGGqRdA4mkLmXj1BfR1nhdiiZ",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_1LsosKEEV4ovrF",
+    "idempotency_key": "f3c6a379-493b-4c0f-a734-f5157d71d5fb"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T07:42:29.277Z - stripeEvent: {"id":"evt_1NFuXmLG0AaCHwVLKyCRSI3p","object":"event","api_version":"2022-11-15","created":1686037386,"data":{"object":{"id":"cs_test_a1t15U2kP0FgWPOemUdRp0RoS1bicvsMtDrEgnh1ORhLMu1kPGcrF3LvYf","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686037350,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686123750,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T07:42:29.279Z - sig: t=1686037386,v1=6e605d7cfa0f5d27101d5f70ed020559f2b14e36cbea3d5a48b864d5e4d00ac2,v0=e6e2d50b61ea077ef4c1d954e16c90612d6ba951530f634a2d1e0610488273f8
+2023-06-06T07:42:29.280Z - session: {"id":"cs_test_a1t15U2kP0FgWPOemUdRp0RoS1bicvsMtDrEgnh1ORhLMu1kPGcrF3LvYf","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686037350,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686123750,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T07:42:29.280Z - stripeEvent.type: checkout.session.completed
+2023-06-06T07:42:29.279Z - body: {
+  "id": "evt_1NFuXmLG0AaCHwVLKyCRSI3p",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686037386,
+  "data": {
+    "object": {
+      "id": "cs_test_a1t15U2kP0FgWPOemUdRp0RoS1bicvsMtDrEgnh1ORhLMu1kPGcrF3LvYf",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686037350,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686123750,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T07:42:29.280Z - newMembershipData: {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T07:42:29.376Z - stripeEvent: {"id":"evt_3NFuXkLG0AaCHwVL0xQBvgld","object":"event","api_version":"2022-11-15","created":1686037385,"data":{"object":{"id":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw_secret_cQbVFNkJLs1uIAZ40nDJa2RMW","confirmation_method":"automatic","created":1686037384,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFuXkLG0AaCHwVL03i0PhEA","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFuXkLG0AaCHwVLea4RzbFL","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_1LsosKEEV4ovrF","idempotency_key":"f3c6a379-493b-4c0f-a734-f5157d71d5fb"},"type":"payment_intent.succeeded"}
+2023-06-06T07:42:29.377Z - sig: t=1686037386,v1=a62cba8eefc09bc89695f6b7e79d767da6977188eceb7449fdd496beeb26e2fa,v0=651c2078271515fe08698f6a32d7560e3908f243bebb4300c8696a896fb602bf
+2023-06-06T07:42:29.377Z - body: {
+  "id": "evt_3NFuXkLG0AaCHwVL0xQBvgld",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686037385,
+  "data": {
+    "object": {
+      "id": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw_secret_cQbVFNkJLs1uIAZ40nDJa2RMW",
+      "confirmation_method": "automatic",
+      "created": 1686037384,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFuXkLG0AaCHwVL03i0PhEA",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFuXkLG0AaCHwVLea4RzbFL",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_1LsosKEEV4ovrF",
+    "idempotency_key": "f3c6a379-493b-4c0f-a734-f5157d71d5fb"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T07:42:29.377Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T07:42:29.417Z - stripeEvent: {"id":"evt_3NFuXkLG0AaCHwVL0hmMErCx","object":"event","api_version":"2022-11-15","created":1686037384,"data":{"object":{"id":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFuXkLG0AaCHwVL0ZVi1eHw_secret_cQbVFNkJLs1uIAZ40nDJa2RMW","confirmation_method":"automatic","created":1686037384,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_1LsosKEEV4ovrF","idempotency_key":"f3c6a379-493b-4c0f-a734-f5157d71d5fb"},"type":"payment_intent.created"}
+2023-06-06T07:42:29.417Z - body: {
+  "id": "evt_3NFuXkLG0AaCHwVL0hmMErCx",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686037384,
+  "data": {
+    "object": {
+      "id": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFuXkLG0AaCHwVL0ZVi1eHw_secret_cQbVFNkJLs1uIAZ40nDJa2RMW",
+      "confirmation_method": "automatic",
+      "created": 1686037384,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_1LsosKEEV4ovrF",
+    "idempotency_key": "f3c6a379-493b-4c0f-a734-f5157d71d5fb"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T07:42:29.417Z - sig: t=1686037386,v1=d4b31fa2c91a855bcd10995839e789a813b9502902bd3a098cf0e957b1a0bb08,v0=13797d541d2230c900f64ad09b08d63ca11b6db5d735407658ad64b514f1f906
+2023-06-06T07:42:29.417Z - stripeEvent.type: payment_intent.created
+2023-06-06T07:42:29.701Z - newMembership: {
+  membershipType: 'adult',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647ee3653d2b1b2390185586")
+}
+2023-06-06T07:42:29.917Z - checkUser: null
+2023-06-06T07:57:49.860Z - stripeEvent: {"id":"evt_3NFumbLG0AaCHwVL1yQN2EC5","object":"event","api_version":"2022-11-15","created":1686038305,"data":{"object":{"id":"ch_3NFumbLG0AaCHwVL1MTen5gS","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFumbLG0AaCHwVL1QNVfKHT","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686038305,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":31,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFumbLG0AaCHwVL1bVWuQT4","payment_method":"pm_1NFumaLG0AaCHwVLLYpnkmLA","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":1,"exp_year":2070,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKKLO-6MGMgZr-iAnDSk6LBbFygCTdou9yQnQpHvaEpIwE4S7FMipc9p5p_YW08QOQajL6MzzqrUQY2N-","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_EDWGbK1pksSwvq","idempotency_key":"3c541806-b7b3-4ef7-b7bb-ab0476f1226e"},"type":"charge.succeeded"}
+2023-06-06T07:57:49.861Z - body: {
+  "id": "evt_3NFumbLG0AaCHwVL1yQN2EC5",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686038305,
+  "data": {
+    "object": {
+      "id": "ch_3NFumbLG0AaCHwVL1MTen5gS",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFumbLG0AaCHwVL1QNVfKHT",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686038305,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 31,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFumbLG0AaCHwVL1bVWuQT4",
+      "payment_method": "pm_1NFumaLG0AaCHwVLLYpnkmLA",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 1,
+          "exp_year": 2070,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKKLO-6MGMgZr-iAnDSk6LBbFygCTdou9yQnQpHvaEpIwE4S7FMipc9p5p_YW08QOQajL6MzzqrUQY2N-",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_EDWGbK1pksSwvq",
+    "idempotency_key": "3c541806-b7b3-4ef7-b7bb-ab0476f1226e"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T07:57:49.862Z - stripeEvent.type: charge.succeeded
+2023-06-06T07:57:49.861Z - sig: t=1686038306,v1=c2428b03fa41a2203bb929afff41b611e7d9cf5e0498277a2ea7a19fdf949616,v0=bee53d54b265dee431edbbf3d11aa5bdca7211349465ccd3746495e8af5cc1c6
+2023-06-06T07:57:49.860Z - stripeEvent: {"id":"evt_3NFumbLG0AaCHwVL1XiGVjcX","object":"event","api_version":"2022-11-15","created":1686038306,"data":{"object":{"id":"pi_3NFumbLG0AaCHwVL1bVWuQT4","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFumbLG0AaCHwVL1bVWuQT4_secret_BvB5p6fBcOBrfe9zcOeASc0kQ","confirmation_method":"automatic","created":1686038305,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFumbLG0AaCHwVL1MTen5gS","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFumaLG0AaCHwVLLYpnkmLA","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_EDWGbK1pksSwvq","idempotency_key":"3c541806-b7b3-4ef7-b7bb-ab0476f1226e"},"type":"payment_intent.succeeded"}
+2023-06-06T07:57:49.862Z - sig: t=1686038306,v1=ebecfbbf3c1ae3f3a2cd0f3f628186bd0dee3897607c04b400e76aea37f93b2c,v0=30f9b1ebd6094c58b9d010548bc6b6d9137b86be16e8d263b92793e2f001dfc7
+2023-06-06T07:57:49.863Z - body: {
+  "id": "evt_3NFumbLG0AaCHwVL1XiGVjcX",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686038306,
+  "data": {
+    "object": {
+      "id": "pi_3NFumbLG0AaCHwVL1bVWuQT4",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFumbLG0AaCHwVL1bVWuQT4_secret_BvB5p6fBcOBrfe9zcOeASc0kQ",
+      "confirmation_method": "automatic",
+      "created": 1686038305,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFumbLG0AaCHwVL1MTen5gS",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFumaLG0AaCHwVLLYpnkmLA",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_EDWGbK1pksSwvq",
+    "idempotency_key": "3c541806-b7b3-4ef7-b7bb-ab0476f1226e"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T07:57:49.864Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T07:57:49.860Z - stripeEvent: {"id":"evt_3NFumbLG0AaCHwVL16aiCd4q","object":"event","api_version":"2022-11-15","created":1686038305,"data":{"object":{"id":"pi_3NFumbLG0AaCHwVL1bVWuQT4","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFumbLG0AaCHwVL1bVWuQT4_secret_BvB5p6fBcOBrfe9zcOeASc0kQ","confirmation_method":"automatic","created":1686038305,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_EDWGbK1pksSwvq","idempotency_key":"3c541806-b7b3-4ef7-b7bb-ab0476f1226e"},"type":"payment_intent.created"}
+2023-06-06T07:57:49.864Z - sig: t=1686038306,v1=9ab789916f1fcc8659c69c98631fbbd0bfc81ad4d187df15224f9ae031bcffc3,v0=b53e5160426fa7c66176703f95521308ba360e9278da03abf11714371be0eaed
+2023-06-06T07:57:49.864Z - body: {
+  "id": "evt_3NFumbLG0AaCHwVL16aiCd4q",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686038305,
+  "data": {
+    "object": {
+      "id": "pi_3NFumbLG0AaCHwVL1bVWuQT4",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFumbLG0AaCHwVL1bVWuQT4_secret_BvB5p6fBcOBrfe9zcOeASc0kQ",
+      "confirmation_method": "automatic",
+      "created": 1686038305,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_EDWGbK1pksSwvq",
+    "idempotency_key": "3c541806-b7b3-4ef7-b7bb-ab0476f1226e"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T07:57:49.864Z - stripeEvent.type: payment_intent.created
+2023-06-06T07:57:49.860Z - stripeEvent: {"id":"evt_1NFumcLG0AaCHwVLah7HiRBc","object":"event","api_version":"2022-11-15","created":1686038306,"data":{"object":{"id":"cs_test_a1DhvwHGrNZBKopIW3Phsk4Wl9CEH3Evuuivvi5HLHPj5eNfWcgTzi2jSU","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686038276,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686124676,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFumbLG0AaCHwVL1bVWuQT4","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T07:57:49.863Z - sig: t=1686038306,v1=5aacba6f3ca0fb0ece6f2aa2912629da4b5a34d474fafb7158877582db1b38c3,v0=55b35f806883e5f2615d72531602ac2d1db9ddb56943c79c2845929152534d6e
+2023-06-06T07:57:49.864Z - body: {
+  "id": "evt_1NFumcLG0AaCHwVLah7HiRBc",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686038306,
+  "data": {
+    "object": {
+      "id": "cs_test_a1DhvwHGrNZBKopIW3Phsk4Wl9CEH3Evuuivvi5HLHPj5eNfWcgTzi2jSU",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686038276,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686124676,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFumbLG0AaCHwVL1bVWuQT4",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T07:57:49.864Z - session: {"id":"cs_test_a1DhvwHGrNZBKopIW3Phsk4Wl9CEH3Evuuivvi5HLHPj5eNfWcgTzi2jSU","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686038276,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686124676,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFumbLG0AaCHwVL1bVWuQT4","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T07:57:49.864Z - newMembershipData: {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T07:57:49.864Z - stripeEvent.type: checkout.session.completed
+2023-06-06T07:57:50.297Z - newMembership: {
+  membershipType: 'adult',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647ee6fec74a93d4afd626c4")
+}
+2023-06-06T07:57:50.297Z - userID: 64799cbe9214ce0c4dc2a410
+2023-06-06T07:57:50.475Z - checkUser: {
+  _id: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  name: 'Gaurav Sudarshan Rai',
+  email: 'gauravrupamrai677@gmail.com',
+  membership: [
+    {
+      _id: new ObjectId("647e66bbf2bdc55e3244620e"),
+      user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+      membershipType: 'child',
+      member1Name: 'Gaurav Rai',
+      member1DateOfBirth: 2023-02-17T00:00:00.000Z,
+      __v: 0
+    }
+  ],
+  role: 'user',
+  createdAt: 2023-06-02T07:39:38.570Z,
+  addresses: [
+    {
+      country: 'India',
+      city: 'Mumbai',
+      address1: '401, AWing',
+      address2: 'Shree Sai Leela Tower',
+      zipCode: 4000072,
+      addressType: 'Home',
+      _id: new ObjectId("6479e40b29e0cce756239993")
+    }
+  ],
+  updatedAt: 2023-06-02T07:39:44.292Z,
+  __v: 8,
+  phoneNumber: 919969519943,
+  emailPreferences: []
+}
+2023-06-06T07:57:50.480Z - Error handling Stripe webhook: ValidationError: user: Path `user` is required.
+2023-06-06T08:27:44.147Z - stripeEvent: {"id":"evt_3NFvFXLG0AaCHwVL1iEiToaW","object":"event","api_version":"2022-11-15","created":1686040100,"data":{"object":{"id":"ch_3NFvFXLG0AaCHwVL13lDB7i3","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFvFXLG0AaCHwVL1ea9vWwq","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686040099,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":42,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFvFXLG0AaCHwVL18gPGeQy","payment_method":"pm_1NFvFWLG0AaCHwVLgErqOuIJ","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2056,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKKTc-6MGMgZIt1MnnSw6LBaBjjmHp1wFOrWZ52cZSL1e43N9sPo5J9MB1y-FdCcvtl6YnYKUC3B7Ug24","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_hk1vj2USxRgGS2","idempotency_key":"beb3d300-6c86-48c6-ac6f-785efbb40533"},"type":"charge.succeeded"}
+2023-06-06T08:27:44.152Z - sig: t=1686040100,v1=7a81b13dfc0b958f143c5e02768691503c719d077237ba05eb0d136a6f6dca13,v0=6377f09055ea3d520f59db9cb7588d723ec2c8a911cd685c0daa0e65d7f77516
+2023-06-06T08:27:44.153Z - body: {
+  "id": "evt_3NFvFXLG0AaCHwVL1iEiToaW",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040100,
+  "data": {
+    "object": {
+      "id": "ch_3NFvFXLG0AaCHwVL13lDB7i3",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFvFXLG0AaCHwVL1ea9vWwq",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686040099,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 42,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFvFXLG0AaCHwVL18gPGeQy",
+      "payment_method": "pm_1NFvFWLG0AaCHwVLgErqOuIJ",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2056,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKKTc-6MGMgZIt1MnnSw6LBaBjjmHp1wFOrWZ52cZSL1e43N9sPo5J9MB1y-FdCcvtl6YnYKUC3B7Ug24",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_hk1vj2USxRgGS2",
+    "idempotency_key": "beb3d300-6c86-48c6-ac6f-785efbb40533"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T08:27:44.153Z - stripeEvent.type: charge.succeeded
+2023-06-06T08:27:44.209Z - stripeEvent: {"id":"evt_1NFvFYLG0AaCHwVLucVfUAB5","object":"event","api_version":"2022-11-15","created":1686040100,"data":{"object":{"id":"cs_test_a1BAIInmR78LoVG8QKQPbfle1PCzzCkEPxDOBYvfwkuGOhUM3ncjCrTd5y","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040073,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126473,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvFXLG0AaCHwVL18gPGeQy","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T08:27:44.213Z - body: {
+  "id": "evt_1NFvFYLG0AaCHwVLucVfUAB5",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040100,
+  "data": {
+    "object": {
+      "id": "cs_test_a1BAIInmR78LoVG8QKQPbfle1PCzzCkEPxDOBYvfwkuGOhUM3ncjCrTd5y",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686040073,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686126473,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFvFXLG0AaCHwVL18gPGeQy",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T08:27:44.212Z - sig: t=1686040100,v1=ed24ce2c8be848967d8657931e5455540379d6b7abbb3af23d7d839ad6aaec62,v0=e236f20c8d0226a8f207f1a64e46926544fa61ec9777db7df8368c114d42880a
+2023-06-06T08:27:44.214Z - newMembershipData: {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T08:27:44.213Z - stripeEvent.type: checkout.session.completed
+2023-06-06T08:27:44.214Z - session: {"id":"cs_test_a1BAIInmR78LoVG8QKQPbfle1PCzzCkEPxDOBYvfwkuGOhUM3ncjCrTd5y","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040073,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126473,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"userId\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvFXLG0AaCHwVL18gPGeQy","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T08:27:44.284Z - stripeEvent: {"id":"evt_3NFvFXLG0AaCHwVL1SJlYB2a","object":"event","api_version":"2022-11-15","created":1686040099,"data":{"object":{"id":"pi_3NFvFXLG0AaCHwVL18gPGeQy","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvFXLG0AaCHwVL18gPGeQy_secret_nQbTeeAhchmbSpQsrYIC8pFrJ","confirmation_method":"automatic","created":1686040099,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_hk1vj2USxRgGS2","idempotency_key":"beb3d300-6c86-48c6-ac6f-785efbb40533"},"type":"payment_intent.created"}
+2023-06-06T08:27:44.285Z - sig: t=1686040100,v1=9ecc66a6832277ec195234f997aef7daf656674bcd46651ba9a917613a450f6e,v0=f6208178f2052409a7c168d3c327e9d56e9b95595859b856099ebbe10f320b97
+2023-06-06T08:27:44.285Z - body: {
+  "id": "evt_3NFvFXLG0AaCHwVL1SJlYB2a",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040099,
+  "data": {
+    "object": {
+      "id": "pi_3NFvFXLG0AaCHwVL18gPGeQy",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvFXLG0AaCHwVL18gPGeQy_secret_nQbTeeAhchmbSpQsrYIC8pFrJ",
+      "confirmation_method": "automatic",
+      "created": 1686040099,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_hk1vj2USxRgGS2",
+    "idempotency_key": "beb3d300-6c86-48c6-ac6f-785efbb40533"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T08:27:44.285Z - stripeEvent.type: payment_intent.created
+2023-06-06T08:27:44.338Z - stripeEvent: {"id":"evt_3NFvFXLG0AaCHwVL1PfCQcpE","object":"event","api_version":"2022-11-15","created":1686040100,"data":{"object":{"id":"pi_3NFvFXLG0AaCHwVL18gPGeQy","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvFXLG0AaCHwVL18gPGeQy_secret_nQbTeeAhchmbSpQsrYIC8pFrJ","confirmation_method":"automatic","created":1686040099,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFvFXLG0AaCHwVL13lDB7i3","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFvFWLG0AaCHwVLgErqOuIJ","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_hk1vj2USxRgGS2","idempotency_key":"beb3d300-6c86-48c6-ac6f-785efbb40533"},"type":"payment_intent.succeeded"}
+2023-06-06T08:27:44.345Z - sig: t=1686040100,v1=0fbf6e1d3356c771aee5501ef266af726bdd231c19b77ee602ef3de08516dcd5,v0=7df0e53bf98ee61113a05b1045914a62393dc3654e3e1de244a280fa804386b7
+2023-06-06T08:27:44.345Z - body: {
+  "id": "evt_3NFvFXLG0AaCHwVL1PfCQcpE",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040100,
+  "data": {
+    "object": {
+      "id": "pi_3NFvFXLG0AaCHwVL18gPGeQy",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvFXLG0AaCHwVL18gPGeQy_secret_nQbTeeAhchmbSpQsrYIC8pFrJ",
+      "confirmation_method": "automatic",
+      "created": 1686040099,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFvFXLG0AaCHwVL13lDB7i3",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFvFWLG0AaCHwVLgErqOuIJ",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_hk1vj2USxRgGS2",
+    "idempotency_key": "beb3d300-6c86-48c6-ac6f-785efbb40533"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T08:27:44.345Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T08:27:44.675Z - Error handling Stripe webhook: ObjectParameterError: Parameter "obj" to Document() must be an object, got {"userId":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T08:33:20.031Z - stripeEvent: {"id":"evt_3NFvKxLG0AaCHwVL0aH716Y9","object":"event","api_version":"2022-11-15","created":1686040436,"data":{"object":{"id":"ch_3NFvKxLG0AaCHwVL0qyzfm5x","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFvKxLG0AaCHwVL02WrfPUT","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686040435,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":15,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFvKxLG0AaCHwVL0a7KXvqx","payment_method":"pm_1NFvKwLG0AaCHwVLB44k82Tr","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2026,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKPTe-6MGMgYL05uD8GE6LBaR7NWqbKfGXOUvQTZ0yKJH3LpKVNBOUot3Lgk-NYe9cM615sTwTGkoP6CI","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_YYdzzYtsH3ynJQ","idempotency_key":"79a7e9d9-c420-4ee2-b25b-6536d8930ab5"},"type":"charge.succeeded"}
+2023-06-06T08:33:20.036Z - sig: t=1686040436,v1=f349d361ffcce4a3d736a86c350efc4271336c7cb8f29f785b7a1950b4a2151b,v0=53192167bc6778e6d3664b9a17696561ee53fd99c4ae31867adc92acb5afb058
+2023-06-06T08:33:20.037Z - body: {
+  "id": "evt_3NFvKxLG0AaCHwVL0aH716Y9",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040436,
+  "data": {
+    "object": {
+      "id": "ch_3NFvKxLG0AaCHwVL0qyzfm5x",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFvKxLG0AaCHwVL02WrfPUT",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686040435,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 15,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFvKxLG0AaCHwVL0a7KXvqx",
+      "payment_method": "pm_1NFvKwLG0AaCHwVLB44k82Tr",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2026,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKPTe-6MGMgYL05uD8GE6LBaR7NWqbKfGXOUvQTZ0yKJH3LpKVNBOUot3Lgk-NYe9cM615sTwTGkoP6CI",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_YYdzzYtsH3ynJQ",
+    "idempotency_key": "79a7e9d9-c420-4ee2-b25b-6536d8930ab5"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T08:33:20.037Z - stripeEvent.type: charge.succeeded
+2023-06-06T08:33:20.044Z - stripeEvent: {"id":"evt_1NFvKyLG0AaCHwVLcTqkAXGo","object":"event","api_version":"2022-11-15","created":1686040436,"data":{"object":{"id":"cs_test_a1kb8SoMwxEs8UQTWTyah6ozkF9wGWDChLyS8ufhzrdKziIIDTMQoT3dw9","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040406,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126806,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvKxLG0AaCHwVL0a7KXvqx","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T08:33:20.045Z - sig: t=1686040436,v1=caedef7440c3cdeb2a8fdc98f73844c80ddbcc16ac918e4af1cc4c712e2d5c3a,v0=003226bdeda34f92f993e69bff41ec7fe6b6b0bb32efc6c12d1c11ed63f4e245
+2023-06-06T08:33:20.046Z - body: {
+  "id": "evt_1NFvKyLG0AaCHwVLcTqkAXGo",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040436,
+  "data": {
+    "object": {
+      "id": "cs_test_a1kb8SoMwxEs8UQTWTyah6ozkF9wGWDChLyS8ufhzrdKziIIDTMQoT3dw9",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686040406,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686126806,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFvKxLG0AaCHwVL0a7KXvqx",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T08:33:20.046Z - stripeEvent.type: checkout.session.completed
+2023-06-06T08:33:20.047Z - session: {"id":"cs_test_a1kb8SoMwxEs8UQTWTyah6ozkF9wGWDChLyS8ufhzrdKziIIDTMQoT3dw9","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040406,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126806,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvKxLG0AaCHwVL0a7KXvqx","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T08:33:20.047Z - newMembershipData: {"user":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T08:33:20.313Z - stripeEvent: {"id":"evt_3NFvKxLG0AaCHwVL0f1isUp2","object":"event","api_version":"2022-11-15","created":1686040435,"data":{"object":{"id":"pi_3NFvKxLG0AaCHwVL0a7KXvqx","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvKxLG0AaCHwVL0a7KXvqx_secret_g53eSFXBsrb2ElZ1se8mskdkR","confirmation_method":"automatic","created":1686040435,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_YYdzzYtsH3ynJQ","idempotency_key":"79a7e9d9-c420-4ee2-b25b-6536d8930ab5"},"type":"payment_intent.created"}
+2023-06-06T08:33:20.314Z - sig: t=1686040436,v1=7df5a0f1ab5cef7eda82e61d54fedd4c9c6d1f4e557b25f9684bc3153018b99b,v0=a609c322d0aa3487f8f93e930677a49e1c3bf2d799b0170b7e2c97dca2b19860
+2023-06-06T08:33:20.314Z - body: {
+  "id": "evt_3NFvKxLG0AaCHwVL0f1isUp2",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040435,
+  "data": {
+    "object": {
+      "id": "pi_3NFvKxLG0AaCHwVL0a7KXvqx",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvKxLG0AaCHwVL0a7KXvqx_secret_g53eSFXBsrb2ElZ1se8mskdkR",
+      "confirmation_method": "automatic",
+      "created": 1686040435,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_YYdzzYtsH3ynJQ",
+    "idempotency_key": "79a7e9d9-c420-4ee2-b25b-6536d8930ab5"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T08:33:20.314Z - stripeEvent.type: payment_intent.created
+2023-06-06T08:33:20.668Z - newMembership: {
+  user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  membershipType: 'adult',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647eef50142b683a3788a4fa")
+}
+2023-06-06T08:33:20.669Z - userID: undefined
+2023-06-06T08:33:20.930Z - checkUser: null
+2023-06-06T08:33:22.632Z - stripeEvent: {"id":"evt_3NFvKxLG0AaCHwVL0cA0JRox","object":"event","api_version":"2022-11-15","created":1686040436,"data":{"object":{"id":"pi_3NFvKxLG0AaCHwVL0a7KXvqx","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvKxLG0AaCHwVL0a7KXvqx_secret_g53eSFXBsrb2ElZ1se8mskdkR","confirmation_method":"automatic","created":1686040435,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFvKxLG0AaCHwVL0qyzfm5x","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFvKwLG0AaCHwVLB44k82Tr","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_YYdzzYtsH3ynJQ","idempotency_key":"79a7e9d9-c420-4ee2-b25b-6536d8930ab5"},"type":"payment_intent.succeeded"}
+2023-06-06T08:33:22.633Z - sig: t=1686040436,v1=77fa2c99b5a8aba4f903c1f5b3da38749ee139fe54e9723ad1f807a9c6efa6a6,v0=1debe9860e854a25eb008697143e92730472aadf5952e92543876a73deb19c2d
+2023-06-06T08:33:22.633Z - body: {
+  "id": "evt_3NFvKxLG0AaCHwVL0cA0JRox",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040436,
+  "data": {
+    "object": {
+      "id": "pi_3NFvKxLG0AaCHwVL0a7KXvqx",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvKxLG0AaCHwVL0a7KXvqx_secret_g53eSFXBsrb2ElZ1se8mskdkR",
+      "confirmation_method": "automatic",
+      "created": 1686040435,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFvKxLG0AaCHwVL0qyzfm5x",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFvKwLG0AaCHwVLB44k82Tr",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_YYdzzYtsH3ynJQ",
+    "idempotency_key": "79a7e9d9-c420-4ee2-b25b-6536d8930ab5"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T08:33:22.633Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T08:37:14.799Z - stripeEvent: {"id":"evt_1NFvOkLG0AaCHwVLTfJJmJMe","object":"event","api_version":"2022-11-15","created":1686040670,"data":{"object":{"id":"cs_test_a1U6gq7nVC8lOU5NJMvHrSH4ZvzUBWRNkD9mrTrQLbp9b4S6HeIYtLdoOC","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040582,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Sudarshan Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126982,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvOjLG0AaCHwVL17pYY3ch","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T08:37:14.801Z - body: {
+  "id": "evt_1NFvOkLG0AaCHwVLTfJJmJMe",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040670,
+  "data": {
+    "object": {
+      "id": "cs_test_a1U6gq7nVC8lOU5NJMvHrSH4ZvzUBWRNkD9mrTrQLbp9b4S6HeIYtLdoOC",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686040582,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Sudarshan Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686126982,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFvOjLG0AaCHwVL17pYY3ch",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T08:37:14.801Z - sig: t=1686040670,v1=59a70bd775c338ce038c1f120c76bf1505f8cab44e5cb46d10a3632543585ed4,v0=61ce011f8ffe7b11c1bd76dc097fb3d1d07ec614dceabe34631fa184d3c8b34d
+2023-06-06T08:37:14.801Z - stripeEvent.type: checkout.session.completed
+2023-06-06T08:37:14.802Z - newMembershipData: {"user":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T08:37:14.802Z - session: {"id":"cs_test_a1U6gq7nVC8lOU5NJMvHrSH4ZvzUBWRNkD9mrTrQLbp9b4S6HeIYtLdoOC","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686040582,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Sudarshan Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686126982,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFvOjLG0AaCHwVL17pYY3ch","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T08:37:14.840Z - stripeEvent: {"id":"evt_3NFvOjLG0AaCHwVL1MNuDfXe","object":"event","api_version":"2022-11-15","created":1686040670,"data":{"object":{"id":"pi_3NFvOjLG0AaCHwVL17pYY3ch","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvOjLG0AaCHwVL17pYY3ch_secret_PC8TOFJQjjm58ALOacWc76iE0","confirmation_method":"automatic","created":1686040669,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFvOjLG0AaCHwVL1jBnQ6s4","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFvOjLG0AaCHwVLx2t54mZK","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_16evE6FWYHlbIZ","idempotency_key":"c0f90cb7-c345-4c9f-b959-959f85beead1"},"type":"payment_intent.succeeded"}
+2023-06-06T08:37:14.841Z - sig: t=1686040671,v1=e99a1165f9267a414e22997dab318cbb3cbb123976c9fb497e4de5c39f02007f,v0=8846810719bfb6ec529794b4eac24175d260818484c38efda7095452289bcdeb
+2023-06-06T08:37:14.841Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T08:37:14.841Z - body: {
+  "id": "evt_3NFvOjLG0AaCHwVL1MNuDfXe",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040670,
+  "data": {
+    "object": {
+      "id": "pi_3NFvOjLG0AaCHwVL17pYY3ch",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvOjLG0AaCHwVL17pYY3ch_secret_PC8TOFJQjjm58ALOacWc76iE0",
+      "confirmation_method": "automatic",
+      "created": 1686040669,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFvOjLG0AaCHwVL1jBnQ6s4",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFvOjLG0AaCHwVLx2t54mZK",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_16evE6FWYHlbIZ",
+    "idempotency_key": "c0f90cb7-c345-4c9f-b959-959f85beead1"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T08:37:14.875Z - stripeEvent: {"id":"evt_3NFvOjLG0AaCHwVL1igmkn2A","object":"event","api_version":"2022-11-15","created":1686040670,"data":{"object":{"id":"ch_3NFvOjLG0AaCHwVL1jBnQ6s4","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFvOjLG0AaCHwVL1yoiWq0l","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Sudarshan Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686040669,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":27,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFvOjLG0AaCHwVL17pYY3ch","payment_method":"pm_1NFvOjLG0AaCHwVLx2t54mZK","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2028,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKN7g-6MGMgaT2Ko6bzo6LBailXwQpxHi9wbm1FgpE9l_dumglY2kpqVHl1dn8KnjclliRzA_htS9o5zw","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_16evE6FWYHlbIZ","idempotency_key":"c0f90cb7-c345-4c9f-b959-959f85beead1"},"type":"charge.succeeded"}
+2023-06-06T08:37:14.876Z - sig: t=1686040670,v1=739db4583b07195f4bc186b59a87899dc984a89f7c84c4adae196d2f604db9c7,v0=a50d508d241f4a3b80d9535b5568f3a58be43f9066594922eed369a991c49edf
+2023-06-06T08:37:14.876Z - stripeEvent.type: charge.succeeded
+2023-06-06T08:37:14.876Z - body: {
+  "id": "evt_3NFvOjLG0AaCHwVL1igmkn2A",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040670,
+  "data": {
+    "object": {
+      "id": "ch_3NFvOjLG0AaCHwVL1jBnQ6s4",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFvOjLG0AaCHwVL1yoiWq0l",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Sudarshan Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686040669,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 27,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFvOjLG0AaCHwVL17pYY3ch",
+      "payment_method": "pm_1NFvOjLG0AaCHwVLx2t54mZK",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2028,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKN7g-6MGMgaT2Ko6bzo6LBailXwQpxHi9wbm1FgpE9l_dumglY2kpqVHl1dn8KnjclliRzA_htS9o5zw",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_16evE6FWYHlbIZ",
+    "idempotency_key": "c0f90cb7-c345-4c9f-b959-959f85beead1"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T08:37:15.079Z - stripeEvent: {"id":"evt_3NFvOjLG0AaCHwVL1CVHgRN8","object":"event","api_version":"2022-11-15","created":1686040669,"data":{"object":{"id":"pi_3NFvOjLG0AaCHwVL17pYY3ch","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFvOjLG0AaCHwVL17pYY3ch_secret_PC8TOFJQjjm58ALOacWc76iE0","confirmation_method":"automatic","created":1686040669,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_16evE6FWYHlbIZ","idempotency_key":"c0f90cb7-c345-4c9f-b959-959f85beead1"},"type":"payment_intent.created"}
+2023-06-06T08:37:15.080Z - body: {
+  "id": "evt_3NFvOjLG0AaCHwVL1CVHgRN8",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686040669,
+  "data": {
+    "object": {
+      "id": "pi_3NFvOjLG0AaCHwVL17pYY3ch",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFvOjLG0AaCHwVL17pYY3ch_secret_PC8TOFJQjjm58ALOacWc76iE0",
+      "confirmation_method": "automatic",
+      "created": 1686040669,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_16evE6FWYHlbIZ",
+    "idempotency_key": "c0f90cb7-c345-4c9f-b959-959f85beead1"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T08:37:15.080Z - stripeEvent.type: payment_intent.created
+2023-06-06T08:37:15.080Z - sig: t=1686040671,v1=e40845560d02a1989d8af32d0f6d7cee210b2a4844649644eaa1b8cee2b23b19,v0=89eef2e214314f1d6a1d76740fa5d7e1478aae98e000c62b7bd0c08bd0c773f7
+2023-06-06T08:37:15.705Z - newMembership: {
+  user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  membershipType: 'adult',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647ef03bfee9aeac2cb21409")
+}
+2023-06-06T08:37:15.705Z - userID: 64799cbe9214ce0c4dc2a410
+2023-06-06T08:37:16.024Z - checkUser: {
+  _id: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  name: 'Gaurav Sudarshan Rai',
+  email: 'gauravrupamrai677@gmail.com',
+  membership: [
+    {
+      _id: new ObjectId("647e66bbf2bdc55e3244620e"),
+      user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+      membershipType: 'child',
+      member1Name: 'Gaurav Rai',
+      member1DateOfBirth: 2023-02-17T00:00:00.000Z,
+      __v: 0
+    }
+  ],
+  role: 'user',
+  createdAt: 2023-06-02T07:39:38.570Z,
+  addresses: [
+    {
+      country: 'India',
+      city: 'Mumbai',
+      address1: '401, AWing',
+      address2: 'Shree Sai Leela Tower',
+      zipCode: 4000072,
+      addressType: 'Home',
+      _id: new ObjectId("6479e40b29e0cce756239993")
+    }
+  ],
+  updatedAt: 2023-06-02T07:39:44.292Z,
+  __v: 8,
+  phoneNumber: 919969519943,
+  emailPreferences: []
+}
+2023-06-06T09:29:59.794Z - sig: t=1686043834,v1=78a9c541db34b10e955eb506d5db4874cc7a40bf93ce2b1757b7d0b9b12e1806,v0=aea89a4abef11c7a6f66b09ebcdd913dfdd446a71d846838dfc9085b18bfe121
+2023-06-06T09:29:59.794Z - body: {
+  "id": "evt_3NFwDkLG0AaCHwVL1dHHIxtK",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686043832,
+  "data": {
+    "object": {
+      "id": "pi_3NFwDkLG0AaCHwVL1uS9SdeT",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFwDkLG0AaCHwVL1uS9SdeT_secret_nk920nhjTboFkMX9p5iYB9C2W",
+      "confirmation_method": "automatic",
+      "created": 1686043832,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_cmLFDGXIRdtQl4",
+    "idempotency_key": "9a4f7e8b-1b17-4f8a-899c-8bef84715e84"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T09:29:59.793Z - stripeEvent: {"id":"evt_3NFwDkLG0AaCHwVL1dHHIxtK","object":"event","api_version":"2022-11-15","created":1686043832,"data":{"object":{"id":"pi_3NFwDkLG0AaCHwVL1uS9SdeT","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFwDkLG0AaCHwVL1uS9SdeT_secret_nk920nhjTboFkMX9p5iYB9C2W","confirmation_method":"automatic","created":1686043832,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_cmLFDGXIRdtQl4","idempotency_key":"9a4f7e8b-1b17-4f8a-899c-8bef84715e84"},"type":"payment_intent.created"}
+2023-06-06T09:29:59.793Z - sig: t=1686043834,v1=a6ed187573f366e4857a22aa8ede462c9d195dde7cc821806f44aa57b9dba208,v0=e8e9e27a509931fbff0d4cd39909cf857f20eaadb38d61c44850ce281a4e0441
+2023-06-06T09:29:59.794Z - stripeEvent.type: payment_intent.created
+2023-06-06T09:29:59.792Z - stripeEvent: {"id":"evt_3NFwDkLG0AaCHwVL1r5fc2Sm","object":"event","api_version":"2022-11-15","created":1686043833,"data":{"object":{"id":"pi_3NFwDkLG0AaCHwVL1uS9SdeT","object":"payment_intent","amount":8500,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":8500,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NFwDkLG0AaCHwVL1uS9SdeT_secret_nk920nhjTboFkMX9p5iYB9C2W","confirmation_method":"automatic","created":1686043832,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NFwDkLG0AaCHwVL1lgLPjnY","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NFwDkLG0AaCHwVLOIiFXeDT","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_cmLFDGXIRdtQl4","idempotency_key":"9a4f7e8b-1b17-4f8a-899c-8bef84715e84"},"type":"payment_intent.succeeded"}
+2023-06-06T09:29:59.794Z - body: {
+  "id": "evt_3NFwDkLG0AaCHwVL1r5fc2Sm",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686043833,
+  "data": {
+    "object": {
+      "id": "pi_3NFwDkLG0AaCHwVL1uS9SdeT",
+      "object": "payment_intent",
+      "amount": 8500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 8500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NFwDkLG0AaCHwVL1uS9SdeT_secret_nk920nhjTboFkMX9p5iYB9C2W",
+      "confirmation_method": "automatic",
+      "created": 1686043832,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NFwDkLG0AaCHwVL1lgLPjnY",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NFwDkLG0AaCHwVLOIiFXeDT",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_cmLFDGXIRdtQl4",
+    "idempotency_key": "9a4f7e8b-1b17-4f8a-899c-8bef84715e84"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T09:29:59.792Z - stripeEvent: {"id":"evt_3NFwDkLG0AaCHwVL15ywtHUU","object":"event","api_version":"2022-11-15","created":1686043833,"data":{"object":{"id":"ch_3NFwDkLG0AaCHwVL1lgLPjnY","object":"charge","amount":8500,"amount_captured":8500,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NFwDkLG0AaCHwVL1YdbBSe0","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686043833,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":22,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NFwDkLG0AaCHwVL1uS9SdeT","payment_method":"pm_1NFwDkLG0AaCHwVLOIiFXeDT","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2026,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKLr5-6MGMgb2_nlUhX86LBYkCaWNaUIg9U79Q3-No4KuDH-FQ4QVsN0Q2fIPuOf2HjkriAt61NlBreSm","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_cmLFDGXIRdtQl4","idempotency_key":"9a4f7e8b-1b17-4f8a-899c-8bef84715e84"},"type":"charge.succeeded"}
+2023-06-06T09:29:59.795Z - body: {
+  "id": "evt_3NFwDkLG0AaCHwVL15ywtHUU",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686043833,
+  "data": {
+    "object": {
+      "id": "ch_3NFwDkLG0AaCHwVL1lgLPjnY",
+      "object": "charge",
+      "amount": 8500,
+      "amount_captured": 8500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NFwDkLG0AaCHwVL1YdbBSe0",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686043833,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 22,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NFwDkLG0AaCHwVL1uS9SdeT",
+      "payment_method": "pm_1NFwDkLG0AaCHwVLOIiFXeDT",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2026,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKLr5-6MGMgb2_nlUhX86LBYkCaWNaUIg9U79Q3-No4KuDH-FQ4QVsN0Q2fIPuOf2HjkriAt61NlBreSm",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_cmLFDGXIRdtQl4",
+    "idempotency_key": "9a4f7e8b-1b17-4f8a-899c-8bef84715e84"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T09:29:59.794Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T09:29:59.795Z - sig: t=1686043834,v1=e70f743624f8e9ccc1d042d3fbefa9c7ecd17ce29dc3b4b4c6f550975f2747ca,v0=cdd0621d8f4bad7d89bd6ba9fd15e37b7e252da52f2d912342f1cb7ed3d34537
+2023-06-06T09:29:59.795Z - stripeEvent.type: charge.succeeded
+2023-06-06T09:29:59.794Z - sig: t=1686043834,v1=704161a38bd16c569b9a2a05d482469d7954b9fbfe155f2d0529cab100414410,v0=f6ce6fe81a53251b4f1ef8659a5b51603401aac657232208a146f102d5f0a6b3
+2023-06-06T09:29:59.792Z - stripeEvent: {"id":"evt_1NFwDmLG0AaCHwVLDdqHN71j","object":"event","api_version":"2022-11-15","created":1686043834,"data":{"object":{"id":"cs_test_a1TFVEOpnB695KonlQMTXPsNxOmKoiyd49tFiTQ8mXvB21aJflxQC0pynT","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686043812,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686130211,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFwDkLG0AaCHwVL1uS9SdeT","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T09:29:59.794Z - body: {
+  "id": "evt_1NFwDmLG0AaCHwVLDdqHN71j",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686043834,
+  "data": {
+    "object": {
+      "id": "cs_test_a1TFVEOpnB695KonlQMTXPsNxOmKoiyd49tFiTQ8mXvB21aJflxQC0pynT",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 8500,
+      "amount_total": 8500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/cancel",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686043812,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686130211,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NFwDkLG0AaCHwVL1uS9SdeT",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T09:29:59.794Z - newMembershipData: {"user":"64799cbe9214ce0c4dc2a410","membershipType":"adult","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T09:29:59.794Z - session: {"id":"cs_test_a1TFVEOpnB695KonlQMTXPsNxOmKoiyd49tFiTQ8mXvB21aJflxQC0pynT","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":8500,"amount_total":8500,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/cancel","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686043812,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686130211,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"adult\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NFwDkLG0AaCHwVL1uS9SdeT","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T09:29:59.794Z - stripeEvent.type: checkout.session.completed
+2023-06-06T09:30:00.308Z - newMembership: {
+  user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  membershipType: 'adult',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647efc98c43f752df9268c02")
+}
+2023-06-06T09:30:00.308Z - userID: 64799cbe9214ce0c4dc2a410
+2023-06-06T09:30:00.612Z - checkUser: {
+  _id: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  name: 'Gaurav Sudarshan Rai',
+  email: 'gauravrupamrai677@gmail.com',
+  membership: [
+    {
+      _id: new ObjectId("647e66bbf2bdc55e3244620e"),
+      user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+      membershipType: 'child',
+      member1Name: 'Gaurav Rai',
+      member1DateOfBirth: 2023-02-17T00:00:00.000Z,
+      __v: 0
+    }
+  ],
+  role: 'user',
+  createdAt: 2023-06-02T07:39:38.570Z,
+  addresses: [
+    {
+      country: 'India',
+      city: 'Mumbai',
+      address1: '401, AWing',
+      address2: 'Shree Sai Leela Tower',
+      zipCode: 4000072,
+      addressType: 'Home',
+      _id: new ObjectId("6479e40b29e0cce756239993")
+    }
+  ],
+  updatedAt: 2023-06-02T07:39:44.292Z,
+  __v: 9,
+  phoneNumber: 919969519943,
+  emailPreferences: []
+}
+2023-06-06T13:49:40.746Z - sig: t=1686059417,v1=434d0006c3c7080a11e568f1e487a1d2adc14a3738955ae20ccf6d4babcd673a,v0=414bd139f8b81d2f9a39ee03d93ea3a1ede1e67a2eaa5e4072756f9ee09d6aab
+2023-06-06T13:49:40.746Z - stripeEvent.type: payment_intent.succeeded
+2023-06-06T13:49:40.746Z - body: {
+  "id": "evt_3NG0H5LG0AaCHwVL1hzikuT2",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686059416,
+  "data": {
+    "object": {
+      "id": "pi_3NG0H5LG0AaCHwVL1cU55bxL",
+      "object": "payment_intent",
+      "amount": 4000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 4000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NG0H5LG0AaCHwVL1cU55bxL_secret_RN8CCmbgwljp4AeqcuuS8cfuM",
+      "confirmation_method": "automatic",
+      "created": 1686059415,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3NG0H5LG0AaCHwVL1LYZdH8i",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1NG0H5LG0AaCHwVLhZpDrV3d",
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_jYKxAUqz6np0s2",
+    "idempotency_key": "510134bb-d8ce-429a-b4af-86196c1ed592"
+  },
+  "type": "payment_intent.succeeded"
+}
+2023-06-06T13:49:40.745Z - stripeEvent: {"id":"evt_3NG0H5LG0AaCHwVL1hzikuT2","object":"event","api_version":"2022-11-15","created":1686059416,"data":{"object":{"id":"pi_3NG0H5LG0AaCHwVL1cU55bxL","object":"payment_intent","amount":4000,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":4000,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NG0H5LG0AaCHwVL1cU55bxL_secret_RN8CCmbgwljp4AeqcuuS8cfuM","confirmation_method":"automatic","created":1686059415,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":"ch_3NG0H5LG0AaCHwVL1LYZdH8i","livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":"pm_1NG0H5LG0AaCHwVLhZpDrV3d","payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_jYKxAUqz6np0s2","idempotency_key":"510134bb-d8ce-429a-b4af-86196c1ed592"},"type":"payment_intent.succeeded"}
+2023-06-06T13:49:40.772Z - stripeEvent: {"id":"evt_3NG0H5LG0AaCHwVL1nLRiuTZ","object":"event","api_version":"2022-11-15","created":1686059415,"data":{"object":{"id":"pi_3NG0H5LG0AaCHwVL1cU55bxL","object":"payment_intent","amount":4000,"amount_capturable":0,"amount_details":{"tip":{}},"amount_received":0,"application":null,"application_fee_amount":null,"automatic_payment_methods":null,"canceled_at":null,"cancellation_reason":null,"capture_method":"automatic","client_secret":"pi_3NG0H5LG0AaCHwVL1cU55bxL_secret_RN8CCmbgwljp4AeqcuuS8cfuM","confirmation_method":"automatic","created":1686059415,"currency":"eur","customer":null,"description":null,"invoice":null,"last_payment_error":null,"latest_charge":null,"livemode":false,"metadata":{},"next_action":null,"on_behalf_of":null,"payment_method":null,"payment_method_options":{"card":{"installments":null,"mandate_options":null,"network":null,"request_three_d_secure":"automatic"}},"payment_method_types":["card"],"processing":null,"receipt_email":null,"review":null,"setup_future_usage":null,"shipping":null,"source":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"requires_payment_method","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_jYKxAUqz6np0s2","idempotency_key":"510134bb-d8ce-429a-b4af-86196c1ed592"},"type":"payment_intent.created"}
+2023-06-06T13:49:40.772Z - sig: t=1686059417,v1=de3e1c336be48adb0fc59831761b8beb9329d6119b04b2490a3a04f749fa74f6,v0=dde72f829cfcd8dda18761dbe34784346855ee3eba400fed1836bb8daec36175
+2023-06-06T13:49:40.772Z - body: {
+  "id": "evt_3NG0H5LG0AaCHwVL1nLRiuTZ",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686059415,
+  "data": {
+    "object": {
+      "id": "pi_3NG0H5LG0AaCHwVL1cU55bxL",
+      "object": "payment_intent",
+      "amount": 4000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3NG0H5LG0AaCHwVL1cU55bxL_secret_RN8CCmbgwljp4AeqcuuS8cfuM",
+      "confirmation_method": "automatic",
+      "created": 1686059415,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_jYKxAUqz6np0s2",
+    "idempotency_key": "510134bb-d8ce-429a-b4af-86196c1ed592"
+  },
+  "type": "payment_intent.created"
+}
+2023-06-06T13:49:40.772Z - stripeEvent: {"id":"evt_3NG0H5LG0AaCHwVL1YDhqsZy","object":"event","api_version":"2022-11-15","created":1686059416,"data":{"object":{"id":"ch_3NG0H5LG0AaCHwVL1LYZdH8i","object":"charge","amount":4000,"amount_captured":4000,"amount_refunded":0,"application":null,"application_fee":null,"application_fee_amount":null,"balance_transaction":"txn_3NG0H5LG0AaCHwVL14h8Hj2Q","billing_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null},"calculated_statement_descriptor":"GAURAV RAI","captured":true,"created":1686059416,"currency":"eur","customer":null,"description":null,"destination":null,"dispute":null,"disputed":false,"failure_balance_transaction":null,"failure_code":null,"failure_message":null,"fraud_details":{},"invoice":null,"livemode":false,"metadata":{},"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","risk_score":8,"seller_message":"Payment complete.","type":"authorized"},"paid":true,"payment_intent":"pi_3NG0H5LG0AaCHwVL1cU55bxL","payment_method":"pm_1NG0H5LG0AaCHwVLhZpDrV3d","payment_method_details":{"card":{"brand":"visa","checks":{"address_line1_check":null,"address_postal_code_check":null,"cvc_check":"pass"},"country":"US","exp_month":2,"exp_year":2036,"fingerprint":"9NLEbJKvAy4l0z9s","funding":"credit","installments":null,"last4":"4242","mandate":null,"network":"visa","network_token":{"used":false},"three_d_secure":null,"wallet":null},"type":"card"},"receipt_email":null,"receipt_number":null,"receipt_url":"https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKJnz_KMGMgbQLTEpTUU6LBahmz7KOlhzkNVLbhOKlrbZwB2XmzBsc8NQDrJqrXpCRUiSQERm70WZAseF","refunded":false,"review":null,"shipping":null,"source":null,"source_transfer":null,"statement_descriptor":null,"statement_descriptor_suffix":null,"status":"succeeded","transfer_data":null,"transfer_group":null}},"livemode":false,"pending_webhooks":2,"request":{"id":"req_jYKxAUqz6np0s2","idempotency_key":"510134bb-d8ce-429a-b4af-86196c1ed592"},"type":"charge.succeeded"}
+2023-06-06T13:49:40.773Z - sig: t=1686059417,v1=7b1386061f5535d36ed95f509cbf803f1fbd60101a6251d1acf9579abace393f,v0=aa71c7c6721b0c7c0b719d72f45f56133ea14d81a952b3b85a1cc8776705467f
+2023-06-06T13:49:40.773Z - body: {
+  "id": "evt_3NG0H5LG0AaCHwVL1YDhqsZy",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686059416,
+  "data": {
+    "object": {
+      "id": "ch_3NG0H5LG0AaCHwVL1LYZdH8i",
+      "object": "charge",
+      "amount": 4000,
+      "amount_captured": 4000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3NG0H5LG0AaCHwVL14h8Hj2Q",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "GAURAV RAI",
+      "captured": true,
+      "created": 1686059416,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 8,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3NG0H5LG0AaCHwVL1cU55bxL",
+      "payment_method": "pm_1NG0H5LG0AaCHwVLhZpDrV3d",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2036,
+          "fingerprint": "9NLEbJKvAy4l0z9s",
+          "funding": "credit",
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTkVhTlVMRzBBYUNId1ZMKJnz_KMGMgbQLTEpTUU6LBahmz7KOlhzkNVLbhOKlrbZwB2XmzBsc8NQDrJqrXpCRUiSQERm70WZAseF",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_jYKxAUqz6np0s2",
+    "idempotency_key": "510134bb-d8ce-429a-b4af-86196c1ed592"
+  },
+  "type": "charge.succeeded"
+}
+2023-06-06T13:49:40.773Z - stripeEvent.type: charge.succeeded
+2023-06-06T13:49:40.772Z - stripeEvent.type: payment_intent.created
+2023-06-06T13:49:40.782Z - stripeEvent: {"id":"evt_1NG0H7LG0AaCHwVL00yWlJMD","object":"event","api_version":"2022-11-15","created":1686059417,"data":{"object":{"id":"cs_test_a1ScmllznU9jW7ASaqfFTQBVj2kDAnYLN7PeVDrquevTMyOvq4ORwBYs10","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":4000,"amount_total":4000,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/membership/failed?session_id={CHECKOUT_SESSION_ID}&cancel=true","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686059369,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686145769,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"child\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NG0H5LG0AaCHwVL1cU55bxL","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card","bancontact","eps","giropay","ideal","link"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/membership/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}},"livemode":false,"pending_webhooks":2,"request":{"id":null,"idempotency_key":null},"type":"checkout.session.completed"}
+2023-06-06T13:49:40.783Z - sig: t=1686059417,v1=8d4429925856b983a1bde289d670d2ddaf13abb9030ed348051378417ebfa894,v0=e78ccbb9e332ba64f895d8343b2c5b2d0a6e3fb6fbcc3e806c5926cd1d6c9f16
+2023-06-06T13:49:40.783Z - body: {
+  "id": "evt_1NG0H7LG0AaCHwVL00yWlJMD",
+  "object": "event",
+  "api_version": "2022-11-15",
+  "created": 1686059417,
+  "data": {
+    "object": {
+      "id": "cs_test_a1ScmllznU9jW7ASaqfFTQBVj2kDAnYLN7PeVDrquevTMyOvq4ORwBYs10",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 4000,
+      "amount_total": 4000,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://d2thrwagvcx5mz.cloudfront.net/membership/failed?session_id={CHECKOUT_SESSION_ID}\u0026cancel=true",
+      "client_reference_id": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1686059369,
+      "currency": "eur",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "IE",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "gauravrupamrai677@gmail.com",
+        "name": "Gaurav Rai",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1686145769,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "newMembershipData": "{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"child\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3NG0H5LG0AaCHwVL1cU55bxL",
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card",
+        "bancontact",
+        "eps",
+        "giropay",
+        "ideal",
+        "link"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "https://d2thrwagvcx5mz.cloudfront.net/membership/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2023-06-06T13:49:40.791Z - newMembershipData: {"user":"64799cbe9214ce0c4dc2a410","membershipType":"child","member1Name":"Gaurav Rai","member1DateOfBirth":"1998-02-17"}
+2023-06-06T13:49:40.791Z - session: {"id":"cs_test_a1ScmllznU9jW7ASaqfFTQBVj2kDAnYLN7PeVDrquevTMyOvq4ORwBYs10","object":"checkout.session","after_expiration":null,"allow_promotion_codes":null,"amount_subtotal":4000,"amount_total":4000,"automatic_tax":{"enabled":false,"status":null},"billing_address_collection":null,"cancel_url":"https://d2thrwagvcx5mz.cloudfront.net/membership/failed?session_id={CHECKOUT_SESSION_ID}&cancel=true","client_reference_id":null,"consent":null,"consent_collection":null,"created":1686059369,"currency":"eur","currency_conversion":null,"custom_fields":[],"custom_text":{"shipping_address":null,"submit":null},"customer":null,"customer_creation":"if_required","customer_details":{"address":{"city":null,"country":"IE","line1":null,"line2":null,"postal_code":null,"state":null},"email":"gauravrupamrai677@gmail.com","name":"Gaurav Rai","phone":null,"tax_exempt":"none","tax_ids":[]},"customer_email":null,"expires_at":1686145769,"invoice":null,"invoice_creation":{"enabled":false,"invoice_data":{"account_tax_ids":null,"custom_fields":null,"description":null,"footer":null,"metadata":{},"rendering_options":null}},"livemode":false,"locale":null,"metadata":{"newMembershipData":"{\"user\":\"64799cbe9214ce0c4dc2a410\",\"membershipType\":\"child\",\"member1Name\":\"Gaurav Rai\",\"member1DateOfBirth\":\"1998-02-17\"}"},"mode":"payment","payment_intent":"pi_3NG0H5LG0AaCHwVL1cU55bxL","payment_link":null,"payment_method_collection":"always","payment_method_options":{},"payment_method_types":["card","bancontact","eps","giropay","ideal","link"],"payment_status":"paid","phone_number_collection":{"enabled":false},"recovered_from":null,"setup_intent":null,"shipping_address_collection":null,"shipping_cost":null,"shipping_details":null,"shipping_options":[],"status":"complete","submit_type":null,"subscription":null,"success_url":"https://d2thrwagvcx5mz.cloudfront.net/membership/success?session_id={CHECKOUT_SESSION_ID}","total_details":{"amount_discount":0,"amount_shipping":0,"amount_tax":0},"url":null}
+2023-06-06T13:49:40.783Z - stripeEvent.type: checkout.session.completed
+2023-06-06T13:49:41.433Z - userID: 64799cbe9214ce0c4dc2a410
+2023-06-06T13:49:41.433Z - newMembership: {
+  user: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  membershipType: 'child',
+  member1Name: 'Gaurav Rai',
+  member1DateOfBirth: 1998-02-17T00:00:00.000Z,
+  _id: new ObjectId("647f39751260b596a0247de7")
+}
+2023-06-06T13:49:41.460Z - checkUser: {
+  _id: new ObjectId("64799cbe9214ce0c4dc2a410"),
+  name: 'Gaurav Sudarshan Rai',
+  email: 'gauravrupamrai677@gmail.com',
+  membership: [],
+  role: 'user',
+  createdAt: 2023-06-02T07:39:38.570Z,
+  addresses: [
+    {
+      country: 'India',
+      city: 'Mumbai',
+      address1: '401, AWing',
+      address2: 'Shree Sai Leela Tower',
+      zipCode: 4000072,
+      addressType: 'Home',
+      _id: new ObjectId("6479e40b29e0cce756239993")
+    }
+  ],
+  updatedAt: 2023-06-02T07:39:44.292Z,
+  __v: 10,
+  phoneNumber: 919969519943,
+  emailPreferences: []
+}
+2023-06-06T13:49:50.760Z - Error handling Stripe webhook: MongooseError: Operation `transactions.findOne()` buffering timed out after 10000ms

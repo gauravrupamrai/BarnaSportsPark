@@ -1,12 +1,11 @@
 import { React, useState } from "react";
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { setUserSession } from "../../services/AuthService";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { setUser } from "../../redux/reducers/user";
 
@@ -15,9 +14,7 @@ const loginURL = `${process.env.REACT_APP_APP_URL}/login`;
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const Login = () => {
-  const userDataState = useSelector((state) => state.user.user_data);
   const dispatch = useDispatch();
-  // console.log(userDataState);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,9 +44,6 @@ const Login = () => {
         console.log("Response Data Token:", response.data.body.token);
         console.log("Response Data User:", response.data.body.user);
         dispatch(setUser(response.data.body))
-        // window.setInterval( function() {
-        //   console.log("Token:");
-        // }, 5000)
         navigate("/");
       })
       .catch((error) => {

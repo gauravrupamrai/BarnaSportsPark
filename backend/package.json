@@ -17,6 +17,8 @@
     "serverless": "^3.31.0",
     "serverless-dotenv-plugin": "^6.0.0",
     "serverless-finch": "^4.0.3",
+    "stripe": "^12.8.0",
+    "uuid": "^9.0.0",
     "validator": "^13.9.0"
   },
   "devDependencies": {

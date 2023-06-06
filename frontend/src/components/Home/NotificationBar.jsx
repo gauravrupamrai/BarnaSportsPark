@@ -5,7 +5,7 @@ import axios from "axios";
 const contentGetURL = `${process.env.REACT_APP_APP_URL}/get-notice-for-home`;
 const apiKey = process.env.REACT_APP_API_KEY;
 
-const NotificationBar = ({ notice }) => {
+const NotificationBar = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [noticesNews, setNoticesNews] = useState([]);
 

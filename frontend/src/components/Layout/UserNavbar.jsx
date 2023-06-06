@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserNavLinks from "./UserNavLinks.jsx";
 import {HiOutlineLogout} from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { Divide as Hamburger } from "hamburger-react";
 
 const UserNavbar = () => {
-  const {isAuthenticated, user} = useSelector((state) => state.user);
-  console.log(isAuthenticated, user);
+  const {isAuthenticated, user_data} = useSelector((state) => state.user);
+  console.log(isAuthenticated, user_data);
   const [isOpen, setOpen] = useState(false);
+  const navigate = useNavigate();
   
-  
+  if(!user_data) {
+    navigate("/");
+    return null;
+  }
+
+  const {name} = user_data.user.name;
 
   return (
     <nav className="bg-white ">
@@ -29,7 +35,7 @@ const UserNavbar = () => {
         <ul className="md:flex hidden uppercase items-center gap-8">
           <li>
             <Link to="/user" className="py-7 px-3 inline-block">
-              Hello {user.user.name}
+              Hello {user_data.user.name}
             </Link>
           </li>
           <UserNavLinks />

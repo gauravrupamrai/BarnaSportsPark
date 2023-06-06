@@ -55,6 +55,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: "user",
       },
+      emailPreferences: [{
+        type: String,
+        enum: ['Promotions', 'Events', 'Alerts']
+    }],    
      createdAt:{
       type: Date,
       default: Date.now(),

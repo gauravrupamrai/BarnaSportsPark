@@ -2,18 +2,19 @@ const util = require("../utils/util");
 const AWS = require("aws-sdk");
 
 const SES = new AWS.SES();
+const senderEmail = process.env.EMAIL_USERNAME;
 
 async function sendEmail(sendEmailBody) {
 
-  const {to, from, subject, body} = sendEmailBody;
+  const {to_addresses, subject, body} = sendEmailBody;
 
-  if (!to || !from || !subject || !body) {
+  if (!to_addresses || !subject || !body) {
     return util.buildResponse(400, "Missing parameters");
   }
 
   const params = {
     Destination: {
-      ToAddresses: [to],
+      ToAddresses: to_addresses.split(','),
     },
     Message: {
       Body: {
@@ -24,8 +25,10 @@ async function sendEmail(sendEmailBody) {
       },
       Subject: { Data: subject },
     },
-    Source: from,
+    Source: senderEmail,
   };
+
+  console.log(params);
 
   try {
     await SES.sendEmail(params).promise();
@@ -33,7 +36,7 @@ async function sendEmail(sendEmailBody) {
   } catch (error) {
     console.log("Error sending email: ", error);
     if (error.statusCode) {
-      return util.buildResponse(error.statusCode, error.message);
+      return util.buildResponse(error.statusCode, error.message, error);
     } else {
       return util.buildResponse(500, "Internal Server Error");
     }

@@ -48,15 +48,19 @@ async function updateProfile(event) {
     }
 
     if (userUpdate.phoneNumber) {
-        updateUser.phoneNumber = userUpdate.phoneNumber;
-        console.log(updateUser.phoneNumber);
-        console.log(userUpdate.phoneNumber);
+      updateUser.phoneNumber = userUpdate.phoneNumber;
+      console.log(updateUser.phoneNumber);
+      console.log(userUpdate.phoneNumber);
     }
 
     if (userUpdate.addresses) {
-        updateUser.addresses = userUpdate.addresses;
-        console.log(updateUser.addresses);
-        console.log(userUpdate.addresses);
+      updateUser.addresses = userUpdate.addresses;
+      console.log(updateUser.addresses);
+      console.log(userUpdate.addresses);
+    }
+
+    if (userUpdate.emailPreferences) {
+      updateUser.emailPreferences = userUpdate.emailPreferences;
     }
 
     console.log("After Update:");
@@ -67,6 +71,7 @@ async function updateProfile(event) {
     console.log(updateUser.addresses);
     console.log(updateUser.membership);
     console.log(updateUser._id);
+    console.log(updateUser.emailPreferences);
 
     await updateUser.save();
 
@@ -76,17 +81,35 @@ async function updateProfile(event) {
     return util.buildResponse(500, "Internal Server Error", error);
   }
 }
- 
-function test(event) {
+
+async function getProfile(event) {
   try {
-    const response = util.buildResponse(200, "Test API", event);
-    return response;
+    await connectDatabase();
+    const { token } = event;
+
+    if (!token) {
+      return util.buildResponse(401, "Missing Fields");
+    }
+
+    const verified = auth.verifyToken(token, verifySecret);
+    console.log(verified);
+
+    if (!verified.verified) {
+      return util.buildResponse(401, "Invalid Token, Please login again");
+    }
+
+    const userID = verified.decoded.userId;
+
+
+    const user = await User.findById(userID);
+    if (!user) {
+      return util.buildResponse(404, "User Not Found");
+    }
+    return util.buildResponse(200, "User Found", user);
   } catch (error) {
     return util.buildResponse(500, "Internal Server Error", error);
   }
-  
 }
 
-module.exports.test = test;
-
+module.exports.getProfile = getProfile;
 module.exports.updateProfile = updateProfile;
