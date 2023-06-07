@@ -8,6 +8,8 @@ async function sendEmail(sendEmailBody) {
 
   const {to_addresses, subject, body} = sendEmailBody;
 
+  console.log("sendEmailBody: ", sendEmailBody);
+
   if (!to_addresses || !subject || !body) {
     return util.buildResponse(400, "Missing parameters");
   }

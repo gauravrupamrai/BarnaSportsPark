@@ -33,23 +33,6 @@ const UserNavLinks = () => {
         { name: "Book a Court", path: "/user/book-a-court" },
       ],
     },
-    {
-      name: "Coaching Sessions",
-      submenu: true,
-      sublink: [
-        { name: "Your Coaching Sessions", path: "/user/your-coaching-sessions" },
-        { name: "Book a Coaching Session", path: "/user/book-a-coaching-session" },
-      ],
-    },
-    {
-      name: "Events",
-      submenu: true,
-      sublink: [
-        { name: "Your Events Booking", path: "/user/your-events-booking" },
-        { name: "Book Event", path: "/user/book-events" },
-        { name: "Update Event", path: "/user/update-event" },
-      ],
-    },
   ];
 
   const [heading, setHeading] = useState("");

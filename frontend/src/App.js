@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import {Store} from "./redux/store";
-import { loadUser } from "./redux/actions/user";
+// import { loadUser } from "./redux/actions/user";
 import { useSelector } from "react-redux";
 /** import all components */
 import {
@@ -21,20 +21,20 @@ import {
   DraftSendEmailPage,
   UserLayout,
   PageNotFoundPage,
+  PasswordResetPage,
+  PasswordResetRequestPage,
 } from "./Routes.js";
 
 /** root routes */
 const App = () => {
-
-  function RequireAdmin({children}) {
-    const {isAuthenticated} = useSelector((state) => state.user);
-    return isAuthenticated === true ? children : <Navigate to="/login" replace />;
+  function RequireAdmin({ children }) {
+    const { isAuthenticated } = useSelector((state) => state.user);
+    return isAuthenticated === true ? (
+      children
+    ) : (
+      <Navigate to="/login" replace />
+    );
   }
-
-  
-  // useEffect(() => {
-  //   // Store.dispatch(loadUser());
-  // }, []);
 
   return (
     <BrowserRouter>
@@ -49,14 +49,19 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/activate" element={<ActivatePage />} />
+        <Route path="/forget-password" element={<PasswordResetRequestPage />} />
+        <Route path="/reset-password" element={<PasswordResetPage />} />
 
         <Route path="/user/*" element={<UserLayout />} />
 
-        <Route path="/admin" element={
-        <RequireAdmin>
-          <AdminPage />
-        </RequireAdmin>
-        } />
+        <Route
+          path="/admin"
+          element={
+            <RequireAdmin>
+              <AdminPage />
+            </RequireAdmin>
+          }
+        />
         <Route path="/createContent" element={<CreateContentPage />} />
         <Route path="/draftSendEmail" element={<DraftSendEmailPage />} />
 

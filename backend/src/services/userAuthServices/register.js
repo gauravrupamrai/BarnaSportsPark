@@ -36,7 +36,7 @@ async function register(registerBody) {
     const userActivation = `${activationURL}?token=${activationToken}`;
 
     const mailOptions = {
-      to: newUserObj.email,
+      to_addresses: newUserObj.email,
       subject: "Account Activation",
       body: `<b>Hello ${newUserObj.name},</b> <br/>Please click the following link to activate your account:<br/> ${userActivation}`,
     };

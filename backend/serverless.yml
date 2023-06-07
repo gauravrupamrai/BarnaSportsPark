@@ -70,6 +70,11 @@ functions:
           method: GET
           cors: true
           private: false
+      - http:
+          path: /reset-password-request
+          method: POST
+          cors: true
+          private: true
     timeout: 90
 
   ## Email Function
@@ -115,11 +120,6 @@ functions:
       - http:
           path: /user-profile-info
           method: GET
-          cors: true
-          private: true
-      - http:
-          path: /user-new-membership
-          method: POST
           cors: true
           private: true
       - http:

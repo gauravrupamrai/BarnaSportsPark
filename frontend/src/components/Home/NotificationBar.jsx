@@ -10,6 +10,8 @@ const NotificationBar = () => {
   const [noticesNews, setNoticesNews] = useState([]);
 
   useEffect(() => {
+
+    console.log(contentGetURL)
     const requestConfig = {
       headers: {
         "x-api-key": apiKey,

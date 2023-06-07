@@ -2,6 +2,7 @@ const registerService = require("../services/userAuthServices/register");
 const loginService = require("../services/userAuthServices/login");
 const verifyService = require("../services/userAuthServices/verify");
 const activateService = require("../services/userAuthServices/activate");
+const resetPasswordService = require("../services/userAuthServices/resetPassword");
 const util = require("../utils/util");
 
 const healthPath = "/health";
@@ -9,6 +10,7 @@ const registerPath = "/register";
 const loginPath = "/login";
 const verifyPath = "/verify";
 const activatePath = "/activate";
+const requestResetPasswordPath = "/reset-password-request";
 
 exports.handler = async (event, context) => {
   console.log("Request event: ", event);
@@ -34,6 +36,10 @@ exports.handler = async (event, context) => {
       break;
     case event.httpMethod === "GET" && event.path === activatePath:
       response = await activateService.activate(event);
+      break;
+    case event.httpMethod === "POST" && event.path === requestResetPasswordPath:
+      const requestResetPasswordBody = JSON.parse(event.body);
+      response = await resetPasswordService.requestResetPassword(requestResetPasswordBody);
       break;
     default:
       response = util.buildResponse(404, "404 Not Found");
