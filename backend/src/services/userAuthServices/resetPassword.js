@@ -51,32 +51,34 @@ async function requestResetPassword(body) {
   }
 }
 
-async function resetPassword(token, newPassword) {
-    try {
-      await connectDatabase();
-  
-      // Find user by password reset token
-      const decoded = auth.verifyToken(token, resetPasswordTokenSecret);
-      const user = await User.findById(decoded._id).select('+passwordResetToken');
-      if (!user) {
-        return util.buildResponse(404, 'Invalid token');
-      }
-  
-      // Update the password
-      user.password = newPassword;
-      user.passwordResetToken = undefined;  // Clear the password reset token
-      await user.save();
-  
-      return util.buildResponse(200, 'Password has been reset successfully');
-    } catch (error) {
-      console.log(error);
-      if (error.statusCode) {
-        return util.buildResponse(error.statusCode, error.message);
-      } else {
-        return util.buildResponse(500, 'Internal Server Error');
-      }
+async function resetPassword(body) {
+  try {
+    const { token, newPassword } = body;
+    await connectDatabase();
+
+    // Find user by password reset token
+    const decoded = auth.verifyToken(token, resetPasswordTokenSecret);
+    console.log(decoded);
+    const user = await User.findById(decoded.decoded._id).select("+passwordResetToken");
+    if (!user) {
+      return util.buildResponse(404, "Invalid token", decoded);
+    }
+
+    // Update the password
+    user.password = newPassword;
+    user.passwordResetToken = undefined; // Clear the password reset token
+    await user.save();
+
+    return util.buildResponse(200, "Password has been reset successfully");
+  } catch (error) {
+    console.log(error);
+    if (error.statusCode) {
+      return util.buildResponse(error.statusCode, error.message);
+    } else {
+      return util.buildResponse(500, "Internal Server Error");
     }
   }
+}
 
 module.exports.requestResetPassword = requestResetPassword;
 module.exports.resetPassword = resetPassword;

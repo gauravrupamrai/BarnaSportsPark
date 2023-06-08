@@ -1,5 +1,7 @@
 import { React, useState } from "react";
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import { GooeyCircleLoader } from "react-loaders-kit";
+
 
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
@@ -19,9 +21,20 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const loaderProps = {
+    loading,
+    size: 80,
+    colors: ['#f6b93b', '#5e22f0', '#ef5777']
+}
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
+
+    console.log("URL:", loginURL);
 
     const requestConfig = {
       headers: {
@@ -34,9 +47,13 @@ const Login = () => {
       password: password,
     };
 
+    console.log("Request Body:", requestBody);
+    console.log("Request Config:", requestConfig);
+
     axios
       .post(loginURL, requestBody, requestConfig)
       .then((response) => {
+        setLoading(false);
         toast.success("User logged in successfully.");
         console.log("Response:", response);
         console.log("Response Data Message:", response.data.message);
@@ -47,10 +64,16 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
+        setLoading(false);
         if (error.response.status === 401 || error.response.status === 403) {
           toast.error(error.response.data.message);
         } else {
-          toast.error("Something went wrong. Please try again later.");
+          if(error.response.data.message){
+            toast.error(error.response.data.message);
+          }else {
+            toast.error('Something went wrong. Please try again later');
+          }
+          
         }
       });
   };
@@ -151,22 +174,36 @@ const Login = () => {
               </label>
             </div>
             <div className="text-sm">
-              <a
-                href=".forgot-password"
+              <Link
+                to="/forgot-password"
                 className="font-medium text-blue-600 hover:text-blue-500"
               >
                 Forgot your password?
-              </a>
+              </Link>
             </div>
           </div>
           <div>
+          { loading ? (
+            <div className="flex justify-center mt-4">
+            <GooeyCircleLoader {...loaderProps} />
+          </div>
+          ) : (
             <button
               type="submit"
               className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
-              Submit
+              Login
             </button>
+          )}
+            
           </div>
+          <div>
+              <Link to="/">
+                <button className="group relative w-full h-[40px] flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
+                  Back to Homepage
+                </button>
+              </Link>
+            </div>
         </form>
       </div>
     </main>

@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
       }
     ],
     phoneNumber:{
-        type: Number,
+        type: String,
       },
       addresses:[
         {
@@ -46,10 +46,10 @@ const UserSchema = new mongoose.Schema({
           address2:{
             type: String,
           },
-          zipCode:{
-            type: Number,
+          eirCode:{
+            type: String,
           },
-          addressType:{
+          county:{
             type: String,
           },
         }
@@ -60,7 +60,7 @@ const UserSchema = new mongoose.Schema({
       },
       emailPreferences: [{
         type: String,
-        enum: ['Promotions', 'Events', 'Alerts']
+        enum: ['Promotions', 'Events', 'Reminders']
     }],    
      createdAt:{
       type: Date,

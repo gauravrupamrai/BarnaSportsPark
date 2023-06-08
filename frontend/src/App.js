@@ -13,6 +13,7 @@ import {
   FacilitiesPage,
   ContactUsPage,
   FAQsPage,
+  PoliciesPage,
   LoginPage,
   SignUpPage,
   ActivatePage,
@@ -28,6 +29,11 @@ import {
 /** root routes */
 const App = () => {
   function RequireAdmin({ children }) {
+    const { isAdmin } = useSelector((state) => state.user);
+    return isAdmin === true ? children : <Navigate to="/login" replace />;
+  }
+
+  function RequireAuth({ children }) {
     const { isAuthenticated } = useSelector((state) => state.user);
     return isAuthenticated === true ? (
       children
@@ -45,14 +51,22 @@ const App = () => {
 
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
+        <Route path="/policies" element={<PoliciesPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/activate" element={<ActivatePage />} />
-        <Route path="/forget-password" element={<PasswordResetRequestPage />} />
+        <Route path="/forgot-password" element={<PasswordResetRequestPage />} />
         <Route path="/reset-password" element={<PasswordResetPage />} />
 
-        <Route path="/user/*" element={<UserLayout />} />
+        <Route
+          path="/user/*"
+          element={
+            <RequireAuth>
+              <UserLayout />
+            </RequireAuth>
+          }
+        />
 
         <Route
           path="/admin"

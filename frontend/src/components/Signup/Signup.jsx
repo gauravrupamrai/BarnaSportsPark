@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { GoUnverified } from "react-icons/go";
 import PasswordChecklist from "react-password-checklist";
+import { GooeyCircleLoader } from "react-loaders-kit";
 
 const signupURL = `${process.env.REACT_APP_APP_URL}/register`;
 
@@ -24,6 +25,13 @@ const Signup = () => {
   const [modalState, setModalState] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [termsChecked, setTermsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const loaderProps = {
+    loading,
+    size: 80,
+    colors: ["#f6b93b", "#5e22f0", "#ef5777"],
+  };
 
   const handleSetPassword = (event) => {
     setPassword(event.target.value);
@@ -35,6 +43,7 @@ const Signup = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     console.log(
       `isPasswordValid: ${isPasswordValid}, isPasswordMatch: ${isPasswordMatch}`
@@ -70,11 +79,13 @@ const Signup = () => {
     axios
       .post(signupURL, requestBody, requestConfig)
       .then((response) => {
+        setLoading(false);
         toast.success("User Registered");
         setModalMessage(response.data.message);
         setModalState(true);
       })
       .catch((error) => {
+        setLoading(false);
         if (error.response.status === 409 || error.response.status === 401) {
           console.log(error.response.data.message);
           toast.error(error.response.data.message);
@@ -270,7 +281,7 @@ const Signup = () => {
               />
               <span className="ml-2">
                 I agree to the{" "}
-                <Link to="/terms" className="text-blue-600">
+                <Link to="/policies" className="text-blue-600">
                   Terms and Conditions
                 </Link>
               </span>
@@ -285,13 +296,21 @@ const Signup = () => {
                 </button>
               </Link>
             </div>
-            <div className="sm:col-span-3">
-              <button
-                type="submit"
-                className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Submit
-              </button>
+            <div>
+              {loading ? (
+                <div className="flex justify-center mt-4">
+                  <GooeyCircleLoader {...loaderProps} />
+                </div>
+              ) : (
+                <div className="sm:col-span-3">
+                  <button
+                    type="submit"
+                    className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                  >
+                    Register
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </form>

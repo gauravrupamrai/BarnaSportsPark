@@ -4,6 +4,7 @@ import FacilitiesPage from './pages/FacilitiesPage.jsx';
 
 import ContactUsPage from './pages/ContactUsPage.jsx';
 import FAQsPage from './pages/FAQsPage.jsx';
+import PoliciesPage from './pages/PoliciesPage.jsx';
 
 import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
@@ -39,6 +40,7 @@ export {
 
     ContactUsPage,
     FAQsPage,
+    PoliciesPage,
 
     LoginPage,
     SignUpPage,

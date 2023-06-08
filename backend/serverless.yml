@@ -44,6 +44,7 @@ functions:
   ## Health Check function
   signupLogin:
     handler: src/apis/signupLogin.handler
+    memorySize: 256
     events:
       - http:
           path: /health
@@ -72,6 +73,11 @@ functions:
           private: false
       - http:
           path: /reset-password-request
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /reset-password
           method: POST
           cors: true
           private: true

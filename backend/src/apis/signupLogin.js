@@ -11,6 +11,7 @@ const loginPath = "/login";
 const verifyPath = "/verify";
 const activatePath = "/activate";
 const requestResetPasswordPath = "/reset-password-request";
+const resetPasswordPath = "/reset-password";
 
 exports.handler = async (event, context) => {
   console.log("Request event: ", event);
@@ -31,7 +32,7 @@ exports.handler = async (event, context) => {
       response = await loginService.login(loginBody);
       break;
     case event.httpMethod === "POST" && event.path === verifyPath:
-      const verifyBody = JSON.parse(event.body);  
+      const verifyBody = JSON.parse(event.body);
       response = await verifyService.verify(verifyBody);
       break;
     case event.httpMethod === "GET" && event.path === activatePath:
@@ -39,7 +40,13 @@ exports.handler = async (event, context) => {
       break;
     case event.httpMethod === "POST" && event.path === requestResetPasswordPath:
       const requestResetPasswordBody = JSON.parse(event.body);
-      response = await resetPasswordService.requestResetPassword(requestResetPasswordBody);
+      response = await resetPasswordService.requestResetPassword(
+        requestResetPasswordBody
+      );
+      break;
+    case event.httpMethod === "POST" && event.path === resetPasswordPath:
+      const resetPasswordBody = JSON.parse(event.body);
+      response = await resetPasswordService.resetPassword(resetPasswordBody);
       break;
     default:
       response = util.buildResponse(404, "404 Not Found");

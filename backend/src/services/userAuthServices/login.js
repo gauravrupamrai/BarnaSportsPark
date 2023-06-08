@@ -31,6 +31,7 @@ async function login(loginBody) {
             userId: userEmail._id,
             name: userEmail.name,
             email: userEmail.email,
+            role: userEmail.role,
         }
 
         const token = auth.generateToken(userInfo, loginSecret, "1h");

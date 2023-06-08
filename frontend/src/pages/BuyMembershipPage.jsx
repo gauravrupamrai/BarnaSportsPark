@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { GooeyCircleLoader } from "react-loaders-kit";
 
 const stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`);
 const membershipURL = `${process.env.REACT_APP_APP_URL}/user-new-membership`;
@@ -199,6 +200,13 @@ const BuyMembershipPage = () => {
     { name: "", dob: "" },
   ]);
   const { user_token } = useSelector((state) => state.user);
+  const [loading, setLoading] = useState(false);
+
+  const loaderProps = {
+    loading,
+    size: 80,
+    colors: ["#f6b93b", "#5e22f0", "#ef5777"],
+  };
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
@@ -214,6 +222,7 @@ const BuyMembershipPage = () => {
   // Handle the submit, using the helper function to calculate the age
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     // Validate for adult
     if (selectedOption === "adult") {
@@ -258,29 +267,35 @@ const BuyMembershipPage = () => {
     };
 
     console.log("requestBody: ", requestBody);
-    console.log("requestConfig: " ,requestConfig);
+    console.log("requestConfig: ", requestConfig);
 
-
-    axios.post(membershipURL, requestBody, requestConfig).then((response) => {
-      const { checkoutSessionId } = response.data.body;
-      stripePromise.then((stripe) => {
-        stripe.redirectToCheckout({
-          sessionId: checkoutSessionId,
-        }).then((res) => {
-          if (res.error) {
-            console.log(res.error.message);
-          }
+    axios
+      .post(membershipURL, requestBody, requestConfig)
+      .then((response) => {
+        setLoading(false);
+        const { checkoutSessionId } = response.data.body;
+        stripePromise.then((stripe) => {
+          stripe
+            .redirectToCheckout({
+              sessionId: checkoutSessionId,
+            })
+            .then((res) => {
+              if (res.error) {
+                setLoading(false);
+                console.log(res.error.message);
+              }
+            });
         });
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log("error: ", error);
+        if (error.response.status === 401 || error.response.status === 403) {
+          toast.error(error.response.data.message);
+        } else {
+          toast.error("Something went wrong. Please try again later.");
+        }
       });
-    }).catch((error) => {
-      console.log("error: ", error);
-      if (error.response.status === 401 || error.response.status === 403) {
-        toast.error(error.response.data.message);
-      } else {
-        toast.error("Something went wrong. Please try again later.");
-      }
-    });
-
   };
 
   return (
@@ -360,12 +375,18 @@ const BuyMembershipPage = () => {
             </div>
 
             <div className="mt-12">
-              <button
-                type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-md"
-              >
-                Submit
-              </button>
+              {loading ? (
+                <div className="flex justify-center mt-4">
+                  <GooeyCircleLoader {...loaderProps} />
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
+                >
+                  Submit
+                </button>
+              )}
             </div>
           </form>
         </div>
