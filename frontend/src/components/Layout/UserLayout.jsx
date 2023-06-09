@@ -14,11 +14,13 @@ import {
   BookACourtPage,
   PageNotFoundPage,
   MembershipFailedPage,
+  CourtBookingSuccessPage,
 } from "../../Routes.js";
 
 const UserLayout = () => {
   function RequireMembership({ children }) {
-    let { isMembership } = useSelector((state) => state.user);
+    const { user_data } = useSelector((state) => state.user);
+    const isMembership = user_data.user.hasMembership;
     return isMembership === true ? (
       children
     ) : (
@@ -49,10 +51,20 @@ const UserLayout = () => {
           path="/book-a-court"
           element={
             <RequireMembership>
-              <BookACourtPage />
+              <UserCourtBookingPage />
             </RequireMembership>
           }
         />
+
+<Route
+          path="/court-booking-success"
+          element={
+            <RequireMembership>
+              <CourtBookingSuccessPage />
+            </RequireMembership>
+          }
+        />
+
         <Route path="*" element={<PageNotFoundPage />} />
       </Routes>
     </>

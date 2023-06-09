@@ -32,6 +32,8 @@ import DraftSendEmailPage from './pages/DraftSendEmailPage.jsx';
 
 import PageNotFoundPage from './pages/PageNotFoundPage.jsx';
 import CourtBookingPage from './pages/CourtBookingPage.jsx';
+import CourtBookingSuccessPage from './pages/CourtBookingSuccessPage.jsx';
+import AssignFOBPage from './pages/AssignFOBPage.jsx';
 
 
 export {
@@ -70,5 +72,7 @@ export {
 
     PageNotFoundPage,
     CourtBookingPage,
+    CourtBookingSuccessPage,
+    AssignFOBPage,
 
 };

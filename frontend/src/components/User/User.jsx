@@ -14,7 +14,7 @@ const User = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [userProfile, setUserProfile] = useState([]);
-  const { user_token } = useSelector((state) => state.user);
+  const { user_token, user_data } = useSelector((state) => state.user);
 
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -188,7 +188,7 @@ const User = () => {
       <header className="bg-sky-50 shadow">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold tracking-tight text-gray-900">
-            Hello User!
+            Hello {user_data.user.name}!
           </h1>
         </div>
       </header>
@@ -591,6 +591,41 @@ const User = () => {
                   </fieldset>
                 </div>
               </div>
+              <div className="flex items-center gap-x-6">
+                  {!updateMode && (
+                    <button
+                      type="button"
+                      className="group relative w-full h-[40px] flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
+                      onClick={handleUpdate}
+                    >
+                      Edit profile
+                    </button>
+                  )}
+                  {updateMode && (
+                    <>
+                      {loading ? (
+                        <div className="flex justify-center mt-4">
+                          <GooeyCircleLoader {...loaderProps} />
+                        </div>
+                      ) : (
+                        <button
+                          type="submit"
+                          className="rounded-md bg-indigo-600 px-4 py-2 w-full text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        >
+                          Update Profile
+                        </button>
+                      )}
+
+                      <button
+                        type="button"
+                        className="group relative w-full h-[40px] flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
+                        onClick={handleCancel}
+                      >
+                        Cancel
+                      </button>
+                    </>
+                  )}
+                </div>
             </div>
           </form>
         </div>

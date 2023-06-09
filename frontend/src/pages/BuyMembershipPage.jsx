@@ -24,42 +24,42 @@ const calculateAge = (dob) => {
 // Component for Child Membership
 const ChildMembership = ({ childName, setChildName }) => (
   <div>
-    <h2 className="text-base font-semibold leading-7 text-gray-900">
+    <h2 className="text-base font-bold text-gray-900">
       Enter details of the child
     </h2>
-    <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-      <div className="sm:col-span-3">
+    <div className="mt-5 space-y-5">
+      <div>
         <label
           htmlFor="childName"
-          className="block text-sm font-medium leading-6 text-gray-900"
+          className="font-semibold text-sm text-gray-600 pb-1 block"
         >
           Child's Name:
         </label>
-        <div className="mt-2">
+        <div className="mt-1">
           <input
             type="text"
             id="childName"
             value={childName}
             onChange={(e) => setChildName(e.target.value)}
-            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
             placeholder="Enter child's name"
             required
           />
         </div>
       </div>
 
-      <div className="sm:col-span-3">
+      <div>
         <label
           htmlFor="childDOB"
-          className="block text-sm font-medium leading-6 text-gray-900"
+          className="font-semibold text-sm text-gray-600 pb-1 block"
         >
           Child's Date of Birth:
         </label>
-        <div className="mt-2">
+        <div className="mt-1">
           <input
             type="date"
             id="childDOB"
-            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
             required
           />
         </div>
@@ -82,44 +82,44 @@ const AdultMembership = ({
 
   return (
     <div>
-      <h2 className="text-base font-semibold leading-7 text-gray-900">
+      <h2 className="text-base font-bold text-gray-900">
         Enter details of the Adult
       </h2>
-      <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div className="sm:col-span-3">
+      <div className="mt-5 space-y-5">
+        <div>
           <label
             htmlFor="adultName"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="font-semibold text-sm text-gray-600 pb-1 block"
           >
             Adult's Name:
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             <input
               type="text"
               id="adultName"
               value={adultName}
               onChange={(e) => setAdultName(e.target.value)}
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
               placeholder="Enter adult's name"
               required
             />
           </div>
         </div>
 
-        <div className="sm:col-span-3">
+        <div>
           <label
             htmlFor="adultDOB"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="font-semibold text-sm text-gray-600 pb-1 block"
           >
             Adult's Date of Birth:
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             <input
               type="date"
               id="adultDOB"
               value={adultDOB}
               onChange={(e) => setAdultDOB(e.target.value)}
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
               max={minAdultDate}
               required
             />
@@ -133,50 +133,47 @@ const AdultMembership = ({
 // Component for Family Membership
 const FamilyMembership = ({ familyMembers, handleInputChange }) => (
   <div>
-    <h2 className="text-base font-semibold leading-7 text-gray-900">
+    <h2 className="text-base font-bold text-gray-900">
       Enter details of Family Members
     </h2>
     {familyMembers.map((x, i) => (
-      <div
-        className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
-        key={i}
-      >
-        <div className="sm:col-span-3">
+      <div className="mt-5 space-y-5" key={i}>
+        <div>
           <label
             htmlFor={`memberName${i}`}
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="font-semibold text-sm text-gray-600 pb-1 block"
           >
             Family Member {i + 1} Name :
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             <input
               type="text"
               id={`memberName${i}`}
               name="name"
               value={x.name}
               onChange={(e) => handleInputChange(e, i)}
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
               placeholder="Enter family member's name"
               required={i < 2}
             />
           </div>
         </div>
 
-        <div className="sm:col-span-3">
+        <div>
           <label
             htmlFor={`memberDOB${i}`}
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="font-semibold text-sm text-gray-600 pb-1 block"
           >
             Family Member {i + 1} Date of Birth:
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             <input
               type="date"
               id={`memberDOB${i}`}
               name="dob"
               value={x.dob}
               onChange={(e) => handleInputChange(e, i)}
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="w-full border bg-white rounded-md py-3 px-4 text-gray-900 outline-none text-sm transition duration-150 ease-in-out mb-4"
               required={i < 2}
             />
           </div>
@@ -303,54 +300,44 @@ const BuyMembershipPage = () => {
       <header className="bg-sky-50 shadow">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold tracking-tight text-gray-900">
-            Memberships
+            Membership form for new membership
           </h1>
         </div>
       </header>
-      <main>
-        <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-          <form
-            className="bg-white px-10 py-6 rounded-xl"
-            onSubmit={handleSubmit}
-          >
-            <div className="space-y-12">
-              <div className="border-b border-gray-900/10 pb-5">
-                <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Membership Form
-                </h2>
-                <p className="mt-1 text-sm leading-6 text-gray-600">
+
+      <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+            <div className="max-w-md mx-auto">
+              <header className="text-center">
+                {/* <h1 className="text-2xl font-bold text-gray-900">Memberships</h1> */}
+                <p className="mt-1 text-sm text-gray-600">
                   Please enter your details below to buy new membership.
                 </p>
-              </div>
+              </header>
 
-              <div className="border-b border-gray-900/10 pb-12">
-                <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                  <div className="sm:col-span-6">
-                    <label
-                      htmlFor="membershipType"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Select Membership Type:
-                    </label>
-                    <div className="mt-2">
-                      <select
-                        id="membershipType"
-                        value={selectedOption}
-                        onChange={handleChange}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        required
-                      >
-                        <option value="">Select...</option>
-                        <option value="child">Child</option>
-                        <option value="adult">Adult</option>
-                        <option value="family">Family</option>
-                      </select>
-                    </div>
-                  </div>
+              <form className="space-y-5" onSubmit={handleSubmit}>
+                <div>
+                  <label
+                    htmlFor="membershipType"
+                    className="font-semibold text-sm text-gray-600 pb-1 block"
+                  >
+                    Select Membership Type:
+                  </label>
+                  <select
+                    id="membershipType"
+                    value={selectedOption}
+                    onChange={handleChange}
+                    className="w-full border bg-white rounded-md py-3 px-4 outline-none text-sm transition duration-150 ease-in-out mb-4"
+                    required
+                  >
+                    <option value="">Select...</option>
+                    <option value="child">Child</option>
+                    <option value="adult">Adult</option>
+                    <option value="family">Family</option>
+                  </select>
                 </div>
-              </div>
 
-              <div className="border-b border-gray-900/10 pb-12">
                 {selectedOption === "child" && (
                   <ChildMembership
                     childName={childName}
@@ -371,26 +358,26 @@ const BuyMembershipPage = () => {
                     handleInputChange={handleInputChange}
                   />
                 )}
-              </div>
-            </div>
 
-            <div className="mt-12">
-              {loading ? (
-                <div className="flex justify-center mt-4">
-                  <GooeyCircleLoader {...loaderProps} />
+                <div>
+                  {loading ? (
+                    <div className="flex justify-center mt-4">
+                      <GooeyCircleLoader {...loaderProps} />
+                    </div>
+                  ) : (
+                    <button
+                      type="submit"
+                      className="w-full py-3 bg-blue-600 text-white rounded-md font-semibold text-sm shadow-lg hover:bg-blue-700 focus:outline-none transition duration-500 transform hover:-translate-y-1 hover:scale-110"
+                    >
+                      Submit
+                    </button>
+                  )}
                 </div>
-              ) : (
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
-                >
-                  Submit
-                </button>
-              )}
+              </form>
             </div>
-          </form>
+          </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };

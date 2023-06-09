@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import UserMembership from '../components/User/UserMembership.jsx';
 
 const UserMembershipPage = () => {
   return (
     <div>
-      User Membership Page
+      <UserMembership />
     </div>
   )
 }

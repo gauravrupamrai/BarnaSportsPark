@@ -26,7 +26,7 @@ import {
   PasswordResetRequestPage,
   MembershipSuccessPage,
   MembershipFailedPage,
-  CourtBookingPage,
+  AssignFOBPage,
 
 } from "./Routes.js";
 
@@ -56,7 +56,6 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/policies" element={<PoliciesPage />} />
-        <Route path="/courtBooking" element={<CourtBookingPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
@@ -86,6 +85,7 @@ const App = () => {
         />
         <Route path="/createContent" element={<CreateContentPage />} />
         <Route path="/draftSendEmail" element={<DraftSendEmailPage />} />
+        <Route path="/assignFOB" element={<AssignFOBPage />} />
 
         <Route path="*" element={<PageNotFoundPage />} />
       </Routes>

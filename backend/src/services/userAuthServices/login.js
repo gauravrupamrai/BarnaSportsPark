@@ -1,5 +1,6 @@
 const connectDatabase = require('../../database/db');
 const User = require('../../models/user');
+const Membership = require('../../models/membership');
 
 const util = require('../../utils/util');
 const auth = require('../../utils/auth');
@@ -7,7 +8,6 @@ const auth = require('../../utils/auth');
 const loginSecret = process.env.LOGIN_SECRET;
 
 async function login(loginBody) {
-
     try {
         await connectDatabase();
         const { email, password } = loginBody;
@@ -16,7 +16,7 @@ async function login(loginBody) {
             return util.buildResponse(401, 'Missing Fields');
         }
 
-        const userEmail = await User.findOne({email}).select('+password');
+        const userEmail = await User.findOne({email}).populate('membership').select('+password');
         if(!userEmail){
             return util.buildResponse(404, 'User not found');
         }
@@ -32,8 +32,18 @@ async function login(loginBody) {
             name: userEmail.name,
             email: userEmail.email,
             role: userEmail.role,
-            membership: userEmail.membership,
         }
+
+        if (userEmail.membership.length > 0) {
+            userInfo.hasMembership = true;
+            userInfo.memberships = userEmail.membership.map(membership => ({
+                membershipType: membership.membershipType,
+                membershipId: membership._id
+            }));
+        } else {
+            userInfo.hasMembership = false;
+        }
+        
 
         const token = auth.generateToken(userInfo, loginSecret, "1h");
 
@@ -52,7 +62,6 @@ async function login(loginBody) {
             return util.buildResponse(500, 'Internal Server Error');
         }
     }
-
 }
 
 module.exports.login = login;

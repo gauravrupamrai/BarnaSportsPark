@@ -112,6 +112,16 @@ functions:
           method: GET
           cors: true
           private: true
+      - http:
+          path: /get-unassigned-fob
+          method: GET
+          cors: true
+          private: true
+      - http:
+          path: /assign-fob
+          method: POST
+          cors: true
+          private: true
     timeout: 90
 
 
@@ -145,6 +155,16 @@ functions:
           private: true
       - http:
           path: /user-court-booking
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /get-membership
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /user-renew-membership
           method: POST
           cors: true
           private: true

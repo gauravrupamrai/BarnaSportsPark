@@ -9,6 +9,8 @@ const profileUpdatePath = "/user-profile-update";
 const profileInfoPath = "/user-profile-info";
 const courtBookingPath = "/user-court-booking";
 const getCourtBookingPath = "/get-court-booking";
+const getMembershipDetailsPath = "/get-membership";
+const renewMembershipPath = "/user-renew-membership";
 
 exports.handler = async (event, context) => {
   console.log("Request event: ", event);
@@ -21,8 +23,16 @@ exports.handler = async (event, context) => {
       const newMembershipBody = JSON.parse(event.body);
       response = await membershipService.newMembership(newMembershipBody);
       break;
+    case event.httpMethod === "POST" && event.path === renewMembershipPath:
+      const renewMembershipBody = JSON.parse(event.body);
+      response = await membershipService.membershipRenewal(renewMembershipBody);
+      break;
     case event.httpMethod === "POST" && event.path === membershipWebhookPath:
       response = await membershipService.stripeWebhook(event);
+      break;
+    case event.httpMethod === "POST" && event.path === getMembershipDetailsPath:
+      const getMembershipDetailsBody = JSON.parse(event.body);
+      response = await membershipService.getMembership(getMembershipDetailsBody);
       break;
     case event.httpMethod === "POST" && event.path === profileUpdatePath:
       const profileUpdateBody = JSON.parse(event.body);

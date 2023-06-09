@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { Link, useNavigate } from "react-router-dom";
 import UserNavLinks from "./UserNavLinks.jsx";
-import {HiOutlineLogout} from "react-icons/hi";
-import { useSelector } from "react-redux";
+import { HiOutlineLogout } from "react-icons/hi";
+import { useSelector, useDispatch } from "react-redux";
 import { Divide as Hamburger } from "hamburger-react";
+import { setUser } from "../../redux/reducers/user";
 
 const UserNavbar = () => {
-  const {isAuthenticated, user_data} = useSelector((state) => state.user);
+  const { isAuthenticated, user_data } = useSelector((state) => state.user);
   console.log(isAuthenticated, user_data);
   const [isOpen, setOpen] = useState(false);
   const navigate = useNavigate();
-  
-  if(!user_data) {
+  const dispatch = useDispatch();
+
+  if (!user_data) {
     navigate("/");
     return null;
   }
-
-  const {name} = user_data.user.name;
 
   return (
     <nav className="bg-white ">
@@ -35,13 +35,21 @@ const UserNavbar = () => {
         <ul className="md:flex hidden uppercase items-center gap-8">
           <li>
             <Link to="/user" className="py-7 px-3 inline-block">
-              Hello {user_data.user.name}
+              {user_data.user.name}
             </Link>
           </li>
           <UserNavLinks />
         </ul>
         <div className="md:block hidden">
-          Logout <HiOutlineLogout className="inline-block"/>
+          <button
+            onClick={() => {
+              dispatch(setUser(null));
+              navigate("/");
+            }}
+            className="py-2 px-5 rounded-lg font-medium text-black text-center bg-white-600 border hover:text-white hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline"
+          >
+            Logout <HiOutlineLogout className="inline-block" />
+          </button>
         </div>
 
         {/* Mobile Nav */}
@@ -60,7 +68,7 @@ const UserNavbar = () => {
           </li>
           <UserNavLinks />
           <div className="py-5">
-            Logout <HiOutlineLogout className="inline-block"/>
+            Logout <HiOutlineLogout className="inline-block" />
           </div>
         </ul>
       </div>
