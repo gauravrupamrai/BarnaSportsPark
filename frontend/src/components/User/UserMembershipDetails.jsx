@@ -1,16 +1,29 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import {dateFormat} from "../../helper/formatDate.jsx";
+import { GooeyCircleLoader } from "react-loaders-kit";
 
 const stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`);
 const renewMembershipURL = `${process.env.REACT_APP_APP_URL}/user-renew-membership`;
 const apiKey = process.env.REACT_APP_API_KEY;
 
+
+
 const UserMembershipDetails = ({ membership }) => {
   const { user_token } = useSelector((state) => state.user);
+  const [renewLoading, setRenewLoading] = useState(false);
+
+  const renewLoaderProps = {
+    loading: renewLoading,
+    size: 80,
+    colors: ['#f6b93b', '#5e22f0', '#ef5777']
+}
+
   const handleRenewMembership = () => {
+    setRenewLoading(true);
     const requestConfig = {
       headers: {
         "x-api-key": apiKey,
@@ -24,6 +37,7 @@ const UserMembershipDetails = ({ membership }) => {
 
     axios.post(renewMembershipURL, requestBody, requestConfig)
       .then((response) => {
+        setRenewLoading(false);
         console.log(response);
         // Handle successful renewal
         const { checkoutSessionId } = response.data.body;
@@ -40,6 +54,7 @@ const UserMembershipDetails = ({ membership }) => {
         });
       })
       .catch((error) => {
+        setRenewLoading(false);
         console.log(error);
         // Handle renewal error
         console.log("error: ", error);
@@ -62,12 +77,21 @@ const UserMembershipDetails = ({ membership }) => {
             Your Membership details.
           </p>
         </div>
-        <button 
+
+        { renewLoading ? (
+            <div className="flex justify-center mt-4">
+            <GooeyCircleLoader {...renewLoaderProps} />
+          </div>
+          ) : (
+            
+            <button 
           className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
           onClick={handleRenewMembership}
         >
           Renew Membership
         </button>
+        )}
+
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
@@ -100,7 +124,7 @@ const UserMembershipDetails = ({ membership }) => {
               Date of Birth
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {membership.member1DateOfBirth}
+            {dateFormat(membership.member1DateOfBirth)}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -108,7 +132,7 @@ const UserMembershipDetails = ({ membership }) => {
               Membership Expiry
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {membership.membershipExpiry}
+              {dateFormat(membership.membershipExpiry)}
             </dd>
           </div>
         </dl>

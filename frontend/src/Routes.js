@@ -34,6 +34,9 @@ import PageNotFoundPage from './pages/PageNotFoundPage.jsx';
 import CourtBookingPage from './pages/CourtBookingPage.jsx';
 import CourtBookingSuccessPage from './pages/CourtBookingSuccessPage.jsx';
 import AssignFOBPage from './pages/AssignFOBPage.jsx';
+import CourtBookingDetailsPage from './pages/CourtBookingDetailsPage.jsx';
+
+import VolunteerPage from './pages/VolunteerPage.jsx';
 
 
 export {
@@ -74,5 +77,7 @@ export {
     CourtBookingPage,
     CourtBookingSuccessPage,
     AssignFOBPage,
+    CourtBookingDetailsPage,
 
+    VolunteerPage,
 };

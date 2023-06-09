@@ -9,12 +9,13 @@ import {
   RenewMembershipPage,
   UpdateMembershipPage,
   BuyMembershipPage,
-  MembershipSuccessPage,
+  
   UserCourtBookingPage,
-  BookACourtPage,
+  
   PageNotFoundPage,
-  MembershipFailedPage,
+  
   CourtBookingSuccessPage,
+  CourtBookingDetailsPage,
 } from "../../Routes.js";
 
 const UserLayout = () => {
@@ -43,7 +44,7 @@ const UserLayout = () => {
           path="/your-court-bookings"
           element={
             <RequireMembership>
-              <UserCourtBookingPage />
+              <CourtBookingDetailsPage />
             </RequireMembership>
           }
         />

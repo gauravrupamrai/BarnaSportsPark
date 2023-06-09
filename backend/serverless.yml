@@ -168,6 +168,16 @@ functions:
           method: POST
           cors: true
           private: true
+      - http:
+          path: /get-bookings
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /get-redux-values
+          method: GET
+          cors: true
+          private: true
     timeout: 90
 
   externalConn:

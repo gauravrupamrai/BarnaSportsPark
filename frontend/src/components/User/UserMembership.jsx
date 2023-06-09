@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import UserMembershipDetails from "./UserMembershipDetails.jsx";
+import { GooeyCircleLoader } from "react-loaders-kit";
+
 
 const getMembershipURL = `${process.env.REACT_APP_APP_URL}/get-membership`;
 const apiKey = process.env.REACT_APP_API_KEY;
@@ -11,6 +13,12 @@ const UserMembership = () => {
   const membershipData = user_data.user.memberships;
   const[membershipLoading, setMembershipLoading] = useState(false);
   const [selectedMembership, setSelectedMembership] = useState(null);
+
+  const membershipLoaderProps = {
+    loading: membershipLoading,
+    size: 80,
+    colors: ['#f6b93b', '#5e22f0', '#ef5777']
+}
 
   const handleViewDetails = (membershipId) => {
         setMembershipLoading(true);
@@ -50,7 +58,7 @@ const UserMembership = () => {
             <tr>
               <th className="py-3 pr-6">Membership ID</th>
               <th className="py-3 pr-6">Membership Type</th>
-              <th className="py-3 pr-6">Membership Expires</th>
+              
               <th className="py-3 pr-6"></th>
             </tr>
           </thead>
@@ -63,11 +71,17 @@ const UserMembership = () => {
                 <td className="pr-6 py-4 whitespace-nowrap capitalize">
                   {item.membershipType}
                 </td>
-                <td className="pr-6 py-4 whitespace-nowrap">Expiry Date</td>
+                
                 <td className="text-right whitespace-nowrap">
+                { membershipLoading ? (
+            <div className="flex justify-center mt-4">
+            <GooeyCircleLoader {...membershipLoaderProps} />
+          </div>
+          ) : (
                   <button className="py-1.5 px-3 text-gray-600 hover:text-gray-500 duration-150 hover:bg-gray-50 border rounded-lg" onClick={() => handleViewDetails(item.membershipId)}>
                     View Details
                   </button>
+          )}
                 </td>
               </tr>
             ))}

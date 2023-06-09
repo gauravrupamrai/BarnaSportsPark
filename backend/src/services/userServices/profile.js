@@ -100,7 +100,6 @@ async function getProfile(event) {
 
     const userID = verified.decoded.userId;
 
-
     const user = await User.findById(userID);
     if (!user) {
       return util.buildResponse(404, "User Not Found");
@@ -111,5 +110,57 @@ async function getProfile(event) {
   }
 }
 
+async function getReduxValues(event) {
+  try {
+    await connectDatabase();
+    const { token } = event;
+
+    if (!token) {
+      return util.buildResponse(401, "Missing Fields");
+    }
+
+    const verified = auth.verifyToken(token, verifySecret);
+    console.log(verified);
+
+    if (!verified.verified) {
+      return util.buildResponse(401, "Invalid Token, Please login again");
+    }
+
+    const userID = verified.decoded.userId;
+
+    const userObj = await User.findById(userID).populate("membership");
+    if (!userObj) {
+      return util.buildResponse(404, "User Not Found");
+    }
+
+    const userInfo = {
+      userId: userObj._id,
+      name: userObj.name,
+      email: userObj.email,
+      role: userObj.role,
+    };
+
+    if (userObj.membership.length > 0) {
+      userInfo.hasMembership = true;
+      userInfo.memberships = userObj.membership.map((membership) => ({
+        membershipType: membership.membershipType,
+        membershipId: membership._id,
+      }));
+    } else {
+      userInfo.hasMembership = false;
+    }
+
+      const response = {
+        user: userInfo,
+        token: token
+    }
+
+    return util.buildResponse(200, "User Found", response);
+  } catch (error) {
+    return util.buildResponse(500, "Internal Server Error", error);
+  }
+}
+
 module.exports.getProfile = getProfile;
 module.exports.updateProfile = updateProfile;
+module.exports.getReduxValues = getReduxValues;

@@ -27,6 +27,7 @@ import {
   MembershipSuccessPage,
   MembershipFailedPage,
   AssignFOBPage,
+  VolunteerPage,
 
 } from "./Routes.js";
 
@@ -65,6 +66,8 @@ const App = () => {
 
         <Route path="/membership/success" element={<MembershipSuccessPage />} />
         <Route path="/membership/failed" element={<MembershipFailedPage />} />
+
+        <Route path="/volunteer" element={<VolunteerPage />} />
 
         <Route
           path="/user/*"

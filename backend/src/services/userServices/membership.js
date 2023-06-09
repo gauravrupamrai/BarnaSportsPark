@@ -3,22 +3,13 @@ const connectDatabase = require("../../database/db");
 const Membership = require("../../models/membership");
 const User = require("../../models/user");
 const auth = require("../../utils/auth");
-const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const Transaction = require("../../models/transaction");
+const { sendEmail } = require("../sendEmail");
 
 const verifySecret = process.env.LOGIN_SECRET;
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
-function logToFile(message) {
-  const logMessage = `${new Date().toISOString()} - ${message}\n`;
-  fs.appendFile("logs.txt", logMessage, (err) => {
-    if (err) {
-      console.error("Error writing to log file:", err);
-    }
-  });
-}
 
 function calculateExpiryDateBasedOnPurchaseDate(purchaseDate) {
   const expiryDate = new Date(purchaseDate);
@@ -184,18 +175,12 @@ async function stripeWebhook(event) {
       webhookSecret
     );
 
-    logToFile(`stripeEvent: ${JSON.stringify(stripeEvent)}`);
-    logToFile(`sig: ${sig}`);
-    logToFile(`body: ${body}`);
-    logToFile(`stripeEvent.type: ${stripeEvent.type}`);
 
     if (stripeEvent.type === "checkout.session.completed") {
       const session = stripeEvent.data.object;
       const { newMembershipData, membershipId, newExpiryDate } =
         session.metadata;
 
-      logToFile(`newMembershipData: ${newMembershipData}`);
-      logToFile(`session: ${JSON.stringify(session)}`);
 
       // Connect to the database
       await connectDatabase();
@@ -223,20 +208,21 @@ async function stripeWebhook(event) {
 
       } else {
         const newMembership = new Membership(JSON.parse(newMembershipData));
-        logToFile(`newMembership: ${newMembership}`);
+        //logToFile(`newMembership: ${newMembership}`);
 
         const userID = JSON.parse(newMembershipData).user;
-        logToFile(`userID: ${userID}`);
+        //logToFile(`userID: ${userID}`);
 
         const checkUser = await User.findById(userID).populate("membership");
 
-        logToFile(`checkUser: ${checkUser}`);
+        //logToFile(`checkUser: ${checkUser}`);
 
         if (!checkUser) {
           return util.buildResponse(404, "User not found");
         }
 
         await newMembership.save();
+        
 
         const transaction = await Transaction.findOne({
           stripeSessionId: session.id,
@@ -304,7 +290,7 @@ async function stripeWebhook(event) {
       return util.buildResponse(400, "Invalid event type");
     }
   } catch (error) {
-    logToFile(`Error handling Stripe webhook: ${error}`);
+    //logToFile(`Error handling Stripe webhook: ${error}`);
     return util.buildResponse(500, "Internal Server Error", error);
   }
 }

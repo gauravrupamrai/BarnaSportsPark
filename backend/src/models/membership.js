@@ -13,17 +13,9 @@ const MembershipSchema = new mongoose.Schema({
   },
   FOB: {
     type: String,
-    unique: true,
   },
   membershipExpiry: {
     type: Date,
-    default: function () {
-      const currentDate = new Date();
-      const currentYear = currentDate.getFullYear();
-      const expiryYear =
-        currentDate.getMonth() >= 4 ? currentYear + 1 : currentYear;
-      return new Date(expiryYear, 5, 30); // 5 corresponds to June (month is zero-based)
-    },
   },
   member1Name: {
     type: String,

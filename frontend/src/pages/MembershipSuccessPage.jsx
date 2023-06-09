@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import logo from "../assets/logo/Logo_Text_SBS.svg";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { setUser } from "../redux/reducers/user";
+import { toast } from "react-toastify";
+
+const getProfileURL = `${process.env.REACT_APP_APP_URL}/get-redux-values`;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 const MembershipSuccessPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const searchParams = new URLSearchParams(location.search);
   const [sessionId, setSessionId] = useState("");
   const [transactionId, setTransactionId] = useState("");
+  const { user_token } = useSelector((state) => state.user);
 
   useEffect(() => {
     setSessionId(searchParams.get("session_id"));
@@ -15,7 +24,34 @@ const MembershipSuccessPage = () => {
   }, [location]);
 
   const goToHomepage = () => {
-    navigate("/");
+
+    const requestConfig = {
+      headers: {
+        "x-api-key": apiKey,
+      },
+    };
+
+    const finalURL = `${getProfileURL}?token=${user_token}`;
+
+    axios.get(finalURL, requestConfig).then((response) => {
+      navigate("/");
+      dispatch(setUser(response.data.body))
+      
+    }).catch((error) => {
+      console.log(error);
+      if (error.response.status === 401 || error.response.status === 403) {
+        toast.error(error.response.data.message);
+      } else {
+        if(error.response.data.message){
+          toast.error(error.response.data.message);
+        }else {
+          toast.error('Something went wrong. Please try again later');
+        }
+        
+      }
+    });
+
+    
   };
 
   const printPage = () => {
