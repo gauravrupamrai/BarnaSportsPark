@@ -13,6 +13,7 @@ import {
   UserCourtBookingPage,
   BookACourtPage,
   PageNotFoundPage,
+  MembershipFailedPage,
 } from "../../Routes.js";
 
 const UserLayout = () => {
@@ -35,7 +36,6 @@ const UserLayout = () => {
         <Route path="/renew-memberships" element={<RenewMembershipPage />} />
         <Route path="/update-memberships" element={<UpdateMembershipPage />} />
         <Route path="/buy-new-memberships" element={<BuyMembershipPage />} />
-        <Route path="/membership/success" element={<MembershipSuccessPage />} />
 
         <Route
           path="/your-court-bookings"

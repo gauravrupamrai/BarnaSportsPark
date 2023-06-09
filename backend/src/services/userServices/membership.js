@@ -124,8 +124,8 @@ async function newMembership(event) {
         },
       ],
       mode: "payment",
-      success_url: `${process.env.FRONTEND_URL}/membership/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.FRONTEND_URL}/membership/failed?session_id={CHECKOUT_SESSION_ID}&cancel=true`,
+      success_url: `${process.env.FRONTEND_URL}/membership/success?session_id={CHECKOUT_SESSION_ID}&transaction_id=${transactionId}`,
+      cancel_url: `${process.env.FRONTEND_URL}/membership/failed?session_id={CHECKOUT_SESSION_ID}&cancel=true&transaction_id=${transactionId}`,
       metadata: {
         newMembershipData: JSON.stringify(newMembershipData),
       },
@@ -167,7 +167,6 @@ async function stripeWebhook(event) {
     logToFile(`sig: ${sig}`);
     logToFile(`body: ${body}`);
     logToFile(`stripeEvent.type: ${stripeEvent.type}`);
-    
 
     if (stripeEvent.type === "checkout.session.completed") {
       const session = stripeEvent.data.object;
@@ -178,8 +177,6 @@ async function stripeWebhook(event) {
 
       // Connect to the database
       await connectDatabase();
-
-
 
       // Create the new membership
       const newMembership = new Membership(JSON.parse(newMembershipData));
@@ -203,7 +200,7 @@ async function stripeWebhook(event) {
       });
       if (transaction) {
         transaction.paymentStatus = "succeeded";
-        transaction.membershipId = JSON.parse(newMembership)._id;
+        transaction.membershipId = newMembership._id;
         await transaction.save();
       }
 
@@ -212,8 +209,7 @@ async function stripeWebhook(event) {
       await checkUser.save();
 
       return util.buildResponse(200, "Membership saved");
-    }
-    else if (stripeEvent.type === "payment_intent.succeeded"){
+    } else if (stripeEvent.type === "payment_intent.succeeded") {
       const paymentIntent = stripeEvent.data.object;
 
       const transaction = await Transaction.findOne({
@@ -225,7 +221,7 @@ async function stripeWebhook(event) {
       }
 
       return util.buildResponse(200, "Payment succeeded");
-    }else if(stripeEvent.type === "payment_intent.payment_failed"){
+    } else if (stripeEvent.type === "payment_intent.payment_failed") {
       const paymentIntent = stripeEvent.data.object;
 
       const transaction = await Transaction.findOne({

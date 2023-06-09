@@ -24,6 +24,10 @@ import {
   PageNotFoundPage,
   PasswordResetPage,
   PasswordResetRequestPage,
+  MembershipSuccessPage,
+  MembershipFailedPage,
+  CourtBookingPage,
+
 } from "./Routes.js";
 
 /** root routes */
@@ -52,12 +56,16 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/policies" element={<PoliciesPage />} />
+        <Route path="/courtBooking" element={<CourtBookingPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/activate" element={<ActivatePage />} />
         <Route path="/forgot-password" element={<PasswordResetRequestPage />} />
         <Route path="/reset-password" element={<PasswordResetPage />} />
+
+        <Route path="/membership/success" element={<MembershipSuccessPage />} />
+        <Route path="/membership/failed" element={<MembershipFailedPage />} />
 
         <Route
           path="/user/*"

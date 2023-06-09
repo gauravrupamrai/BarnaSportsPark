@@ -138,6 +138,16 @@ functions:
           method: POST
           cors: true
           private: false
+      - http:
+          path: /get-court-booking
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /user-court-booking
+          method: POST
+          cors: true
+          private: true
     timeout: 90
 
   externalConn:

@@ -21,6 +21,7 @@ import RenewMembershipPage from './pages/RenewMembershipPage.jsx';
 import UpdateMembershipPage from './pages/UpdateMembershipPage.jsx';
 import BuyMembershipPage from './pages/BuyMembershipPage.jsx';
 import MembershipSuccessPage from './pages/MembershipSuccessPage.jsx';
+import MembershipFailedPage from './pages/MembershipFailedPage.jsx';
 
 import UserCourtBookingPage from './pages/UserCourtBookingPage.jsx';
 import BookACourtPage from './pages/BookACourtPage.jsx';
@@ -30,6 +31,7 @@ import CreateContentPage from './pages/CreateContentPage.jsx';
 import DraftSendEmailPage from './pages/DraftSendEmailPage.jsx';
 
 import PageNotFoundPage from './pages/PageNotFoundPage.jsx';
+import CourtBookingPage from './pages/CourtBookingPage.jsx';
 
 
 export {
@@ -57,6 +59,7 @@ export {
     UpdateMembershipPage,
     BuyMembershipPage,
     MembershipSuccessPage,
+    MembershipFailedPage,
 
     UserCourtBookingPage,
     BookACourtPage,
@@ -66,5 +69,6 @@ export {
     DraftSendEmailPage,
 
     PageNotFoundPage,
+    CourtBookingPage,
 
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import logo from "../assets/logo/Logo_Text_SBS.svg";
 
-const MembershipSuccessPage = () => {
+const MembershipFailedPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const searchParams = new URLSearchParams(location.search);
@@ -34,11 +34,11 @@ const MembershipSuccessPage = () => {
               alt="Barna Sports Park"
             />
           </Link>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Membership Purchase Successful!
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-red-600">
+            Membership Purchase Failed!
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Thank you for your purchase. Your membership is now active.
+          <p className="mt-2 text-center text-sm text-red-900">
+            We're sorry, but your membership purchase was not successful.
           </p>
           <p className="mt-2 text-center text-sm text-gray-600 break-words">
             Session ID: {sessionId}
@@ -66,4 +66,4 @@ const MembershipSuccessPage = () => {
   );
 };
 
-export default MembershipSuccessPage;
+export default MembershipFailedPage;
