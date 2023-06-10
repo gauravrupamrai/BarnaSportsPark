@@ -16,14 +16,6 @@ export const navigation = [
     title: "Membership",
     url: "/membership",
   },
-  {
-    title: "Events",
-    url: "/events",
-  },
-  {
-    title: "Contact Us",
-    url: "/contactUs",
-  },
 ];
 
 export const joiningProcess = [

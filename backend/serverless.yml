@@ -188,3 +188,24 @@ functions:
           method: POST
           cors: true
           private: true
+      - http:
+          path: /submit-volunteer-info
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /get-volunteer-info
+          method: GET
+          cors: true
+          private: true
+      - http:
+          path: /submit-contact-us-info
+          method: POST
+          cors: true
+          private: true
+      - http:
+          path: /get-contact-us-info
+          method: GET
+          cors: true
+          private: true
+    timeout: 90

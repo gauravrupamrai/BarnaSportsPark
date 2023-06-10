@@ -1,6 +1,72 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+
+const volunteerURLSubmit = `${process.env.REACT_APP_APP_URL}/submit-volunteer-info`;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 const VolunteerForm = () => {
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        message: ""
+      });
+
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [name]: value
+        }));
+      };
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        // Send the formData object to the backend
+        const requestConfig = {
+            headers: {
+              "x-api-key": apiKey,
+            },
+          };
+      
+          const requestBody = {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phoneNumber,
+            message: formData.message,
+          };
+
+          axios.post(volunteerURLSubmit, requestBody, requestConfig).then((response) => {
+            toast.success("Volunteer info submitted successfully.");
+            setFormData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phoneNumber: "",
+                message: ""
+              });
+          }).catch((error) => {
+            if (error.response.status === 401 || error.response.status === 403) {
+                toast.error(error.response.data.message);
+              } else {
+                if(error.response.data.message){
+                  toast.error(error.response.data.message);
+                }else{
+                  toast.error("Something went wrong!");
+                }
+              }
+          });
+        // You can make an API request here to send the data
+        console.log(formData);
+        // Reset the form fields after submission
+        
+      };
+    
+
   return (
     <main className="py-14 ">
       <div className="max-w-screen-xl bg-white rounded-xl py-10 mx-auto px-4 text-gray-600 md:px-8">
@@ -17,13 +83,15 @@ const VolunteerForm = () => {
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto">
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={handleSubmit}  className="space-y-5">
             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
               <div>
                 <label className="font-medium">First name</label>
                 <input
                   type="text"
                   placeholder="Enter your first name"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
@@ -33,6 +101,8 @@ const VolunteerForm = () => {
                 <input
                   type="text"
                   placeholder="Enter your last name"
+                    value={formData.lastName}
+                    onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
@@ -43,6 +113,8 @@ const VolunteerForm = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
@@ -53,6 +125,8 @@ const VolunteerForm = () => {
                 <input
                   type="number"
                   placeholder="0891234567"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
@@ -61,12 +135,13 @@ const VolunteerForm = () => {
             <div>
               <label className="font-medium">Message</label>
               <textarea
-                required
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Enter any additional information here..."
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               ></textarea>
             </div>
-            <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+            <button type="submit" className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
               Submit
             </button>
           </form>

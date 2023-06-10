@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { navigation } from "../../static/data";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
@@ -11,6 +11,28 @@ const NavigationBar = () => {
   const { isAuthenticated, user_data } = useSelector((state) => state.user);
   console.log(isAuthenticated, user_data); // Add this line
   const [state, setState] = useState(false);
+
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (
+        isDropdownVisible &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target)
+      ) {
+        setIsDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [isDropdownVisible]);
 
   const logOut = () => {
     dispatch(setUser(null));
@@ -77,6 +99,34 @@ const NavigationBar = () => {
                   <NavLink to={item.url}>{item.title}</NavLink>
                 </li>
               ))}
+              <li className="relative text-gray-500 hover:text-indigo-600 pl-2 md:pl-0">
+                <button
+                  onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+                >
+                  More
+                </button>
+                {isDropdownVisible && (
+                  <ul
+                    ref={dropdownRef}
+                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  >
+                    <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
+                      <Link to="/events">Events</Link>
+                    </li>
+                    <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
+                      <Link to="/policies">Policies</Link>
+                    </li>
+
+                    <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
+                      <Link to="/faqs">FAQs</Link>
+                    </li>
+                    
+                    <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
+                      <Link to="/contact-us">Contact Us</Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
             </div>
             {isAuthenticated ? (
               <div className="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12 mt-5 md:mt-0">
