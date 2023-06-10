@@ -216,7 +216,7 @@ const User = () => {
                     {!updateMode && (
                       <button
                         type="button"
-                        className="group relative w-full h-[40px] flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
+                        className="group relative w-full flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
                         onClick={handleUpdate}
                       >
                         Edit profile
@@ -593,7 +593,7 @@ const User = () => {
                   {!updateMode && (
                     <button
                       type="button"
-                      className="group relative w-full h-[40px] flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
+                      className="group relative w-full flex justify-center py-2 px-4 text-sm text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg"
                       onClick={handleUpdate}
                     >
                       Edit profile

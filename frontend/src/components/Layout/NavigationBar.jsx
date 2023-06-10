@@ -110,7 +110,7 @@ const NavigationBar = () => {
                 {isDropdownVisible && (
                   <ul
                     ref={dropdownRef}
-                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none nav-dropdown-bar"
                   >
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
                       <Link to="/events">Events</Link>
