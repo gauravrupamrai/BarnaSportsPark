@@ -137,6 +137,7 @@ const Signup = () => {
                   type="text"
                   name="text"
                   autoComplete="name"
+                  placeholder="Enter your full name"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -157,6 +158,7 @@ const Signup = () => {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  placeholder="Enter your email address"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -179,6 +181,7 @@ const Signup = () => {
                   name="password"
                   type={visible ? "text" : "password"}
                   autoComplete="current-password"
+                  placeholder="Enter your password"
                   required
                   value={password}
                   onChange={handleSetPassword}
@@ -232,6 +235,7 @@ const Signup = () => {
                   name="confirmPassword"
                   type={visible ? "text" : "password"}
                   autoComplete="current-password"
+                  placeholder="Enter your password again"
                   required
                   value={matchPassword}
                   onChange={handleSetMatchPassword}

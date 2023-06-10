@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { footerNavs } from '../../static/data';
 import logo from '../../assets/logo/Logo_Text_SBS.svg'
+import { toast } from 'react-toastify';
 
 const Footer = () => {
+
+    const [email, setEmail] = useState('');
+
+  const handleSubscribe = () => {
+    // Perform any necessary actions with the email (e.g., subscribe to a newsletter)
+    console.log('Subscribed:', email);
+
+    toast.success("Subscribed successfully.");
+
+    // Clear the input field
+    setEmail('');
+  };
 
     return (
         <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen mx-auto md:px-8">
@@ -26,9 +39,12 @@ const Footer = () => {
                                 type="email"
                                 placeholder="Enter your email"
                                 className="w-full p-2.5 outline-none"
+                                value={email}
+          onChange={(e) => setEmail(e.target.value)}
                             />
                             <button
                                 className="p-2.5 rounded-md text-white bg-indigo-600 outline-none shadow-md focus:shadow-none sm:px-5"
+                                onClick={handleSubscribe}
                             >
                                 Subscribe
                             </button>

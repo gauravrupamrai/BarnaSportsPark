@@ -69,24 +69,34 @@ const FaqsCard = (props) => {
 const FAQs = () => {
   const faqsList = [
     {
-      q: "What are some random questions to ask?",
-      a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+      q: "How do I get to the Park?",
+      a: <>We encourage patrons to walk from City Centre where possible (30 minutes) or to use public transport (Galway City Bus service). Please go to the <Link to = "/contactUs" className="text-indigo-600"> Contact Us </Link> page to find the most efficient way via Google Maps Pinned Location.</>,
     },
     {
-      q: "Do you include common questions?",
-      a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
+      q: "Are there any Park Tours available to the general public?",
+      a: "Yes, fortunately there are Park Tours available. Barna Sports Park is available for the locals to visit  from 5 a.m. to 11 p.m. One can simply drop in and enjoy the facilities within the time limits.",
     },
     {
-      q: "Can I use this for 21 questions?",
-      a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
+      q: "Can I use a cloakroom or locker?",
+      a: "Yes, members of the barna sport park community can access a locker. They can opt in for the facility as required with a minimum charge and similar they can even opt out while the money is refunded back to the source.",
     },
     {
-      q: "Are these questions for girls or for boys?",
-      a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
+      q: "What events are on at the park?",
+      a: <>Check the <Link to = "/events" className="text-indigo-600">Events page</Link> for up to date information on the upcoming events at the park. Alternatively, you can also see the notice or news flash on the Home Page.</>
     },
     {
-      q: "What do you wish you had more talent doing?",
-      a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+      q: "How do I report any theft or lost property?",
+      a: <>For information on lost property please contact <a href="mailto:barnasportspark@gmail.com" className="text-indigo-600">barnasportspark@gmail.com</a>, You can even make a call at +1 (555) 000-000 or report an incident to the community head.</>,
+    },
+    {
+      q: "Are there any toilets facilities available?",
+      a: "Yes. There are 3 accessible toilets in the park- for females, males and specially abled people. The usage charge is 0.20 cents per person. The toilets are located adjacent to the main gates",
+    },
+    {
+      q: "Are there any facilities for disabled/ specially abled people?",
+      a: <>In order to assist special people the community has a group of members who volunteer and can get in touch with. 
+      For more information you can call at +1 (555) 000-000 or send an email to contact <a href="mailto:barnasportspark@gmail.com" className="text-indigo-600">barnasportspark@gmail.com</a>.
+      </>,
     },
   ];
 

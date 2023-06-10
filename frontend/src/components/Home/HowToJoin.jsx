@@ -11,7 +11,7 @@ const HowToJoin = () => {
                             How our Membership Works
                         </h3>
                         <p className="mt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.
+                        Kick your feet up towards a healthy journey! With a Park designed for you and by you. Discover a range of flexible membership plans, participate in different sport events and get a chance to meet the community.
                         </p>
                     </div>
                     <div className="mt-12">

@@ -4,20 +4,20 @@ const Events = () => {
 
         const jobs = [
             {
-                title: "Say no to plastic usage and save the planet",
-                desc: "Barna Sports Park presents 'Say No to Plastic Usage and Save the Planet' event! Join us in a community-driven initiative to raise awareness about the harmful effects of plastic and promote sustainable alternatives. Engage in eco-friendly activities, learn about recycling, and be part of the solution. Together, let's protect our planet for future generations!",
-                date: "May 17, 2022",
-                type: "Open to All",
-                location: "GHotel, Galway",
-                href: "javascript:void(0)"
+                title: "Saturday Social Tennis",
+                desc: "Saturday Social Tennis at Barna Tennis Courts is a weekly event where members can engage in friendly matches organized by Coach Teo. Beginners play from 11am-12pm, while experienced players meet from 12pm-1pm. To participate, members need to pre-book via the event's WhatsApp group due to limited availability. The fee is €3, payable on the day. For more info or to join the group, contact Coach Teo at 085 1628988.",
+                date: "Every Saturday",
+                type: "For Adults Only",
+                location: "Barna Sports Park, Galway",
+                href: "/events"
             },
             {
-                title: "Say no to plastic usage and save the planet",
-                desc: "Barna Sports Park presents 'Say No to Plastic Usage and Save the Planet' event! Join us in a community-driven initiative to raise awareness about the harmful effects of plastic and promote sustainable alternatives. Engage in eco-friendly activities, learn about recycling, and be part of the solution. Together, let's protect our planet for future generations!",
-                date: "Nov 11, 2022",
-                type: "For Registered Users Only",
-                location: "Barna, Galway",
-                href: "javascript:void(0)"
+                title: "Saturday Play and Stay",
+                desc: "Saturday Play and Stay is a weekly social tennis event for juniors at Barna Tennis Courts. Under Coach Teo's guidance, kids engage in enjoyable tennis matches and games, applying the skills they've learned. It's held from 11am-12pm for under 8s, and 12pm-1pm for those aged 9 and above. A €3 fee per child applies, payable to the coach. Pre-booking via the event's WhatsApp group is required due to limited slots. Contact Coach Teo at 085 1628988 for more details or to join the group.",
+                date: "Every Saturday",
+                type: "For Kids Only",
+                location: "Barna Sports Park, Galway",
+                href: "/events"
             },
         ]
     
@@ -37,7 +37,7 @@ const Events = () => {
                                     <div>
                                         <div className="justify-between sm:flex">
                                             <div className="flex-1">
-                                                <h3 className="text-xl font-medium text-cyan-600">
+                                                <h3 className="text-xl font-medium text-indigo-600">
                                                     {item.title}
                                                 </h3>
                                                 <p className="text-gray-500 mt-2 pr-2">
@@ -74,6 +74,14 @@ const Events = () => {
                         ))
                     }
                 </ul>
+                <div className="mt-12 flex justify-center">
+        <a
+          href="/events"
+          className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-cyan-700 transition-colors duration-300"
+        >
+          View more events
+        </a>
+      </div>
             </section>
         )
     

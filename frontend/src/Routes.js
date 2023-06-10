@@ -37,6 +37,8 @@ import AssignFOBPage from './pages/AssignFOBPage.jsx';
 import CourtBookingDetailsPage from './pages/CourtBookingDetailsPage.jsx';
 
 import VolunteerPage from './pages/VolunteerPage.jsx';
+import NewsNoticePage from './pages/NewsNoticePage.jsx';
+import EventsPage from './pages/EventsPage.jsx';
 
 
 export {
@@ -80,4 +82,6 @@ export {
     CourtBookingDetailsPage,
 
     VolunteerPage,
+    NewsNoticePage,
+    EventsPage,
 };

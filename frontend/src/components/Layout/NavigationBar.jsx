@@ -118,13 +118,15 @@ const NavigationBar = () => {
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
                       <Link to="/policies">Policies</Link>
                     </li>
-
+                    <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
+                      <Link to="/newsNotice">Notices & News</Link>
+                    </li>
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
                       <Link to="/faqs">FAQs</Link>
                     </li>
                     
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
-                      <Link to="/contact-us">Contact Us</Link>
+                      <Link to="/contactus">Contact Us</Link>
                     </li>
                   </ul>
                 )}

@@ -25,7 +25,9 @@ const Stats = () => {
                             Our customers are always happy
                         </h3>
                         <p className="mt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sollicitudin quam ut tincidunt.
+                        We’re not just about FITNESS.
+We’re About LIFE.
+
                         </p>
                     </div>
                     <div className="mt-12">

@@ -1,11 +1,20 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { GooeyCircleLoader } from "react-loaders-kit";
 
 const volunteerURLSubmit = `${process.env.REACT_APP_APP_URL}/submit-volunteer-info`;
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const VolunteerForm = () => {
+
+    const [loading, setLoading] = useState(false);
+
+    const loaderProps = {
+      loading,
+      size: 80,
+      colors: ['#f6b93b', '#5e22f0', '#ef5777']
+  }
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -24,6 +33,7 @@ const VolunteerForm = () => {
       };
 
       const handleSubmit = (e) => {
+        setLoading(true);
         e.preventDefault();
         // Send the formData object to the backend
         const requestConfig = {
@@ -41,6 +51,7 @@ const VolunteerForm = () => {
           };
 
           axios.post(volunteerURLSubmit, requestBody, requestConfig).then((response) => {
+            setLoading(false);
             toast.success("Volunteer info submitted successfully.");
             setFormData({
                 firstName: "",
@@ -50,6 +61,7 @@ const VolunteerForm = () => {
                 message: ""
               });
           }).catch((error) => {
+            setLoading(false);
             if (error.response.status === 401 || error.response.status === 403) {
                 toast.error(error.response.data.message);
               } else {
@@ -141,9 +153,15 @@ const VolunteerForm = () => {
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               ></textarea>
             </div>
+            { loading ? (
+            <div className="flex justify-center mt-4">
+            <GooeyCircleLoader {...loaderProps} />
+          </div>
+          ) : (
             <button type="submit" className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
               Submit
             </button>
+            )}
           </form>
         </div>
       </div>

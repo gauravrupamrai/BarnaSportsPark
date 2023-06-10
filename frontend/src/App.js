@@ -28,6 +28,8 @@ import {
   MembershipFailedPage,
   AssignFOBPage,
   VolunteerPage,
+  NewsNoticePage,
+  EventsPage,
 
 } from "./Routes.js";
 
@@ -53,10 +55,12 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutUs" element={<AboutUsPage />} />
         <Route path="/facilities" element={<FacilitiesPage />} />
+        <Route path="/newsNotice" element={<NewsNoticePage />} />
 
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/policies" element={<PoliciesPage />} />
+        <Route path="/events" element={<EventsPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
