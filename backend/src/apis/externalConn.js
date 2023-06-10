@@ -2,6 +2,7 @@ const sendEmailService = require("../services/sendEmail");
 const sendEmailPath = "send-Email";
 const volunteerService = require("../services/miscellaneous/volunteer");
 const contactusService = require("../services/miscellaneous/contactus");
+const adminReportsService = require("../services/miscellaneous/adminReports");
 
 const util = require("../utils/util");
 
@@ -10,6 +11,10 @@ const submitVolunteerInfoPath = "/submit-volunteer-info";
 const submitContactUsInfoPath = "/submit-contact-us-info";
 const getVolunteerInfoPath = "/get-volunteer-info";
 const getContactUsInfoPath = "/get-contact-us-info";
+const getAllUsersPath = "/get-all-users";
+const getAllMembersPath = "/get-all-memberships";
+const getAllTransactionsPath = "/get-all-transactions";
+const getAllBookingsPath = "/get-all-bookings";
 
 exports.handler = async (event, context) => {
   console.log("Request event: ", event);
@@ -43,7 +48,18 @@ exports.handler = async (event, context) => {
     case event.httpMethod === "GET" && event.path === getContactUsInfoPath:
       response = await contactusService.getContactUsInfo();
       break;
-
+    case event.httpMethod === "GET" && event.path === getAllUsersPath:
+      response = await adminReportsService.getAllUsers();
+      break;
+    case event.httpMethod === "GET" && event.path === getAllMembersPath:
+      response = await adminReportsService.getAllMembers();
+      break;
+    case event.httpMethod === "GET" && event.path === getAllTransactionsPath:
+      response = await adminReportsService.getAllTransactions();
+      break;
+    case event.httpMethod === "GET" && event.path === getAllBookingsPath:
+      response = await adminReportsService.getAllBookings();
+      break;
     default:
       response = util.buildResponse(404, "404 Not Found");
   }

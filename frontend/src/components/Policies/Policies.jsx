@@ -1,8 +1,14 @@
 import React from "react";
 import GDPR from "../../assets/documents/Barna_Sports_Park_GDPR_Policy.pdf"
+import CP from "../../assets/documents/BSP_Child_Protection_Notice_June_2022.pdf"
+import GR from "../../assets/documents/Rules_Comharchumann_Bearna_Teoranta.pdf"
 
 
 const Policies = () => {
+
+  const openPDF = (path) => {
+    window.open(path, "_blank");
+  };
 
   return (
     <div>
@@ -22,13 +28,30 @@ const Policies = () => {
             <a
               href="#owners"
               className="inline-block py-2 px-4 text-gray-800 font-medium duration-150 border hover:bg-gray-50 active:bg-gray-100 rounded-lg"
+              onClick={() => openPDF(GDPR)}
             >
-              Who Owns Barna Sports Park?
+              GDPR Policy - Barna Sports Park
             </a>
 
-<iframe src={GDPR}>
+          </div>
+          <div className="flex gap-3 items-center mt-4 md:justify-center">
+            <a
+              href="#owners"
+              className="inline-block py-2 px-4 text-gray-800 font-medium duration-150 border hover:bg-gray-50 active:bg-gray-100 rounded-lg"
+              onClick={() => openPDF(CP)}
+            >
+              Barna Sports Park Child Protection Policy
+            </a>
 
-</iframe>
+          </div>
+          <div className="flex gap-3 items-center mt-4 md:justify-center">
+            <a
+              href="#owners"
+              className="inline-block py-2 px-4 text-gray-800 font-medium duration-150 border hover:bg-gray-50 active:bg-gray-100 rounded-lg"
+              onClick={() => openPDF(GR)}
+            >
+              Barna Sports Park General Notice
+            </a>
 
           </div>
         </div>

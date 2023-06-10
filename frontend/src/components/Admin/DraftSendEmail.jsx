@@ -49,70 +49,49 @@ const DraftSendEmail = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <form className="w-full max-w-lg" onSubmit={handleSubmit}>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="subject">
-              Subject
-            </label>
-          </div>
-          <div className="md:w-2/3">
-            <input
-              className="appearance-none bg-gray-200 text-gray-700 rounded py-3 px-4 md:mr-3 leading-tight focus:outline-none focus:bg-white"
-              id="subject"
-              type="text"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+    <div className="min-h-screen bg-gray-200 py-6 flex flex-col justify-center sm:py-12">
+      <div className="relative py-3 sm:max-w-xl mx-auto text-center">
+        <span className="text-2xl font-light">Email Draft</span>
+        <div className="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+          <div className="h-2 bg-indigo-400 rounded-t-md"></div>
+          <form className="py-6 px-8" onSubmit={handleSubmit}>
+            <label className="block text-sm font-medium leading-tight" htmlFor="subject">Subject</label>
+            <input 
+              className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" 
+              id="subject" 
+              type="text" 
+              value={subject} 
+              onChange={(e) => setSubject(e.target.value)} 
             />
-          </div>
-        </div>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="toAddresses">
-            toAddresses
-            </label>
-          </div>
-          <div className="md:w-2/3">
-            <input
-              className="appearance-none bg-gray-200 text-gray-700 rounded py-3 px-4 md:mr-3 leading-tight focus:outline-none focus:bg-white"
-              id="toAddresses"
-              type="text"
-              value={toAddresses}
-              onChange={(e) => setToAddresses(e.target.value)}
+            <label className="block mt-3 text-sm font-medium leading-tight" htmlFor="toAddresses">To Addresses</label>
+            <input 
+              className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" 
+              id="toAddresses" 
+              type="text" 
+              value={toAddresses} 
+              onChange={(e) => setToAddresses(e.target.value)} 
             />
-          </div>
-        </div>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-              Content
-            </label>
-          </div>
-          <div className="md:w-2/3">
-            <CKEditor
-              editor={ClassicEditor}
-              data={content}
+            <label className="block mt-3 text-sm font-medium leading-tight">Content</label>
+            <CKEditor 
+              editor={ClassicEditor} 
+              data={content} 
               onChange={(event, editor) => {
                 const data = editor.getData();
                 setContent(data);
-              }}
-              ref={editorRef}
+              }} 
+              ref={editorRef} 
             />
-          </div>
+            <div className="mt-6">
+              <button 
+                className="py-2 px-4 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white text-sm focus:outline-none" 
+                type="submit"
+              >
+                Send Email
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="md:flex md:items-center">
-          <div className="md:w-1/3"></div>
-          <div className="md:w-2/3">
-            <button
-              className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Log Content
-            </button>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
   );
 };

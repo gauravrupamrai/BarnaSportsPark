@@ -208,4 +208,24 @@ functions:
           method: GET
           cors: true
           private: true
+      - http:
+          path: /get-all-users
+          method: GET
+          cors: true
+          private: true
+      - http:
+          path: /get-all-memberships
+          method: GET
+          cors: true
+          private: true
+      - http:
+          path: /get-all-bookings
+          method: GET
+          cors: true
+          private: true
+      - http:
+          path: /get-all-transactions
+          method: GET
+          cors: true
+          private: true
     timeout: 90

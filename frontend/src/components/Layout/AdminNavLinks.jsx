@@ -3,32 +3,34 @@ import { Link } from "react-router-dom";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 
-const UserNavLinks = () => {
+const AdminNavLinks = () => {
   
 
   const links = [
     {
-      name: "Membership",
+      name: "Reports",
       submenu: true,
       sublink: [
         {
-          name: "Your Memberships",
-          path: "/user/your-memberships",
-        },
-        {
-          name: "Buy New Memberships",
-          path: "/user/buy-new-memberships",
+          name: "Download Reports",
+          path: "/admin/reports",
         },
       ],
     },
     {
-      name: "Courts",
+      name: "Create Notices",
       submenu: true,
       sublink: [
-        { name: "Your Court Bookings", path: "/user/your-court-bookings" },
-        { name: "Book a Court", path: "/user/book-a-court" },
+        { name: "Create Notice", path: "/admin/create-notices" },
       ],
     },
+    {
+        name: "Send Emails",
+        submenu: true,
+        sublink: [
+          { name: "Send Emails", path: "/admin/send-email" },
+        ],
+      },
   ];
 
   const [heading, setHeading] = useState("");
@@ -105,4 +107,4 @@ const UserNavLinks = () => {
   );
 };
 
-export default UserNavLinks;
+export default AdminNavLinks;

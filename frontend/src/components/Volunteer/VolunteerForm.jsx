@@ -101,6 +101,7 @@ const VolunteerForm = () => {
                 <label className="font-medium">First name</label>
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="Enter your first name"
                   value={formData.firstName}
                   onChange={handleChange}
@@ -112,6 +113,7 @@ const VolunteerForm = () => {
                 <label className="font-medium">Last name</label>
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Enter your last name"
                     value={formData.lastName}
                     onChange={handleChange}
@@ -124,6 +126,7 @@ const VolunteerForm = () => {
               <label className="font-medium">Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email address"
                 value={formData.email}
                 onChange={handleChange}
@@ -136,6 +139,7 @@ const VolunteerForm = () => {
               <div className="relative mt-2">
                 <input
                   type="number"
+                  name="phoneNumber"
                   placeholder="0891234567"
                     value={formData.phoneNumber}
                     onChange={handleChange}
@@ -147,6 +151,7 @@ const VolunteerForm = () => {
             <div>
               <label className="font-medium">Message</label>
               <textarea
+                name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Enter any additional information here..."

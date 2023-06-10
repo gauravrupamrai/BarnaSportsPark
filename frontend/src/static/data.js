@@ -73,44 +73,27 @@ export const facilities = [
 
 export const footerNavs = [
   {
-    label: "Company",
+    label: "Home",
     items: [
       {
-        href: "javascript:void()",
-        name: "Partners",
+        href: "/",
+        name: "Home Page",
       },
       {
-        href: "javascript:void()",
-        name: "Blog",
+        href: "/facilities",
+        name: "Facilities",
       },
       {
-        href: "javascript:void()",
-        name: "Team",
+        href: "/membership",
+        name: "Memberships",
       },
       {
-        href: "javascript:void()",
-        name: "Careers",
-      },
-    ],
-  },
-  {
-    label: "Resources",
-    items: [
-      {
-        href: "javascript:void()",
-        name: "contact",
+        href: "/events",
+        name: "Events",
       },
       {
-        href: "javascript:void()",
-        name: "Support",
-      },
-      {
-        href: "javascript:void()",
-        name: "Docs",
-      },
-      {
-        href: "javascript:void()",
-        name: "Pricing",
+        href: "/volunteer",
+        name: "Volunteers",
       },
     ],
   },
@@ -118,79 +101,25 @@ export const footerNavs = [
     label: "About",
     items: [
       {
-        href: "javascript:void()",
-        name: "Terms",
+        href: "/aboutUs",
+        name: "About Us",
       },
       {
-        href: "javascript:void()",
-        name: "License",
+        href: "/policies",
+        name: "Privacy Policy",
       },
       {
-        href: "javascript:void()",
-        name: "Privacy",
+        href: "/newsNotice",
+        name: "Notice & News",
       },
       {
-        href: "javascript:void()",
-        name: "About US",
+        href: "/contactUs",
+        name: "Contact Us",
+      },
+      {
+        href: "/faqs",
+        name: "FAQs",
       },
     ],
-  },
-];
-
-
-
-export const footerProductLinks = [
-  {
-    name: "About us",
-    link: "/about",
-  },
-  {
-    name: "Careers",
-    link: "/carrers",
-  },
-  {
-    name: "Store Locations",
-  },
-  {
-    name: "Our Blog",
-  },
-  {
-    name: "Reviews",
-  },
-];
-
-export const footercompanyLinks = [
-  {
-    name: "Game & Video",
-  },
-  {
-    name: "Phone &Tablets",
-  },
-  {
-    name: "Computers & Laptop",
-  },
-  {
-    name: "Sport Watches",
-  },
-  {
-    name: "Events",
-  },
-];
-
-export const footerSupportLinks = [
-  {
-    name: "FAQ",
-  },
-  {
-    name: "Reviews",
-  },
-  {
-    name: "Contact Us",
-  },
-  {
-    name: "Shipping",
-  },
-  {
-    name: "Live chat",
   },
 ];

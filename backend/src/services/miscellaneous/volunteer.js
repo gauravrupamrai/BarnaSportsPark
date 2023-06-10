@@ -30,7 +30,18 @@ async function submitVolunteerInfo(body) {
     }
 };
 
-async function getVolunteerInfo() {};
+async function getVolunteerInfo() {
+    try {
+        await connectDatabase();
+
+        const volunteerInfo = await Volunteer.find({});
+
+        return util.buildResponse(200, 'Volunteer info retrieved', volunteerInfo);
+    } catch (error) {
+        console.log(error);
+        return util.buildResponse(500, 'Internal Server Error');
+    }
+};
 
 module.exports.submitVolunteerInfo = submitVolunteerInfo;
 module.exports.getVolunteerInfo = getVolunteerInfo;

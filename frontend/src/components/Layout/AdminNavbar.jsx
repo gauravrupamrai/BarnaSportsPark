@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { Link, useNavigate } from "react-router-dom";
-import UserNavLinks from "./UserNavLinks.jsx";
+import AdminNavLinks from "./AdminNavLinks.jsx";
 import { HiOutlineLogout } from "react-icons/hi";
 import { useSelector, useDispatch } from "react-redux";
 import { Divide as Hamburger } from "hamburger-react";
 import { setUser } from "../../redux/reducers/user";
 
-const UserNavbar = () => {
+const AdminNavbar = () => {
   const { isAuthenticated, user_data } = useSelector((state) => state.user);
   console.log(isAuthenticated, user_data);
   const [isOpen, setOpen] = useState(false);
@@ -35,10 +35,10 @@ const UserNavbar = () => {
         <ul className="md:flex hidden uppercase items-center gap-8">
           <li>
             <Link to="/user" className="py-7 px-3 inline-block">
-              {user_data.user.name}
+              Admin
             </Link>
           </li>
-          <UserNavLinks />
+          <AdminNavLinks />
         </ul>
         <div className="md:block hidden">
           <button
@@ -63,10 +63,10 @@ const UserNavbar = () => {
         >
           <li>
             <Link to="/user" className="py-7 px-3 inline-block">
-              Hello User!
+              Hello Admin!
             </Link>
           </li>
-          <UserNavLinks />
+          <AdminNavLinks />
           <div className="py-5">
             Logout <HiOutlineLogout className="inline-block" />
           </div>
@@ -76,4 +76,4 @@ const UserNavbar = () => {
   );
 };
 
-export default UserNavbar;
+export default AdminNavbar;

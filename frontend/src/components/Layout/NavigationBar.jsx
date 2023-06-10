@@ -4,7 +4,7 @@ import { navigation } from "../../static/data";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../redux/reducers/user";
-import {IoMdArrowDropdown} from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
@@ -124,7 +124,7 @@ const NavigationBar = () => {
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
                       <Link to="/faqs">FAQs</Link>
                     </li>
-                    
+
                     <li className="px-4 py-2 text-gray-500 hover:text-indigo-600">
                       <Link to="/contactus">Contact Us</Link>
                     </li>
@@ -135,12 +135,21 @@ const NavigationBar = () => {
             {isAuthenticated ? (
               <div className="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12 mt-5 md:mt-0">
                 <li className="order-2 py-3 md:py-0">
-                  <Link
-                    to="/user"
-                    className="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline shadow-lg hover:shadow-none"
-                  >
-                    Hi {user_data.user.name}
-                  </Link>
+                  {user_data.user.role === "admin" ? (
+                    <Link
+                      to="/admin"
+                      className="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline shadow-lg hover:shadow-none"
+                    >
+                      Hi {user_data.user.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/user"
+                      className="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline shadow-lg hover:shadow-none"
+                    >
+                      Hi {user_data.user.name}
+                    </Link>
+                  )}
                 </li>
                 <li className="order-3 py-3 md:py-0">
                   <button

@@ -39,7 +39,11 @@ import CourtBookingDetailsPage from './pages/CourtBookingDetailsPage.jsx';
 import VolunteerPage from './pages/VolunteerPage.jsx';
 import NewsNoticePage from './pages/NewsNoticePage.jsx';
 import EventsPage from './pages/EventsPage.jsx';
-
+import MembershipPage from './pages/MembershipPage.jsx';
+import AdminLayout from './components/Layout/AdminLayout.jsx';
+import AdminReportsPage from './pages/AdminReportsPage.jsx';
+import SendEmailPage from './pages/SendEmailPage.jsx';
+import CreateNoticePage from './pages/CreateNoticePage.jsx';
 
 export {
 
@@ -84,4 +88,10 @@ export {
     VolunteerPage,
     NewsNoticePage,
     EventsPage,
+    MembershipPage,
+    AdminLayout,
+
+    AdminReportsPage,
+    SendEmailPage,
+    CreateNoticePage,
 };

@@ -49,7 +49,7 @@ const UserMembership = () => {
 
   return (
     <div className="max-w-screen-xl bg-white rounded-xl mt-4 mx-auto px-4 md:px-8">
-    {membershipData.length > 0 ? (
+    {membershipData && membershipData.length > 0 ? (
         <>
       <div className="items-start justify-between md:flex"></div>
       <div className="mt-12 relative h-max overflow-auto">

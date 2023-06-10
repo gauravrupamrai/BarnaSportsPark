@@ -30,14 +30,16 @@ import {
   VolunteerPage,
   NewsNoticePage,
   EventsPage,
+  MembershipPage,
+  AdminLayout,
 
 } from "./Routes.js";
 
 /** root routes */
 const App = () => {
   function RequireAdmin({ children }) {
-    const { isAdmin } = useSelector((state) => state.user);
-    return isAdmin === true ? children : <Navigate to="/login" replace />;
+    const { user_data } = useSelector((state) => state.user);
+    return user_data.user.role === "admin" ? children : <Navigate to="/login" replace />;
   }
 
   function RequireAuth({ children }) {
@@ -61,6 +63,7 @@ const App = () => {
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/policies" element={<PoliciesPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/membership" element={<MembershipPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
@@ -83,10 +86,10 @@ const App = () => {
         />
 
         <Route
-          path="/admin"
+          path="/admin/*"
           element={
             <RequireAdmin>
-              <AdminPage />
+              <AdminLayout />
             </RequireAdmin>
           }
         />
