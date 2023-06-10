@@ -4,6 +4,7 @@ import { navigation } from "../../static/data";
 import logo from "../../assets/logo/Logo_Text_SBS.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../redux/reducers/user";
+import {IoMdArrowDropdown} from "react-icons/io";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
@@ -102,8 +103,9 @@ const NavigationBar = () => {
               <li className="relative text-gray-500 hover:text-indigo-600 pl-2 md:pl-0">
                 <button
                   onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+                  className="flex items-center focus:outline-none"
                 >
-                  More
+                  More <IoMdArrowDropdown />
                 </button>
                 {isDropdownVisible && (
                   <ul
