@@ -20,6 +20,7 @@ async function getAllMembers(){
     try{
         await connectDatabase();
         const members = await Member.find({});
+        
         return util.buildResponse(200, 'Members retrieved', members);
     } catch (error) {
         console.log(error);
